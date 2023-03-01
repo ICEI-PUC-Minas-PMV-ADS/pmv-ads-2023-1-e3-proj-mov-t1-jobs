@@ -24,7 +24,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Idade:|39|
 |Ocupação:| Film Maker, Criador de conteúdo. |
 |Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.     |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
 |Frustrações | Falta de oportunidades para iniciar sua carreira. |
 |Hobbies | Aprimorar o conhecimento em sua área de atuação. |
 
@@ -33,14 +33,14 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Idade:|22|
 |Ocupação:| Técnico em Informática. |
 |Aplicativos:| WhatsApp, Instagram, Twitch, Youtube, Discord  |
-|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.  |
+|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
 |Frustrações | Sentir que seu trabalho não está sendo bem feito. |
 |Hobbies | Assistir séries , jogar jogos online |
 
 |Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
 |-----------------------|-|
 |Idade:|25|
-|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem. |
+|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.  |
 |Aplicativos:| WhatsApp, Instagram, TikTok, Youtube. |
 |Motivações | Crescer como profissional da saúde. |
 |Frustrações | Sentir que seu trabalho não está sendo bem feito. |
@@ -52,7 +52,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Ocupação:| Designer de interiores e empresaria. |
 |Aplicativos:| WhatsApp, Instagram, TikTok. |
 |Motivações |  Crescer sua empresa e maximizar seus lucros.  |
-|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada. |
+|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada.     |
 |Hobbies | Academia, Maquiagem. |
 
 ## Histórias de Usuários
@@ -62,7 +62,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`         |PARA ... `MOTIVO/VALOR`                               |
 |--------------------|--------------------------------------------|------------------------------------------------------|
 |João Paiva         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
-|Ricardo Ornelas      |Estabelecer conexões com outros profissionais afim de tocar ideias sobre a execução dos serviços                           |Encontrar procedimentos visando otimizar o tempo total de uma obra|
+|Ricardo Ornelas      |Estabelecer conexões com outros profissionais afim de trocar ideias sobre a execução dos serviços                           |Encontrar procedimentos visando otimizar o tempo total de uma obra|
 |Gabriel Gamber        |Encontrar pessoas e estabelecimentos que buscam serviços de qualidade        |Ampliar suas experiências e obter mais resultados satisfatórios  |
 |Heloísa Pimenta       |Sentir satisfação ao ver pessoas que passaram sob seus cuidados recuperadas e com qualidade de vida           |Retribuição moral e pessoal
 |Maria Gomes        |Localizar mais pessoas necessitadas de cuidados específicos e atenção hospitalar          |Ajudar mais pessoas, obter mais experiências e contatos                  |
