@@ -8,19 +8,229 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+<table>
+  <tr>
+   <td width="1000" colspan="5" align="center">João Teixeira, 45 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189243307-9fd2fe0e-879c-4189-8f56-937bdee0decf.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Segurança de empresa privada e gesseiro.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook.<br>
+    ●	Instagram.<br>
+    ●	OLX.<br>
+    ●	WhatsApp.<br>
+   </td>
+   <td>
+    ●	Trabalhar visando proporcionar uma boa qualidade de vida para a família.
+   </td>
+   <td>
+    ●	Não conseguir entregar uma obra dentro do prazo.<br>
+    ●	Não encontrar clientes.	<br>
+   </td>
+   <td>
+    ●	Jogar futebol com amigos.<br>
+    ●	Passear com a família em parques e shoppings.<br>
+    ●	Pai presente e dedicado na criação dos filhos.<br>
+   </td>
+  </tr>
+   
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+   <tr>
+   <td width="1000" colspan="5" align="center">Jadson Mendes, 48 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="img/persona1"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Oficial de Manutenção Predial.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook.<br>
+    ●	Instagram.<br>
+    ●	WhatsApp.<br>
+   </td>
+   <td>
+    ●	Tornar-se excelência na prestação de seus serviços à comunidade.<br>
+    ●	Mudar de vida através do seu trabalho.<br>
+   </td>
+   <td>
+    ●	Não ser reconhecido pelos serviços prestados a um cliente.<br>
+    ●	Falta de tempo para passar com os familiares.	<br>
+   </td>
+   <td>
+    ●	Aprimorar o conhecimento em sua área de atuação.<br>
+    ●	Profissional dedicado e obcecado por resultados.<br>
+   </td>
+  </tr>
+    
+  <tr>
+   <td width="1000" colspan="5" align="center">Guilherme Prado, 21 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189245168-1616d4cf-3ade-4e78-88d8-16dbedf32ff6.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Técnico em Informática.</td>
+  <tr>
+   <td width="150" align="center">Aplicativos</td>
+   <td width="210" align="center">Motivações</td>
+   <td width="210" align="center">Frustrações</td>
+   <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Discord.<br>
+    ●	Facebook.<br>
+    ●	Instagram.<br>
+    ●	Reddit.<br>
+    ●	Twitch.<br>
+    ●	Twitter.<br>
+    ●	YouTube.<br>
+    ●	WhatsApp.<br>
+   </td>
+   <td>
+    ● Prestar ao cliente um serviço de excelência.<br>
+    ● Entregar ao cliente o resultado que ele mesmo gostaria de receber. <br>
+   </td>
+   <td>
+    ●	Tentar compreender a falta de conhecimento específico de um cliente.<br>
+    ●	Sentir que seu trabalho não está sendo bem feito.<br>
+   </td>
+   <td>
+    ●	Consumir conteúdo sobre tecnologia focado em hardware.<br>
+    ●	Jogar jogos online. <br>
+   </td>
+  </tr>
+ 
+  <tr>
+   <td width="1000" colspan="5" align="center">Karen Rocha, 27 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="img/persona4.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.</td>
+  <tr>
+   <td width="150" align="center">Aplicativos</td>
+   <td width="210" align="center">Motivações</td>
+   <td width="210" align="center">Frustrações</td>
+   <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook.<br>
+    ●	Instagram.<br>
+    ●	LinkedIn.<br>
+    ●	Telegram.<br>
+   </td>
+   <td>
+    ●	Cuidar das pessoas de forma séria e humana.<br>
+    ●	Crescer como profissional da saúde.<br>
+   </td>
+   <td>
+    ●	Tentar compreender a falta de conhecimento específico de um cliente.<br>
+    ●	Sentir que seu trabalho não está sendo bem feito.<br>
+   </td>
+   <td>
+    ●	Cuidar com a casa e animais de estimação.<br>
+    ●	Praticar exercícios físicos.<br>
+    ●	Aprofundar-se nos estudos de sua área de atuação.<br>
+   </td>
+  </tr>
+ 
+  <tr>
+   <td width="1000" colspan="5" align="center">Luiza Silva, 29 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="imga/persona5.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Designer de interiores e empresaria.</td>
+  <tr>
+   <td width="150" align="center">Aplicativos</td>
+   <td width="210" align="center">Motivações</td>
+   <td width="210" align="center">Frustrações</td>
+   <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ● Instagram.<br>
+    ● Linkedin.<br>
+    ●	TikTok.<br>
+    ●	Youtube.<br>
+   </td>
+   <td>
+    ●	Crescer sua empresa e maximizar seus lucros.<br>
+    ●	Terceirizar serviços.<br>
+   </td>
+   <td>
+    ●	Falta de resultados expressivos na busca de mão de obra qualificada.<br>
+    ●	Perda de tempo e de dinheiro ao não conseguir uma equipe qualificada para construir seus projetos.<br>
+   </td>
+   <td>
+    ●	Criar artes gráficas.<br>
+    ●	Maquiagem.<br>
+    ●	Redes sociais.<br>
+   </td>
+  </tr>
+    
+ 
+  <tr>
+   <td width="1000" colspan="5" align="center">Paulo Ribeiro, 37 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189246157-e34d4684-f8f0-495b-bbae-15892d6413bf.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Film Maker, Criador de conteudo.</td>
+ <tr>
+   <td width="150" align="center">Aplicativos</td>
+   <td width="210" align="center">Motivações</td>
+   <td width="210" align="center">Frustrações</td>
+   <td width="240" align="center">Hobbies, História</td>
+  </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Youtube.<br>
+    ●	Instagram.<br>
+    ●	LinkedIn.<br>
+    ●	Telegram.<br>
+    ●	Netflix.<br>
+    ●	Prime Video.<br>
+   </td>
+   <td>
+   ● Procura de staff qualificada para apoio em seus projetos.<br>
+   ●	Crescer suas mídias e aumentar o capital de investidores  para suas obras cinematográficas.<br>
+   </td>
+   <td>
+    ●	Sentir que um paciente não está satisfeito com seus cuidados.<br>
+    ●	Falta de oportunidades para iniciar sua carreira.<br>
+   </td>
+   <td>
+    ●	Cuidar com a casa e animais de estimação.<br>
+    ●	Aprofundar-se nos estudos de sua área de atuação.<br>
+   </td>
+   </tr>
+ 
+ </table>
 
 ## Histórias de Usuários
 
