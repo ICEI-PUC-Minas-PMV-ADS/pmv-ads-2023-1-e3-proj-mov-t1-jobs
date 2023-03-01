@@ -46,12 +46,13 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    </td>
   </tr>
    
-
+   
+   
    <tr>
    <td width="1000" colspan="5" align="center">Jadson Mendes, 48 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="../img/persona1.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/homem-de-meia-idade-alegre-de-pele-escura-e-sorriso-brilhante_273609-28538.jpg?w=1380&t=st=1677698168~exp=1677698768~hmac=3a42f33c249460ae5be7ee56f31a39cb549f7c0ec70f10b805be59dd6e159b29"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Oficial de Manutenção Predial.</td>
    <tr>
@@ -85,7 +86,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Guilherme Prado, 21 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189245168-1616d4cf-3ade-4e78-88d8-16dbedf32ff6.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg?w=996&t=st=1677697969~exp=1677698569~hmac=26279dd6ce6c88ff997b7bb167e94ea82e8fcf28ea2e8c16c799629f5be4ef8d"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Técnico em Informática.</td>
   <tr>
@@ -124,7 +125,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Karen Rocha, 27 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="../img/persona4.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/mulher-jovem-e-bonita-em-sueter-rosa-quente-aparencia-natural-sorridente-retrato-ligado-isolado-cabelo-comprido_285396-896.jpg?w=1380&t=st=1677698228~exp=1677698828~hmac=4fbbf32c8d55503e7bda98510b3769bc41b88ce008e1b7ee184921d6be3fa66d"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.</td>
   <tr>
@@ -160,7 +161,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Luiza Silva, 29 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="../imga/persona5.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189246145-eddeac65-4066-4842-8345-b2dc8eec0980.png"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Designer de interiores e empresaria.</td>
   <tr>
