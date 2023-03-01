@@ -10,228 +10,50 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-<table>
-  <tr>
-   <td width="1000" colspan="5" align="center">João Teixeira, 45 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189243307-9fd2fe0e-879c-4189-8f56-937bdee0decf.png"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Segurança de empresa privada e gesseiro.</td>
-   <tr>
-    <td width="150" align="center">Aplicativos</td>
-    <td width="210" align="center">Motivações</td>
-    <td width="210" align="center">Frustrações</td>
-    <td width="240" align="center">Hobbies, História</td>
-   </tr>
-  </tr>
-  <tr>
-   <td>
-    ●	Facebook.<br>
-    ●	Instagram.<br>
-    ●	OLX.<br>
-    ●	WhatsApp.<br>
-   </td>
-   <td>
-    ●	Trabalhar visando proporcionar uma boa qualidade de vida para a família.
-   </td>
-   <td>
-    ●	Não conseguir entregar uma obra dentro do prazo.<br>
-    ●	Não encontrar clientes.	<br>
-   </td>
-   <td>
-    ●	Jogar futebol com amigos.<br>
-    ●	Passear com a família em parques e shoppings.<br>
-    ●	Pai presente e dedicado na criação dos filhos.<br>
-   </td>
-  </tr>
-   
-   
-   
-   <tr>
-   <td width="1000" colspan="5" align="center">Jadson Mendes, 48 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/homem-de-meia-idade-alegre-de-pele-escura-e-sorriso-brilhante_273609-28538.jpg?w=1380&t=st=1677698168~exp=1677698768~hmac=3a42f33c249460ae5be7ee56f31a39cb549f7c0ec70f10b805be59dd6e159b29"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Oficial de Manutenção Predial.</td>
-   <tr>
-    <td width="150" align="center">Aplicativos</td>
-    <td width="210" align="center">Motivações</td>
-    <td width="210" align="center">Frustrações</td>
-    <td width="240" align="center">Hobbies, História</td>
-   </tr>
-  </tr>
-  <tr>
-   <td>
-    ●	Facebook.<br>
-    ●	Instagram.<br>
-    ●	WhatsApp.<br>
-   </td>
-   <td>
-    ●	Tornar-se excelência na prestação de seus serviços à comunidade.<br>
-    ●	Mudar de vida através do seu trabalho.<br>
-   </td>
-   <td>
-    ●	Não ser reconhecido pelos serviços prestados a um cliente.<br>
-    ●	Falta de tempo para passar com os familiares.	<br>
-   </td>
-   <td>
-    ●	Aprimorar o conhecimento em sua área de atuação.<br>
-    ●	Profissional dedicado e obcecado por resultados.<br>
-   </td>
-  </tr>
-    
-  <tr>
-   <td width="1000" colspan="5" align="center">Guilherme Prado, 21 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg?w=996&t=st=1677697969~exp=1677698569~hmac=26279dd6ce6c88ff997b7bb167e94ea82e8fcf28ea2e8c16c799629f5be4ef8d"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Técnico em Informática.</td>
-  <tr>
-   <td width="150" align="center">Aplicativos</td>
-   <td width="210" align="center">Motivações</td>
-   <td width="210" align="center">Frustrações</td>
-   <td width="240" align="center">Hobbies, História</td>
-   </tr>
-  </tr>
-  <tr>
-   <td>
-    ●	Discord.<br>
-    ●	Facebook.<br>
-    ●	Instagram.<br>
-    ●	Reddit.<br>
-    ●	Twitch.<br>
-    ●	Twitter.<br>
-    ●	YouTube.<br>
-    ●	WhatsApp.<br>
-   </td>
-   <td>
-    ● Prestar ao cliente um serviço de excelência.<br>
-    ● Entregar ao cliente o resultado que ele mesmo gostaria de receber. <br>
-   </td>
-   <td>
-    ●	Tentar compreender a falta de conhecimento específico de um cliente.<br>
-    ●	Sentir que seu trabalho não está sendo bem feito.<br>
-   </td>
-   <td>
-    ●	Consumir conteúdo sobre tecnologia focado em hardware.<br>
-    ●	Jogar jogos online. <br>
-   </td>
-  </tr>
- 
-  <tr>
-   <td width="1000" colspan="5" align="center">Karen Rocha, 27 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://img.freepik.com/fotos-gratis/mulher-jovem-e-bonita-em-sueter-rosa-quente-aparencia-natural-sorridente-retrato-ligado-isolado-cabelo-comprido_285396-896.jpg?w=1380&t=st=1677698228~exp=1677698828~hmac=4fbbf32c8d55503e7bda98510b3769bc41b88ce008e1b7ee184921d6be3fa66d"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.</td>
-  <tr>
-   <td width="150" align="center">Aplicativos</td>
-   <td width="210" align="center">Motivações</td>
-   <td width="210" align="center">Frustrações</td>
-   <td width="240" align="center">Hobbies, História</td>
-   </tr>
-  </tr>
-  <tr>
-   <td>
-    ●	Facebook.<br>
-    ●	Instagram.<br>
-    ●	LinkedIn.<br>
-    ●	Telegram.<br>
-   </td>
-   <td>
-    ●	Cuidar das pessoas de forma séria e humana.<br>
-    ●	Crescer como profissional da saúde.<br>
-   </td>
-   <td>
-    ●	Tentar compreender a falta de conhecimento específico de um cliente.<br>
-    ●	Sentir que seu trabalho não está sendo bem feito.<br>
-   </td>
-   <td>
-    ●	Cuidar com a casa e animais de estimação.<br>
-    ●	Praticar exercícios físicos.<br>
-    ●	Aprofundar-se nos estudos de sua área de atuação.<br>
-   </td>
-  </tr>
- 
-  <tr>
-   <td width="1000" colspan="5" align="center">Luiza Silva, 29 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189246145-eddeac65-4066-4842-8345-b2dc8eec0980.png"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Designer de interiores e empresaria.</td>
-  <tr>
-   <td width="150" align="center">Aplicativos</td>
-   <td width="210" align="center">Motivações</td>
-   <td width="210" align="center">Frustrações</td>
-   <td width="240" align="center">Hobbies, História</td>
-   </tr>
-  </tr>
-  <tr>
-   <td>
-    ● Instagram.<br>
-    ● Linkedin.<br>
-    ●	TikTok.<br>
-    ●	Youtube.<br>
-   </td>
-   <td>
-    ●	Crescer sua empresa e maximizar seus lucros.<br>
-    ●	Terceirizar serviços.<br>
-   </td>
-   <td>
-    ●	Falta de resultados expressivos na busca de mão de obra qualificada.<br>
-    ●	Perda de tempo e de dinheiro ao não conseguir uma equipe qualificada para construir seus projetos.<br>
-   </td>
-   <td>
-    ●	Criar artes gráficas.<br>
-    ●	Maquiagem.<br>
-    ●	Redes sociais.<br>
-   </td>
-  </tr>
-    
- 
-  <tr>
-   <td width="1000" colspan="5" align="center">Paulo Ribeiro, 37 anos.</td>
-  </tr>
-  <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/101372729/189246157-e34d4684-f8f0-495b-bbae-15892d6413bf.png"></td>
-   <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Film Maker, Criador de conteudo.</td>
- <tr>
-   <td width="150" align="center">Aplicativos</td>
-   <td width="210" align="center">Motivações</td>
-   <td width="210" align="center">Frustrações</td>
-   <td width="240" align="center">Hobbies, História</td>
-  </tr>
-  </tr>
-  <tr>
-   <td>
-    ●	Youtube.<br>
-    ●	Instagram.<br>
-    ●	LinkedIn.<br>
-    ●	Telegram.<br>
-    ●	Netflix.<br>
-    ●	Prime Video.<br>
-   </td>
-   <td>
-   ● Procura de staff qualificada para apoio em seus projetos.<br>
-   ●	Crescer suas mídias e aumentar o capital de investidores  para suas obras cinematográficas.<br>
-   </td>
-   <td>
-    ●	Sentir que um paciente não está satisfeito com seus cuidados.<br>
-    ●	Falta de oportunidades para iniciar sua carreira.<br>
-   </td>
-   <td>
-    ●	Cuidar com a casa e animais de estimação.<br>
-    ●	Aprofundar-se nos estudos de sua área de atuação.<br>
-   </td>
-   </tr>
- 
- </table>
+|Diego Lopes| ![alt text](/docs/img/persona1.png) |
+|-----------------------|-|
+|Idade:|35|
+|Ocupação:| Influencer digital |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify    |
+|Motivações | Possui um sonho de fazer publicidade de grandes marcas  |
+|Frustrações | Não ter condições de ter um celular de ponta para fazer seus vídeos com qualidade |
+|Hobbies | Gosta de ler, Ouvir música |
+
+|Melissa Soares| ![alt text](/docs/img/personas2.png) |
+|-----------------------|-|
+|Idade:|56|
+|Ocupação:| Publicitária em uma agência em período integral |
+|Aplicativos:| WhatsApp, Facebook, Instagram |
+|Motivações | Gostaria de morar em outro país para conhecer novas culturas, Seus filhos são seu tesouro   |
+|Frustrações | Gostaria de trocar seu aparelho, mas não sabe aonde vender |
+|Hobbies | Gosta de cuidar de suas plantas, Faz natação |
+
+|Lucas Simão|  ![alt text](/docs/img/personas3.png) |
+|-----------------------|-|
+|Idade:|15|
+|Ocupação:| Estudante do ensino médio |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify    |
+|Motivações | Espera um dia ser jogador profissional de free fire, Encontrar seus amigos a noite para conversas divertidas  |
+|Frustrações | Por jogar tanto no celular, a bateria acaba sendo prejudicada e por esse motivo ele sempre precisa comprar um aparelho novo, gastando muito dinheiro sempre |
+|Hobbies | Andar de skate , Assistir TV  |
+
+|Elisa Andrade| ![alt text](/docs/img/personas4.png) |
+|-----------------------|-|
+|Idade:|75|
+|Ocupação:| Dona de casa, aposentada. Criou seus 2 filhos e agora curte seus netos e seu jardim |
+|Aplicativos:| WhatsApp |
+|Motivações | Seus netos são muito preciosos para ela, Encontrar alguns amigos para jogar xadrez |
+|Frustrações | Por seus netos não morarem na mesma cidade, só conseguem se falar por vídeo chamada, Gostaria de trocar de celular para obter um com uma câmera melhor |
+|Hobbies | Gosta de ler, Jogar Xadrez |
+
+|Sergio Souza | ![alt text](/docs/img/personas5.png) |
+|-----------------------|-|
+|Idade:|55|
+|Ocupação:| Analista de compras em uma startup que assessora vendas de roupa em atacado |
+|Aplicativos:| WhatsApp, Facebook |
+|Motivações |  Viajar ao mundo com sua esposa e conhecer novas culturas  |
+|Frustrações | Sua empresa precisa diminuir custos com despesas de celulares corporativos para seus funcionários |
+|Hobbies | Academia, Jogar tênis |
 
 ## Histórias de Usuários
 
