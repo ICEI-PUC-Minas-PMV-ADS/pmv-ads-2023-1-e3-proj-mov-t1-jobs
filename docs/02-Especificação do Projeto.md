@@ -10,50 +10,50 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-|Diego Lopes| ![alt text](/docs/img/persona1.png) |
+|João Paiva| ![alt text](/docs/img/persona1.png) |
 |-----------------------|-|
-|Idade:|35|
-|Ocupação:| Influencer digital |
-|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify    |
-|Motivações | Possui um sonho de fazer publicidade de grandes marcas  |
-|Frustrações | Não ter condições de ter um celular de ponta para fazer seus vídeos com qualidade |
+|Idade:|41|
+|Ocupação:| Segurança de empresa privada e gesseiro. |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify.  |
+|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família.  |
+|Frustrações | Não conseguir entregar uma obra dentro do prazo. |
 |Hobbies | Gosta de ler, Ouvir música |
 
-|Melissa Soares| ![alt text](/docs/img/personas2.png) |
+|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
 |-----------------------|-|
-|Idade:|56|
-|Ocupação:| Publicitária em uma agência em período integral |
-|Aplicativos:| WhatsApp, Facebook, Instagram |
-|Motivações | Gostaria de morar em outro país para conhecer novas culturas, Seus filhos são seu tesouro   |
-|Frustrações | Gostaria de trocar seu aparelho, mas não sabe aonde vender |
-|Hobbies | Gosta de cuidar de suas plantas, Faz natação |
+|Idade:|39|
+|Ocupação:| Film Maker, Criador de conteúdo. |
+|Aplicativos:| WhatsApp, Facebook, Instagram. |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.   |
+|Frustrações | Falta de oportunidades para iniciar sua carreira. |
+|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
 
-|Lucas Simão|  ![alt text](/docs/img/personas3.png) |
+|Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
 |-----------------------|-|
-|Idade:|15|
-|Ocupação:| Estudante do ensino médio |
-|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify    |
-|Motivações | Espera um dia ser jogador profissional de free fire, Encontrar seus amigos a noite para conversas divertidas  |
-|Frustrações | Por jogar tanto no celular, a bateria acaba sendo prejudicada e por esse motivo ele sempre precisa comprar um aparelho novo, gastando muito dinheiro sempre |
-|Hobbies | Andar de skate , Assistir TV  |
+|Idade:|22|
+|Ocupação:| Técnico em Informática. |
+|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify, Twitch, Youtube, Discord  |
+|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.  |
+|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
+|Hobbies | Assistir séries , jogar jogos online |
 
-|Elisa Andrade| ![alt text](/docs/img/personas4.png) |
+|Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
 |-----------------------|-|
-|Idade:|75|
-|Ocupação:| Dona de casa, aposentada. Criou seus 2 filhos e agora curte seus netos e seu jardim |
-|Aplicativos:| WhatsApp |
-|Motivações | Seus netos são muito preciosos para ela, Encontrar alguns amigos para jogar xadrez |
-|Frustrações | Por seus netos não morarem na mesma cidade, só conseguem se falar por vídeo chamada, Gostaria de trocar de celular para obter um com uma câmera melhor |
-|Hobbies | Gosta de ler, Jogar Xadrez |
+|Idade:|25|
+|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem. |
+|Aplicativos:| WhatsApp, Instagram, TikTok, Youtube. |
+|Motivações | Crescer como profissional da saúde. |
+|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
+|Hobbies | Praticar exercícios físicos, ler. |
 
-|Sergio Souza | ![alt text](/docs/img/personas5.png) |
+|Maria Gomes | ![alt text](/docs/img/persona5.png) |
 |-----------------------|-|
-|Idade:|55|
-|Ocupação:| Analista de compras em uma startup que assessora vendas de roupa em atacado |
-|Aplicativos:| WhatsApp, Facebook |
-|Motivações |  Viajar ao mundo com sua esposa e conhecer novas culturas  |
-|Frustrações | Sua empresa precisa diminuir custos com despesas de celulares corporativos para seus funcionários |
-|Hobbies | Academia, Jogar tênis |
+|Idade:|24|
+|Ocupação:| Designer de interiores e empresaria. |
+|Aplicativos:| WhatsApp, Instagram, TikTok. |
+|Motivações |  Crescer sua empresa e maximizar seus lucros.  |
+|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada. |
+|Hobbies | Academia, Maquiagem. |
 
 ## Histórias de Usuários
 
