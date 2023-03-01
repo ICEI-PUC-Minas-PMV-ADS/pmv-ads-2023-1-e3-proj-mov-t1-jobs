@@ -102,8 +102,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O usuário deve conseguir cadastrar uma conta na aplicação móvel | ALTA | 
+|RF-002| O usuário cadastrado deve conseguir fazer o login em sua conta   | ALTA |
+|RF-003| O usuário cadastrado deve conseguir publicar serviços na aplicação móvel   | MÉDIA |
+|RF-004| O usuário deve conseguir    | ALTA |
 
 ### Requisitos não Funcionais
 
