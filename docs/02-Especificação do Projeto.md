@@ -51,7 +51,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Jadson Mendes, 48 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="img/persona1"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="../img/persona1.png"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Oficial de Manutenção Predial.</td>
    <tr>
@@ -124,7 +124,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Karen Rocha, 27 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="img/persona4.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="../img/persona4.png"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.</td>
   <tr>
@@ -160,7 +160,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    <td width="1000" colspan="5" align="center">Luiza Silva, 29 anos.</td>
   </tr>
   <tr>
-   <td width="200" align="center" height="200" rowspan="3"><img src="imga/persona5.png"></td>
+   <td width="200" align="center" height="200" rowspan="3"><img src="../imga/persona5.png"></td>
    <td width="150" align="center">Ocupação</td>
    <td colspan="3">Designer de interiores e empresaria.</td>
   <tr>
