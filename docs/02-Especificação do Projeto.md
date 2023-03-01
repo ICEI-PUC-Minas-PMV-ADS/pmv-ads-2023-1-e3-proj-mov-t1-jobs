@@ -14,8 +14,8 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |-----------------------|-|
 |Idade:|41|
 |Ocupação:| Segurança de empresa privada e gesseiro. |
-|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify.  |
-|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família.  |
+|Aplicativos:| WhatsApp, Instagram, LinkedIn, Aplicativos de bancos. |
+|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família. |
 |Frustrações | Não conseguir entregar uma obra dentro do prazo. |
 |Hobbies | Gosta de ler, Ouvir música |
 
@@ -24,7 +24,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Idade:|39|
 |Ocupação:| Film Maker, Criador de conteúdo. |
 |Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.   |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.     |
 |Frustrações | Falta de oportunidades para iniciar sua carreira. |
 |Hobbies | Aprimorar o conhecimento em sua área de atuação. |
 
@@ -32,7 +32,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |-----------------------|-|
 |Idade:|22|
 |Ocupação:| Técnico em Informática. |
-|Aplicativos:| WhatsApp, Facebook, Instagram, LinkedIn, Aplicativos de bancos, Spotify, Twitch, Youtube, Discord  |
+|Aplicativos:| WhatsApp, Instagram, Twitch, Youtube, Discord  |
 |Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.  |
 |Frustrações | Sentir que seu trabalho não está sendo bem feito. |
 |Hobbies | Assistir séries , jogar jogos online |
