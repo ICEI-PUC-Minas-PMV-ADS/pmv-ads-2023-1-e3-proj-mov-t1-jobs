@@ -1,24 +1,24 @@
-# TÍTULO DO PROJETO
+<img src="docs/img/Jobslogo1.png" width="850">
 
-`CURSO`
+# JOBS
 
-`DISCIPLINA`
+`Análise e Desenvolvimento de Sistemas`
 
-`SEMESTRE`
+`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
+
+`Terceiro semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
-## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+## Integrantes
+| [<img src="https://avatars.githubusercontent.com/u/103579574?v=4" width=115><br><sub>Vinicius Luiz </sub>](https://github.com/viniciussluiz) | [<img src="https://avatars.githubusercontent.com/u/103225086?v=4" width=115><br><sub>Leonardo Xavier </sub>](https://github.com/LeoXavier13) | [<img src="https://avatars.githubusercontent.com/u/100442612?v=4" width=115><br><sub>Alisson Carvalho</sub>](https://github.com/alessaocarvalho) | [<img src="https://avatars.githubusercontent.com/u/90863834?v=4" width=115><br><sub>Crislaine Medeiros</sub>](https://github.com/MedeirosCris) |
+| :---: | :---: | :---: | :---: |
 
 ## Orientador
 
-* Nome completo do professor 1
-
+| [<img src="https://avatars.githubusercontent.com/u/80125344?v=4" width=115><br><sub>Will Machado</sub>](https://github.com/willrsmachado) |
+| :---: |
 ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.

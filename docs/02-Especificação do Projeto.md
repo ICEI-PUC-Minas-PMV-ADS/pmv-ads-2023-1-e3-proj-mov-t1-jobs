@@ -1,44 +1,69 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foram consolidados com a participação dos usuários em um trabalho de imersão feita pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. Os detalhes levantados nesse processo foram afirmados na forma de personas e histórias de usuários
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+|João Paiva| ![alt text](/docs/img/persona1.png) |
+|-----------------------|-|
+|Idade:|41|
+|Ocupação:| Segurança de empresa privada e gesseiro. |
+|Aplicativos:| WhatsApp, Instagram, LinkedIn, Aplicativos de bancos. |
+|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família. |
+|Frustrações | Não conseguir entregar uma obra dentro do prazo. |
+|Hobbies | Gosta de ler, Ouvir música |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
+|-----------------------|-|
+|Idade:|39|
+|Ocupação:| Film Maker, Criador de conteúdo. |
+|Aplicativos:| WhatsApp, Facebook, Instagram. |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
+|Frustrações | Falta de oportunidades para iniciar sua carreira. |
+|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
+
+|Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
+|-----------------------|-|
+|Idade:|22|
+|Ocupação:| Técnico em Informática. |
+|Aplicativos:| WhatsApp, Instagram, Twitch, Youtube, Discord  |
+|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
+|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
+|Hobbies | Assistir séries , jogar jogos online |
+
+|Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
+|-----------------------|-|
+|Idade:|25|
+|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.  |
+|Aplicativos:| WhatsApp, Instagram, TikTok, Youtube. |
+|Motivações | Crescer como profissional da saúde. |
+|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
+|Hobbies | Praticar exercícios físicos, ler. |
+
+|Maria Gomes | ![alt text](/docs/img/persona5.png) |
+|-----------------------|-|
+|Idade:|24|
+|Ocupação:| Designer de interiores e empresaria. |
+|Aplicativos:| WhatsApp, Instagram, TikTok. |
+|Motivações |  Crescer sua empresa e maximizar seus lucros.  |
+|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada.     |
+|Hobbies | Academia, Maquiagem. |
+
+> - [Imagens das personas retiradas do site](https://br.freepik.com/)
 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`         |PARA ... `MOTIVO/VALOR`                               |
+|--------------------|--------------------------------------------|------------------------------------------------------|
+|João Paiva         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
+|Ricardo Ornelas      |Estabelecer conexões com outros profissionais afim de trocar ideias sobre a execução dos serviços                           |Encontrar procedimentos visando otimizar o tempo total de uma obra|
+|Gabriel Gamber        |Encontrar pessoas e estabelecimentos que buscam serviços de qualidade        |Ampliar suas experiências e obter mais resultados satisfatórios  |
+|Heloísa Pimenta       |Sentir satisfação ao ver pessoas que passaram sob seus cuidados recuperadas e com qualidade de vida           |Retribuição moral e pessoal
+|Maria Gomes        |Localizar mais pessoas necessitadas de cuidados específicos e atenção hospitalar          |Ajudar mais pessoas, obter mais experiências e contatos                  |
 
 ## Modelagem do Processo de Negócio 
 
@@ -79,45 +104,44 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O usuário deve conseguir cadastrar uma conta na aplicação móvel. | ALTA | 
+|RF-002| O usuário cadastrado deve conseguir fazer o login em sua conta.   | ALTA |
+|RF-003| O usuário deve conseguir editar informações do seu perfil.   | MÉDIA |
+|RF-004| O anunciante deve conseguir publicar serviços na aplicação móvel.   | ALTA |
+|RF-005| O anunciante deve conseguir informar valores do seu serviço.  | ALTA |
+|RF-006| O usuário deve conseguir buscar por serviços na aplicação.   | ALTA |
+|RF-007| O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante.   | MÉDIA |
+|RF-008| O anunciante deve conseguir decidir o meio de comunicação com o usuário referente ao serviço publicado. 	   | ALTA |
+|RF-009| O anunciante deve conseguir contratar serviço.	   | ALTA |
+|RF-010| A aplicação móvel deve notificar o anunciante sobre a solicitação de serviço.  | MÉDIA |
+|RF-011| O Anunciante deve conseguir rejeitar um serviço caso não queira executa-lo.  | ALTA |
+|RF-012| O Usuário deve conseguir avaliar e comentar nos serviços contratados da aplicação.  | BAIXA |
+|RF-013| O usuário deve conseguir ver as avaliações e comentários de clientes nos serviços.  | BAIXA |
+|RF-014| A aplicação móvel deve conter uma tela principal  | ALTA |
+|RF-015| A aplicação móvel deve conter tela de login  | ALTA |
+
+
 
 ### Requisitos não Funcionais
+Os requisitos não funcionais não estão relacionados diretamente com os serviços específicos do sistema oferecidos aos seus usuários. Eles estão relacionados com o nível de serviço esperado para o melhor funcionamento do software como um todo. O descritivo abaixo representa o escopo não funcional que a plataforma atenderá:
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001|A aplicação deve retornar os resultados da busca de serviços em até 5 segundos.  | ALTA | 
+|RNF-002|A aplicação deve verificar a disponibilidade do serviço requisitado pelo usuário antes de notificar o anunciante.   |  ALTA | 
+|RNF-03|A aplicação deve ter ícones representando visualmente as funcionalidades.  | MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01|A aplicação móvel deve ser feita apenas por membros do grupo do projeto.  |
+|RE-02|A aplicação móvel deve ser desenvolvida apenas utilizando React Native |
+|RE-03|O sistema deve ser responsivo |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
