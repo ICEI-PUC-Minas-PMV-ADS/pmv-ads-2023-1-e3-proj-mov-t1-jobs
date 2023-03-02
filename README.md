@@ -12,8 +12,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 
 ## Integrantes
-| [<img src="https://avatars.githubusercontent.com/u/103579574?v=4" width=115><br><sub>Vinicius Luiz </sub>](https://github.com/viniciussluiz) | [<img src="https://avatars.githubusercontent.com/u/103225086?v=4" width=115><br><sub>Leonardo Xavier </sub>](https://github.com/LeoXavier13) | [<img src="https://avatars.githubusercontent.com/u/100442612?v=4" width=115><br><sub>Alisson Carvalho</sub>](https://github.com/alessaocarvalho) |
-| :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/103579574?v=4" width=115><br><sub>Vinicius Luiz </sub>](https://github.com/viniciussluiz) | [<img src="https://avatars.githubusercontent.com/u/103225086?v=4" width=115><br><sub>Leonardo Xavier </sub>](https://github.com/LeoXavier13) | [<img src="https://avatars.githubusercontent.com/u/100442612?v=4" width=115><br><sub>Alisson Carvalho</sub>](https://github.com/alessaocarvalho) | [<img src="https://avatars.githubusercontent.com/u/90863834?v=4" width=115><br><sub>Crislaine Medeiros</sub>](https://github.com/MedeirosCris) |
+| :---: | :---: | :---: | :---: |
 
 ## Orientador
 
