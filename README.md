@@ -1,4 +1,4 @@
-![JOBS](Jobs.logo.png)
+<img src="docs/img/Jobslogo.png" width="200">
 
 # JOBS
 
