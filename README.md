@@ -13,7 +13,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 | [<img src="https://avatars.githubusercontent.com/u/103579574?v=4" width=115><br><sub>Vinicius Luiz </sub>](https://github.com/viniciussluiz) |
-| :---: | :---: | :---: | :---: | :---: |
+| :---: | 
 
 ## Orientador
 
