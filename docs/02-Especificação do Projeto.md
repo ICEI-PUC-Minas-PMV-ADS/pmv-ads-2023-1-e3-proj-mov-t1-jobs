@@ -51,6 +51,8 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada.     |
 |Hobbies | Academia, Maquiagem. |
 
+> - [Imagens das personas retiradas do site](https://br.freepik.com/)
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -102,47 +104,44 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O usuário deve conseguir cadastrar uma conta na aplicação móvel | ALTA | 
-|RF-002| O usuário cadastrado deve conseguir fazer o login em sua conta   | ALTA |
-|RF-003| O usuário cadastrado deve conseguir publicar serviços na aplicação móvel   | MÉDIA |
-|RF-004| O usuário deve conseguir    | ALTA |
+|RF-001| O usuário deve conseguir cadastrar uma conta na aplicação móvel. | ALTA | 
+|RF-002| O usuário cadastrado deve conseguir fazer o login em sua conta.   | ALTA |
+|RF-003| O usuário deve conseguir editar informações do seu perfil.   | MÉDIA |
+|RF-004| O anunciante deve conseguir publicar serviços na aplicação móvel.   | ALTA |
+|RF-005| O anunciante deve conseguir informar valores do seu serviço.  | ALTA |
+|RF-006| O usuário deve conseguir buscar por serviços na aplicação.   | ALTA |
+|RF-007| O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante.   | MÉDIA |
+|RF-008| O anunciante deve conseguir decidir o meio de comunicação com o usuário referente ao serviço publicado. 	   | ALTA |
+|RF-009| O anunciante deve conseguir contratar serviço.	   | ALTA |
+|RF-010| A aplicação móvel deve notificar o anunciante sobre a solicitação de serviço.  | MÉDIA |
+|RF-011| O Anunciante deve conseguir rejeitar um serviço caso não queira executa-lo.  | ALTA |
+|RF-012| O Usuário deve conseguir avaliar e comentar nos serviços contratados da aplicação.  | BAIXA |
+|RF-013| O usuário deve conseguir ver as avaliações e comentários de clientes nos serviços.  | BAIXA |
+|RF-014| A aplicação móvel deve conter uma tela principal  | ALTA |
+|RF-015| A aplicação móvel deve conter tela de login  | ALTA |
+
+
 
 ### Requisitos não Funcionais
+Os requisitos não funcionais não estão relacionados diretamente com os serviços específicos do sistema oferecidos aos seus usuários. Eles estão relacionados com o nível de serviço esperado para o melhor funcionamento do software como um todo. O descritivo abaixo representa o escopo não funcional que a plataforma atenderá:
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001|A aplicação deve retornar os resultados da busca de serviços em até 5 segundos.  | ALTA | 
+|RNF-002|A aplicação deve verificar a disponibilidade do serviço requisitado pelo usuário antes de notificar o anunciante.   |  ALTA | 
+|RNF-03|A aplicação deve ter ícones representando visualmente as funcionalidades.  | MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RE-01|A aplicação móvel deve ser feita apenas por membros do grupo do projeto.  |
+|RE-02|A aplicação móvel deve ser desenvolvida apenas utilizando React Native |
+|RE-03|O sistema deve ser responsivo |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
