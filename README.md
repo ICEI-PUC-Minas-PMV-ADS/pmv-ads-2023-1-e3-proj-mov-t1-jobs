@@ -1,4 +1,4 @@
-<img src="docs/img/Jobslogo1.png" width="600">
+<img src="docs/img/Jobslogo1.png" width="600" height="350">
 
 # JOBS
 
