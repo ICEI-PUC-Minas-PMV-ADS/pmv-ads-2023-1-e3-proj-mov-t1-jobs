@@ -182,7 +182,7 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 O gráfico abaixo é uma ferramenta utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico do cronograma](/docs/docs/img/Cronograma.png)
+![Gráfico do cronograma](/docs/img/Cronograma.png)
 
 ## Gerenciamento de Equipe
 
