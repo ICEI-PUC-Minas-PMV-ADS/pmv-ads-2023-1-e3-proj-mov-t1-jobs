@@ -8,7 +8,7 @@
 
 `Terceiro semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O Jobs vem para trazer oportunidade para profissionais autônomos que queiram divulgar com qualidade seu serviço. Ao mesmo tempo, trazendo praticidade e segurança para os contratantes.
 
 
 ## Integrantes
