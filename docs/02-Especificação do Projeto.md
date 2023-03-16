@@ -77,27 +77,23 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 ### Processo 1 – LOGIN DO USUÁRIO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
 ![Processo 1](img/jobs-processo1.png)
 
 ### Processo 2 – GERENCIAMENTO DO PERFIL
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
 ![Processo 2](img/jobs-processo2.png)
 
 ### Processo 3 – ANÚNCIO DE SERVIÇOS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
 ![Processo 3](img/jobs-processo3.png)
 
-### Processo 4 – SOLICITAÇÃO DE SERVIÇO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 4 – SOLICITAÇÃO DO CONTRATANTE
 
 ![Processo 4](img/jobs-processo4.png)
+
+### Processo 5 - SOLICITAÇÃO DE SERVIÇO
+
+![Processo 5](img/jobs-processo5.png)
 
 ## Indicadores de Desempenho
 
