@@ -61,6 +61,8 @@ A equipe está organizada da seguinte maneira:
 
 Para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, foi criado um quadro de backlogs no Projects do Github.
 
+![Planejamento](planejamento.png)
+
 
 ### Ferramentas
 
