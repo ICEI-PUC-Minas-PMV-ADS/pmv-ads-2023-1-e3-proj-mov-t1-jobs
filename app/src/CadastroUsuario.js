@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 
-export default function Principal({navigation}) {
-
-  const entrar = () => {
-    navigation.reset({
-        idex: 0,
-        routes: [{name: "Cadastro do usuário"}]
-    })
-  }
+export default function Principal() {
 
     return (
         <View>
