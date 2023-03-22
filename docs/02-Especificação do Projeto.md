@@ -75,17 +75,25 @@ Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o 
 
 Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – LOGIN DO USUÁRIO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+![Processo 1](img/jobs-processo1.png)
 
-![Processo 1](img/02-bpmn-proc1.png)
+### Processo 2 – GERENCIAMENTO DO PERFIL
 
-### Processo 2 – NOME DO PROCESSO
+![Processo 2](img/jobs-processo2.png)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 3 – ANÚNCIO DE SERVIÇOS
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 3](img/jobs-processo3.png)
+
+### Processo 4 – SOLICITAÇÃO DO CONTRATANTE
+
+![Processo 4](img/jobs-processo4.png)
+
+### Processo 5 - SOLICITAÇÃO DE SERVIÇO
+
+![Processo 5](img/jobs-processo5.png)
 
 ## Indicadores de Desempenho
 
@@ -147,14 +155,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+![Diagrama de Casos de Uso](/docs/img/DiagramaCasosdeUso.png)
 
 # Matriz de Rastreabilidade
 
