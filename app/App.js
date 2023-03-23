@@ -15,9 +15,6 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Principal" component={Principal} />
-      <Stack.Screen name="Cadastro do usuário" component={CadastroUsuario} />
-      <Stack.Screen name="Cadastro de serviços" component={CadastroServico} />
-      <Stack.Screen name="Buscar serviços" component={BuscarServicos} />
     </Stack.Navigator>
   );
 }
