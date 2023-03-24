@@ -4,7 +4,6 @@ Com o avanço da tecnologia e o crescimento social e humanístico que o mundo vi
 Pensando nesse dilema surge a criação da Jobs com a principal premissa de expor com qualidade e de forma personalizada serviços necessários a sociedade em um único lugar e principalmente aumentar a exposição e a oferta de serviços de trabalhadores autônomos.
  
 
-
 ## Problema
 
 No mercado há pouco espaço para que o profissional consiga visibilidade e cresça em expertise. Há dificuldade em praticar e expor seus conhecimentos e habilidades, mesmo que em projetos pequenos e temporários. Logo, vemos a necessidade de contratar uma mão de obra cujo tenha confiabilidade é meios de avalição perante ao serviço.
