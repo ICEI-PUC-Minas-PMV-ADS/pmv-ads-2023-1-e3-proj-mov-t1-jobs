@@ -22,7 +22,7 @@ export default function Principal({ navigation }) {
             color="white"
           />
         }
-        title=" Log in"
+        title=" Próxima página"
         onPress={() => entrar()}
       />
     </View>
