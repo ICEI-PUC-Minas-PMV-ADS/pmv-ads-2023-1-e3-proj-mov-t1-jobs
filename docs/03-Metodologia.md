@@ -12,7 +12,7 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 
 | AMBIENTE | PLATAFORMA | LINK DE ACESSO |
 | --- | --- | --- |
-| Repositório | GitHub |    link   |
+| Repositório | GitHub |    [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
 | Projeto de Interfaces |    |    |
 | Gerenciamento do Projeto|Projects - GitHub|     |
 | IDE|Visual Studio Code |   |
