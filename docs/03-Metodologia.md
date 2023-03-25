@@ -10,12 +10,13 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
 Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
-|AMBIENTE|PLATAFORMA|LINK DE ACESSO
-|Repositório|GitHub|       |
-|Projeto de Interfaces|   |    |
-|Gerenciamento do Projeto|Projects - GitHub|     |
-|IDE|Visual Studio Code|   |
-|Comunicação|Teams, Whatsapp|     |
+| AMBIENTE | PLATAFORMA | LINK DE ACESSO |
+| --- | --- | --- |
+| Repositório | GitHub |    link   |
+| Projeto de Interfaces |    |    |
+| Gerenciamento do Projeto|Projects - GitHub|     |
+| IDE|Visual Studio Code |   |
+| Comunicação|Teams, Whatsapp |     |
 
 ## Controle de Versão
 
