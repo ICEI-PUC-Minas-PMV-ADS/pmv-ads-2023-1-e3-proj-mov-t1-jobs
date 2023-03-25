@@ -1,14 +1,17 @@
-
 # Metodologia
-
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
 
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
 Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+
+| AMBIENTE | PLATAFORMA | LINK DE ACESSO |
+| --- | --- | --- |
+| Repositório | GitHub |    [Jobs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
+| Projeto de Interfaces |    |    |
+| Gerenciamento do Projeto|Projects - GitHub|   [Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247)  |
+| IDE|Visual Studio Code |  [VS Code](https://code.visualstudio.com/) |
+| Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e Whatsapp   |
 
 ## Controle de Versão
 
@@ -19,9 +22,8 @@ foi utilizado para hospedagem do repositório.
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- `develop`: versão instável já testada do software após commit pelos desenvolvedores
+- `develop---[nome do desenvolvedor]`: versão de desenvolvimento do software pelo colaborador
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
@@ -31,15 +33,8 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+Após os desenvolvedores efetuarem commit para aa branch "develop", o scrum master deve ser comunicado. Apenas o Scrum Master atualizará as funcionaliddes para a branch Main. Quanto às issues, cada um é responsável pela sua tarefa de iniciar, desenvolver e finalizar.
 
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 ## Gerenciamento de Projeto
 
