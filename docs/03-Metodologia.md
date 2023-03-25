@@ -8,7 +8,7 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 | AMBIENTE | PLATAFORMA | LINK DE ACESSO |
 | --- | --- | --- |
 | Repositório | GitHub |    [Jobs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
-| Projeto de Interfaces |    |    |
+| Projeto de Interfaces |  Miro  | [Miro](https://miro.com/welcomeonboard/NjBVcXhZTW1ZcnZrbFVMMW1vTll4aDB3REJycGVWYjNoaXBEM0MyTURzWEFtandlSFJVZzBSM3k5allvUDNiUHwzNDU4NzY0NTQ5ODg4MzY5NzY0fDI=?share_link_id=511224780292)   |
 | Gerenciamento do Projeto|Projects - GitHub|   [Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247)  |
 | IDE|Visual Studio Code |  [VS Code](https://code.visualstudio.com/) |
 | Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e Whatsapp   |
