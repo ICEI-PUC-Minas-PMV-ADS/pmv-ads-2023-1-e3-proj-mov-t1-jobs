@@ -12,11 +12,11 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 
 | AMBIENTE | PLATAFORMA | LINK DE ACESSO |
 | --- | --- | --- |
-| Repositório | GitHub |    [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
+| Repositório | GitHub |    [Jobs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
 | Projeto de Interfaces |    |    |
-| Gerenciamento do Projeto|Projects - GitHub|     |
-| IDE|Visual Studio Code |   |
-| Comunicação|Teams, Whatsapp |     |
+| Gerenciamento do Projeto|Projects - GitHub|   [Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247)  |
+| IDE|Visual Studio Code |  [VS Code](https://code.visualstudio.com/) |
+| Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e [Whatsapp](   |
 
 ## Controle de Versão
 
