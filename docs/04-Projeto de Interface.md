@@ -2,8 +2,7 @@
 # Projeto de Interface
 
 ## Diagrama de Fluxo
-
-![image](https://user-images.githubusercontent.com/103225086/227740056-26359df1-1be1-4f8a-86c1-f2ec969d74fb.png)
+![image](https://user-images.githubusercontent.com/103225086/227742092-6e3d5155-ad90-4a44-82b3-ed86da6cd960.png)
 
 ## Wireframes
 
