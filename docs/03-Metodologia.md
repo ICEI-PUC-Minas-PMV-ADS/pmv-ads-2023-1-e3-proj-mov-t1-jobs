@@ -35,6 +35,7 @@ etiquetas:
 
 Após os desenvolvedores efetuarem commit para aa branch "develop", o scrum master deve ser comunicado. Apenas o Scrum Master atualizará as funcionaliddes para a branch Main. Quanto às issues, cada um é responsável pela sua tarefa de iniciar, desenvolver e finalizar.
 
+Dessa maneira, o controle de versões será realizado pelo scrum master, que controlará a branch Main. Será seguido o versionamento semântico em que a descrição geral é "Maior.Menor.Pacote", em que Pacote são alterações para corrigir falhas, Menor quando há alteração, exclusão ou inclusão de funcionalidades sem alteração na API e Maior quando a atualização realizar mudanças incompatíveis na API.
 
 ## Gerenciamento de Projeto
 
