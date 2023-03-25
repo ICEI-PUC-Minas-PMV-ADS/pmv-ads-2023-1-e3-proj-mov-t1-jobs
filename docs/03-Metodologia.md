@@ -16,7 +16,7 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 | Projeto de Interfaces |    |    |
 | Gerenciamento do Projeto|Projects - GitHub|   [Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247)  |
 | IDE|Visual Studio Code |  [VS Code](https://code.visualstudio.com/) |
-| Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e [Whatsapp](   |
+| Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e Whatsapp   |
 
 ## Controle de Versão
 
