@@ -99,7 +99,7 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo.
 
-![Indicadores de Desempenho](img/indicadores.png)
+![Indicadores de Desempenho](/docs/img/indicadores.png)
 
 ## Requisitos
 
