@@ -6,5 +6,6 @@
 
 ## Wireframes
 
-![image](![image](https://user-images.githubusercontent.com/103579574/229178808-38750f8d-7489-4575-abd3-da9ef9c900f9.png)
+![image](https://user-images.githubusercontent.com/103579574/229179068-0d724718-4ff4-4626-a64c-bd03847d603e.png)
+
 )
