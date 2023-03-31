@@ -7,7 +7,7 @@ export default function Principal({ navigation }) {
   const entrar = () => {
     navigation.reset({
       idex: 0,
-      routes: [{ name: "Cadastro do usuário" }]
+      routes: [{ name: "Buscar" }]
     })
   }
 
