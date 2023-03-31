@@ -2,6 +2,7 @@
 # Projeto de Interface
 
 ## Diagrama de Fluxo
+
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
 ![diagrama-de-fluxo](https://user-images.githubusercontent.com/100442612/228654293-dcab5d57-c9b2-438a-bdd0-1f4b333b79b1.png)
