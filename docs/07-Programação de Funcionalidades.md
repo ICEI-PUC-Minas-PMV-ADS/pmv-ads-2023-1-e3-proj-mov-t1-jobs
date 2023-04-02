@@ -1,7 +1,9 @@
 # Programação de Funcionalidades
-
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
+
+
 ![image](https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png)
+
 ![image](https://user-images.githubusercontent.com/103579574/229380130-56c1e7f2-b802-4bf7-bb63-3ac57f29df1d.png)
 
 
