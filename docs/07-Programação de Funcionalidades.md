@@ -9,6 +9,7 @@ Tela App.js
 
 
 Tela Login (Vinicius)
+
 RF-001	O usuário deve conseguir cadastrar uma conta na aplicação móvel.
 RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
 
@@ -19,6 +20,7 @@ RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
 Vinicius: "Botão que leva à tela de cadastro para o caso do usuário que não tem uma conta e quer registrar-se, será inserido na tela de login. Além de funcionalidades para bloquear o login caso a senha ou e-mail estejam incorretos."
 
 Tela Principal (Leonardo Xavier)
+
 RF-006	O usuário deve conseguir buscar por serviços na aplicação.
 RF-014	A aplicação móvel deve conter uma tela principal. 
 
@@ -29,6 +31,7 @@ RF-014	A aplicação móvel deve conter uma tela principal. 
 Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços.
 
 Tela de Busca de Seriços (Alisson)
+
 RF-006	O usuário deve conseguir buscar por serviços na aplicação.	
 RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante.	
 
@@ -39,6 +42,7 @@ RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinad
 Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria. 
 
 Tela de Cadastro de serviços (Crislaine)
+
 RF-004	O anunciante deve conseguir publicar serviços na aplicação móvel.
 RF-005	O anunciante deve conseguir informar valores do seu serviço.
 
