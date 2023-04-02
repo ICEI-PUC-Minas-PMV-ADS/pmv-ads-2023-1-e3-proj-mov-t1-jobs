@@ -8,10 +8,10 @@ Tela App.js
 ![image](https://user-images.githubusercontent.com/103579574/229380130-56c1e7f2-b802-4bf7-bb63-3ac57f29df1d.png)
 
 
-Tela Login (Vinicius)
+## Tela Login (Vinicius)
 
-RF-001	O usuário deve conseguir cadastrar uma conta na aplicação móvel.
-RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
+-RF-001	O usuário deve conseguir cadastrar uma conta na aplicação móvel.
+-RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
 
 ![image](https://user-images.githubusercontent.com/103579574/229380469-93b1d739-1fc8-465a-96a9-ba28428871a1.png)
 
@@ -19,10 +19,10 @@ RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
 
 Vinicius: "Botão que leva à tela de cadastro para o caso do usuário que não tem uma conta e quer registrar-se, será inserido na tela de login. Além de funcionalidades para bloquear o login caso a senha ou e-mail estejam incorretos."
 
-Tela Principal (Leonardo Xavier)
+## Tela Principal (Leonardo Xavier)
 
-RF-006	O usuário deve conseguir buscar por serviços na aplicação.
-RF-014	A aplicação móvel deve conter uma tela principal. 
+-RF-006	O usuário deve conseguir buscar por serviços na aplicação.
+-RF-014	A aplicação móvel deve conter uma tela principal. 
 
 ![image](https://user-images.githubusercontent.com/103579574/229380866-ed578349-6c6c-43f9-9e5d-b9314f0a51a4.png)
 
@@ -30,10 +30,10 @@ RF-014	A aplicação móvel deve conter uma tela principal. 
 
 Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços.
 
-Tela de Busca de Seriços (Alisson)
+## Tela de Busca de Seriços (Alisson)
 
-RF-006	O usuário deve conseguir buscar por serviços na aplicação.	
-RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante.	
+-RF-006	O usuário deve conseguir buscar por serviços na aplicação.	
+-RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante.	
 
 ![image](https://user-images.githubusercontent.com/103579574/229380908-f84c46f8-52cc-4e95-93c2-63e4ac2f30ad.png)
 
@@ -41,10 +41,10 @@ RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinad
 
 Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria. 
 
-Tela de Cadastro de serviços (Crislaine)
+## Tela de Cadastro de serviços (Crislaine)
 
-RF-004	O anunciante deve conseguir publicar serviços na aplicação móvel.
-RF-005	O anunciante deve conseguir informar valores do seu serviço.
+-RF-004	O anunciante deve conseguir publicar serviços na aplicação móvel.
+-RF-005	O anunciante deve conseguir informar valores do seu serviço.
 
 ![image](https://user-images.githubusercontent.com/103579574/229380929-b508e7f0-3eef-46dd-8123-a1a0c4647ac0.png)
 
