@@ -32,7 +32,7 @@ Requisitos
 
 ![image](https://user-images.githubusercontent.com/103579574/229380050-a205b994-b1a6-4dfe-a32c-0e60261dcfb3.png)
 
-Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços.
+Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços."
 
 ## Tela de Busca de Seriços (Alisson)
 Requisitos 
@@ -45,7 +45,7 @@ Requisitos
 
 ![image](https://user-images.githubusercontent.com/103579574/229380089-681feb36-e95e-470a-86c4-4262acfe3924.png)
 
-Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria. 
+Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria." 
 
 ## Tela de Cadastro de serviços (Crislaine)
 Requisitos
