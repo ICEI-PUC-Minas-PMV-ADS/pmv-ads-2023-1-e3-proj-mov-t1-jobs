@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import { Button, Input, Text } from 'react-native-elements';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
@@ -19,8 +19,12 @@ export default function Login({navigation}) {
 
   return (
     <View style={[styles.container, specificStyle.specificContainer]}>
-      <Text h1>Fazer Login</Text>
-      <Input 
+      <Image
+      source={require('../assets/Jobslogo1.png')}
+      style={specificStyle.logo}
+      />
+      <Text h1 style={specificStyle.campos}>Fazer Login</Text>
+      <Input
         placeholder="E-mail"
         leftIcon={{ type: 'font-awesome', name: 'envelope' }}
         onChangeText={value => setEmail(value)}
@@ -33,9 +37,9 @@ export default function Login({navigation}) {
         secureTextEntry={true}
       />
 
-      <Button
+      <Button style={specificStyle.botao}
         icon={
-          <Icon
+          <Icon 
             name="arrow-right"
             size={15}
             color="white"
@@ -52,6 +56,18 @@ export default function Login({navigation}) {
 
 const specificStyle = StyleSheet.create({
   specificContainer: {
-    backgroundColor: "#F2BC1B"
+    backgroundColor: "#FEC619"
+  },
+  logo:{
+    marginTop: 60,
+    width: 400,
+    height: 200
+  },
+  campos:{
+    marginTop: 20,
+    marginBottom: 50
+  },
+  botao:{
+    marginTop: 20
   }
 })
