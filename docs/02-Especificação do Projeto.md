@@ -15,15 +15,6 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Frustrações | Não conseguir entregar uma obra dentro do prazo. |
 |Hobbies | Gosta de ler, Ouvir música |
 
-|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
-|-----------------------|-|
-|Idade:|39|
-|Ocupação:| Film Maker, Criador de conteúdo. |
-|Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
-|Frustrações | Falta de oportunidades para iniciar sua carreira. |
-|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
-
 |Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
 |-----------------------|-|
 |Idade:|22|
@@ -32,6 +23,15 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
 |Frustrações | Sentir que seu trabalho não está sendo bem feito. |
 |Hobbies | Assistir séries , jogar jogos online |
+
+|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
+|-----------------------|-|
+|Idade:|39|
+|Ocupação:| Film Maker, Criador de conteúdo. |
+|Aplicativos:| WhatsApp, Facebook, Instagram. |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
+|Frustrações | Falta de oportunidades para iniciar sua carreira. |
+|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
 
 |Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
 |-----------------------|-|
