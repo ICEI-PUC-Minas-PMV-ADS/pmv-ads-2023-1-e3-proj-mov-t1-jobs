@@ -16,7 +16,10 @@ export default function Login({navigation}) {
         routes: [{name: "Principal"}]
     })
   }
-
+  
+  const cadastrar = () => {
+    navigation.navigate("Cadastro")
+  }
   return (
     <View style={[styles.container, specificStyle.specificContainer]}>
       <Image
@@ -37,7 +40,7 @@ export default function Login({navigation}) {
         secureTextEntry={true}
       />
 
-      <Button style={specificStyle.botao}
+      <Button 
         icon={
           <Icon 
             name="arrow-right"
@@ -46,7 +49,21 @@ export default function Login({navigation}) {
           />
         }
         title=" Log in"
+        buttonStyle={specificStyle.button}
         onPress={() => entrar()}
+      />
+
+      <Button
+        icon={
+          <Icon 
+            name="user"
+            size={15}
+            color="white"
+          />
+        }
+        title=" Registre-se"
+        buttonStyle={specificStyle.button}
+        onPress={() => cadastrar()}
       />
 
 
@@ -67,7 +84,8 @@ const specificStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 50
   },
-  botao:{
-    marginTop: 20
+  button:{
+    width: "100%",
+    marginTop: 20,
   }
 })
