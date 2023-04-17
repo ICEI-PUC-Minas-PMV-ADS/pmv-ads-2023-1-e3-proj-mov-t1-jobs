@@ -1,4 +1,3 @@
-
 # Metodologia
 
 ## Relação de Ambientes de Trabalho
@@ -9,7 +8,7 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
 | AMBIENTE | PLATAFORMA | LINK DE ACESSO |
 | --- | --- | --- |
 | Repositório | GitHub |    [Jobs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs)   |
-| Projeto de Interfaces |    |    |
+| Projeto de Interfaces |  Miro  | [Miro](https://miro.com/welcomeonboard/NjBVcXhZTW1ZcnZrbFVMMW1vTll4aDB3REJycGVWYjNoaXBEM0MyTURzWEFtandlSFJVZzBSM3k5allvUDNiUHwzNDU4NzY0NTQ5ODg4MzY5NzY0fDI=?share_link_id=511224780292)   |
 | Gerenciamento do Projeto|Projects - GitHub|   [Project](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247)  |
 | IDE|Visual Studio Code |  [VS Code](https://code.visualstudio.com/) |
 | Comunicação|Teams, Whatsapp |  [Teams](https://www.microsoft.com/pt-br/microsoft-teams/log-in) e Whatsapp   |
@@ -34,51 +33,40 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
+Após os desenvolvedores efetuarem commit para aa branch "develop", o scrum master deve ser comunicado. Apenas o Scrum Master atualizará as funcionaliddes para a branch Main. Quanto às issues, cada um é responsável pela sua tarefa de iniciar, desenvolver e finalizar.
 
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+Dessa maneira, o controle de versões será realizado pelo scrum master, que controlará a branch Main. Será seguido o versionamento semântico em que a descrição geral é "Maior.Menor.Pacote", em que Pacote são alterações para corrigir falhas, Menor quando há alteração, exclusão ou inclusão de funcionalidades sem alteração na API e Maior quando a atualização realizar mudanças incompatíveis na API.
 
 ## Gerenciamento de Projeto
 
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento.
+
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+A equipe está organizada da seguinte maneira:
+- Scrum Master: Vinicius;
+- Product Owner: Alisson;
+- Equipe de Desenvolvimento: Leonardo;
+- Equipe de Design: Crislaine.
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Vinicius Luiz Alves de Oliveira;
-- Product Owner: Alisson Anderson de Carvalho;
-- Equipe de Desenvolvimento: Vinicius Luiz, Alisson Anderson, Leonardo Xavier, Crislaine Fernandes;
-- Equipe de Design: Crislaine Fernandes e Leonardo Xavier
+> **Links Úteis**:
+> - [Projeto Jobs: Divisão de Tarefas](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/247/views/1)
+
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, foi criado um quadro de backlogs no Projects do Github.
+
+![image](https://user-images.githubusercontent.com/103579574/229887118-3e3df3f4-53d6-414b-b1e0-3ffa476725fe.png)
+
 
 ### Ferramentas
 
-As ferramentas empregadas no projeto são:
+A equipe utilizará a plataforma Github para a construção do projeto e planejamento do código fonte. É também pelo Github que iremos criar os quadros de atividades específicas, roteiros abrangentes e checklists de versão.Na ferramenta Projects, a equipe realizará os fluxos de trabalho, personalizando-os conforme a necessidade. 
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
+> **Possíveis Ferramentas que  auxiliarão no gerenciamento**: 
 > - [Github](https://github.com/)
+> - [Visual Studio Code](https://code.visualstudio.com/)
+> - [React Native](https://callstack.github.io/react-native-paper/)
+> - [Expo.dev](https://expo.dev/)
+
