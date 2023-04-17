@@ -15,15 +15,6 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Frustrações | Não conseguir entregar uma obra dentro do prazo. |
 |Hobbies | Gosta de ler, Ouvir música |
 
-|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
-|-----------------------|-|
-|Idade:|39|
-|Ocupação:| Film Maker, Criador de conteúdo. |
-|Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
-|Frustrações | Falta de oportunidades para iniciar sua carreira. |
-|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
-
 |Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
 |-----------------------|-|
 |Idade:|22|
@@ -32,6 +23,15 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
 |Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
 |Frustrações | Sentir que seu trabalho não está sendo bem feito. |
 |Hobbies | Assistir séries , jogar jogos online |
+
+|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
+|-----------------------|-|
+|Idade:|39|
+|Ocupação:| Film Maker, Criador de conteúdo. |
+|Aplicativos:| WhatsApp, Facebook, Instagram. |
+|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
+|Frustrações | Falta de oportunidades para iniciar sua carreira. |
+|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
 
 |Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
 |-----------------------|-|
@@ -97,16 +97,18 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Apresente aqui os principais indicadores de desempenho e algumas metas para o processo.
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+![Indicadores de Desempenho](/docs/img/indicadores.png)
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, foi aplicada a técnica de priorização da Escala de Três Níveis, que busca delimitar o universo de possíveis valores desse atributo para tais possibilidades, de modo que a prioridade seja uniformizada e melhor entendida por todos do time.
+
+Foram estabelecidos os níveis de prioridade de acordo com os dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, capaz de criar prioridades que combinem esses aspectos.
+
+![image](https://user-images.githubusercontent.com/103579574/229512485-da1405c1-c007-4bb0-bffb-1f177a19beb3.png)
+
 
 ### Requisitos Funcionais
 
