@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Platform } from 'react-native';
 import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Button, CheckBox, Input, Text } from 'react-native-elements';
 import { TextInputMask } from 'react-native-masked-text';
 import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
+import usuarioService from '../services/UsuarioService';
 
 
 export default function Cadastro({navigation}) {
@@ -44,9 +46,23 @@ export default function Cadastro({navigation}) {
   }
 
   const salvar = () => {
-    if (validar()){
-      console.log("Salvou")
-    }
+      if (validar()){
+        let data = {
+          email: email,
+          cpf: cpf,
+          nome: nome,
+          telefone: telefone
+        }
+
+        usuarioService.cadastrar(data)
+        .then((response) => {
+          console.log(response)
+        })
+        .cath((error) => {
+          console.log(error)
+          console.log("Deu erro")
+        })
+      }
   }
   return (
     <KeyboardAvoidingView
