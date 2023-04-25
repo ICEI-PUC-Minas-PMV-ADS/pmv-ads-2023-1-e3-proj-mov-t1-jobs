@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Platform } from 'react-native';
 import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Button, CheckBox, Input, Text } from 'react-native-elements';
@@ -20,6 +20,7 @@ export default function Cadastro({navigation}) {
   const [errorNome, setErrorNome] = useState(null)
   const [errorCpf, setErrorCpf] = useState(null)
   const [errorTelefone, setErrorTelefone] = useState(null)
+  const [isLoading, setLoading] = useState(false)
 
   let cpfField = null
   let telefoneField = null
@@ -47,23 +48,28 @@ export default function Cadastro({navigation}) {
 
   const salvar = () => {
       if (validar()){
-        let data = {
-          email: email,
-          cpf: cpf,
-          nome: nome,
-          telefone: telefone
-        }
+        setLoading(true)
 
-        usuarioService.cadastrar(data)
-        .then((response) => {
-          console.log(response)
-        })
-        .cath((error) => {
-          console.log(error)
-          console.log("Deu erro")
-        })
-      }
-  }
+          let data = {
+            nome: nome,
+            email: email,
+            cpf: cpf,
+            telefone: telefone
+          }
+
+          usuarioService.cadastrar(data)
+          .then((response) => {
+            setLoading(false)
+            console.log(response.data)
+          })
+          .catch((error) => {
+            setLoading(false)
+            console.log(error)
+            console.log("Deu erro")
+          })
+        }
+    }
+
   return (
     <KeyboardAvoidingView
     behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -128,6 +134,12 @@ export default function Cadastro({navigation}) {
             checked={isSelected}
             onPress={() => setSelected(!isSelected)}
         />
+
+        { isLoading&&
+        <Text>Carregando...</Text>
+        }
+        
+        { !isLoading &&
         <Button
           icon={
             <Icon
@@ -140,6 +152,7 @@ export default function Cadastro({navigation}) {
           buttonStyle={specificStyle.button}
           onPress={() => salvar()}
         />
+}
       </ScrollView>
     </KeyboardAvoidingView>
   );

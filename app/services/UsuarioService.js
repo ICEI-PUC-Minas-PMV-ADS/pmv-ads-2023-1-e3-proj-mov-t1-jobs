@@ -4,7 +4,7 @@ class UsuarioService{
 
     async cadastrar(data){
         return axios({
-            url: "http://localhost:3000/cadastrar",
+            url: "http://192.168.100.37:3000/cadastrar",
             method: "POST",
             timeout: 5000,
             data: data, 
