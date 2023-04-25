@@ -15,7 +15,6 @@ export default function Cadastro({navigation}) {
   const [telefone, setTelefone] = useState(null)
   const [isSelected, setSelected] = useState(false)
   const [errorEmail, setErrorEmail] = useState(null)
-  const [errorNome, setErrorNome] = useState(null)
   const [errorCpf, setErrorCpf] = useState(null)
   const [errorTelefone, setErrorTelefone] = useState(null)
 
