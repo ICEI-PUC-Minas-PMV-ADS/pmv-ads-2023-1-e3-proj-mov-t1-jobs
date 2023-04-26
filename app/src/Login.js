@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import { Button, Input, Text } from 'react-native-elements';
+import { Input, Text } from 'react-native-elements';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
+import { Button } from '@rneui/themed';
 
 
 export default function Login({navigation}) {
@@ -26,7 +27,6 @@ export default function Login({navigation}) {
       source={require('../assets/Jobslogo1.png')}
       style={specificStyle.logo}
       />
-      <Text h1 style={specificStyle.campos}>Fazer Login</Text>
       <Input
         placeholder="E-mail"
         leftIcon={{ type: 'font-awesome', name: 'envelope' }}
@@ -40,29 +40,45 @@ export default function Login({navigation}) {
         secureTextEntry={true}
       />
 
-      <Button 
-        icon={
-          <Icon 
-            name="arrow-right"
-            size={15}
-            color="white"
-          />
-        }
-        title=" Log in"
-        buttonStyle={specificStyle.button}
+      <Button
+        title="LOG IN"
+        buttonStyle={{
+          backgroundColor: 'black',
+          borderWidth: 2,
+          borderColor: 'grey',
+          borderRadius: 30,
+        }}
+        containerStyle={{
+          width: 200,
+          marginHorizontal: 50,
+          marginVertical: 10,
+        }}
+        titleStyle={{ fontWeight: 'bold' }}
         onPress={() => entrar()}
-      />
+        />
 
       <Button
-        icon={
-          <Icon 
-            name="user"
-            size={15}
-            color="white"
-          />
-        }
-        title=" Registre-se"
-        buttonStyle={specificStyle.button}
+        title="REGISTRE-SE"
+        icon={{
+        name: 'user',
+        type: 'font-awesome',
+        size: 15,
+        color: 'white',
+        }}
+        iconRight
+        iconContainerStyle={{ marginLeft: 10 }}
+        titleStyle={{ fontWeight: '700' }}
+        buttonStyle={{
+          backgroundColor: 'rgba(199, 43, 98, 1)',
+          borderColor: 'transparent',
+          borderWidth: 0,
+          borderRadius: 30,
+        }}
+        containerStyle={{
+          width: 200,
+          marginHorizontal: 50,
+          marginVertical: 10,
+        }}
         onPress={() => cadastrar()}
       />
 
@@ -84,8 +100,5 @@ const specificStyle = StyleSheet.create({
     marginTop: 20,
     marginBottom: 50
   },
-  button:{
-    width: "100%",
-    marginTop: 20,
-  }
-})
+ }
+)
