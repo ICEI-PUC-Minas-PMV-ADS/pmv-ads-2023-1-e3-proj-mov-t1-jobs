@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Platform } from 'react-native';
+import { Alert, Platform } from 'react-native';
 import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Button, CheckBox, Input, Text } from 'react-native-elements';
 import { TextInputMask } from 'react-native-masked-text';
@@ -7,7 +7,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
-
 
 export default function Cadastro({navigation}) {
 
@@ -68,12 +67,12 @@ export default function Cadastro({navigation}) {
           usuarioService.cadastrar(data)
           .then((response) => {
             setLoading(false)
-            console.log(response.data)
+            const titulo = (response.data.status) ? "Sucesso" : "Erro"
+            Alert.alert(titulo, response.data.mensagem)
           })
           .catch((error) => {
             setLoading(false)
-            console.log(error)
-            console.log("Deu erro")
+            Alert.alert("Erro", "Houve um erro inesperado")
           })
         }
     }
@@ -168,7 +167,8 @@ export default function Cadastro({navigation}) {
           buttonStyle={specificStyle.button}
           onPress={() => salvar()}
         />
-}
+      }
+
       </ScrollView>
     </KeyboardAvoidingView>
   );
