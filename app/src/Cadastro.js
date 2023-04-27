@@ -95,7 +95,6 @@ export default function Cadastro({navigation}) {
         <Input
           placeholder="Nome"
           onChangeText={value => setNome(value)}
-          errorMessage={errorNome}
           />
         <View style={styles.containerMask}>
         <TextInputMask
