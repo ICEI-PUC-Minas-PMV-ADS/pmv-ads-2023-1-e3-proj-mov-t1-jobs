@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Input, Text } from 'react-native-elements';
+import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import { Button } from '@rneui/themed';
@@ -22,23 +23,28 @@ export default function Login({navigation}) {
     navigation.navigate("Cadastro")
   }
   return (
-    <View style={[styles.container, specificStyle.specificContainer]}>
-      <Image
-      source={require('../assets/Jobslogo1.png')}
-      style={specificStyle.logo}
-      />
-      <Input
-        placeholder="E-mail"
-        leftIcon={{ type: 'font-awesome', name: 'envelope' }}
-        onChangeText={value => setEmail(value)}
-        keyboardType="email-address"
-      />
-      <Input 
-        placeholder="Sua senha"
-        leftIcon={{ type: 'font-awesome', name: 'lock' }}
-        onChangeText={value => setPassword(value)}
-        secureTextEntry={true}
-      />
+      <KeyboardAvoidingView
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+      style={[styles.container, specificStyle.specificContainer]}
+      keyboardVerticalOffset={100}>
+        <ScrollView style={{width: "100%"}}>
+          <View style={[styles.container, specificStyle.specificContainer]}>
+          <Image
+          source={require('../assets/jobslogo.png')}
+          style={specificStyle.logo}
+          />
+          <Input style={[styles.input, specificStyle.specificContainer]}
+            placeholder="E-mail"
+            leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+            onChangeText={value => setEmail(value)}
+            keyboardType="email-address"
+          />
+          <Input style={[styles.input, specificStyle.specificContainer]}
+            placeholder="Sua senha"
+            leftIcon={{ type: 'font-awesome', name: 'lock' }}
+            onChangeText={value => setPassword(value)}
+            secureTextEntry={true}
+          />
 
       <Button
         title="LOG IN"
@@ -84,15 +90,17 @@ export default function Login({navigation}) {
 
 
     </View>
+    </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const specificStyle = StyleSheet.create({
   specificContainer: {
-    backgroundColor: "#FEC619"
+    backgroundColor: "#000"
   },
   logo:{
-    marginTop: 60,
+    marginTop: 180,
     width: 400,
     height: 200
   },

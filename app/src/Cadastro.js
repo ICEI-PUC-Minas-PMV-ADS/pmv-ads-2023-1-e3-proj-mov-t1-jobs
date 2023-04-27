@@ -83,7 +83,7 @@ export default function Cadastro({navigation}) {
     style={[styles.container, specificStyle.specificContainer]}
     keyboardVerticalOffset={80}>
       <ScrollView style={{width: "100%"}}>
-        <Text h1 style={specificStyle.campos}>Registre-se</Text>
+        <Text h1 style={specificStyle.titulo}>Registre-se</Text>
         <Input
           placeholder="E-mail"
           onChangeText={value => {
@@ -156,6 +156,7 @@ export default function Cadastro({navigation}) {
         
         { !isLoading &&
         <Button
+        title=" Salvar"
           icon={
             <Icon
               name="check"
@@ -163,8 +164,15 @@ export default function Cadastro({navigation}) {
               color="white"
             />
           }
-          title=" Salvar"
-          buttonStyle={specificStyle.button}
+          buttonStyle={{
+            backgroundColor: '#1E592B',
+            borderColor: 'white',
+          }}
+          containerStyle={{
+            width: '100%',
+            marginTop: 20,
+            alignContent: 'center'
+          }}
           onPress={() => salvar()}
         />
       }
@@ -176,10 +184,11 @@ export default function Cadastro({navigation}) {
 
 const specificStyle = StyleSheet.create({
   specificContainer: {
-    backgroundColor: "#FEC619",
+    backgroundColor: "#fff",
     padding: 10
   },
-  campos:{
+  titulo:{
+    fontWeight: 'bold',
     marginTop: 20,
     marginBottom: 50
   },
