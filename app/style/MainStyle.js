@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    input: {
+      color: 'white',
+      marginBottom: 5,
+      marginLeft: 10,
+      marginRight: 10,
+    },
     maskedInput: {
       flexGrow: 1,
       height: 40,

@@ -1,4 +1,4 @@
-<img src="docs/img/Jobslogo1.png" width="850">
+![image](https://user-images.githubusercontent.com/103579574/234741738-bacc0646-91a2-4f4e-9fee-ef552149328e.png)
 
 # JOBS
 
