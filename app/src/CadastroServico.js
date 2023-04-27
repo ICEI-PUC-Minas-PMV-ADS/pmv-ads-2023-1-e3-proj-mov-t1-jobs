@@ -68,7 +68,9 @@ const CadastroServicosForm = ({ navigation }) => {
           dddMask: '(99) ',
         }}
       />
-      <Button title="Cadastrar" onPress={handleCadastro} />
+      <TouchableOpacity style={styles.button} onPress={handleCadastro}>
+        <Text style={styles.buttonText}>Cadastrar</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -76,13 +78,27 @@ const CadastroServicosForm = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    backgroundColor: '#fff',
+    flex: 1,
   },
   input: {
     marginBottom: 16,
-    padding: 8,
+    padding: 12,
     borderWidth: 1,
     borderColor: '#000',
     borderRadius: 4,
+    fontSize: 16,
+  },
+  button: {
+    backgroundColor: '#007bff',
+    padding: 12,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
