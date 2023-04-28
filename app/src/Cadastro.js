@@ -19,6 +19,7 @@ export default function Cadastro({navigation}) {
   const [errorEmail, setErrorEmail] = useState(null)
   const [errorCpf, setErrorCpf] = useState(null)
   const [errorTelefone, setErrorTelefone] = useState(null)
+  const [errorNome, setErrorNome] = useState(null)
   const [errorSenha, setErrorSenha] = useState(null)
   const [isLoading, setLoading] = useState(false)
 
@@ -30,6 +31,7 @@ export default function Cadastro({navigation}) {
     setErrorEmail(null)
     setErrorCpf(null)
     setErrorSenha(null)
+    setErrorNome(null)
 
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if (!re.test(String(email).toLowerCase())){
@@ -48,6 +50,8 @@ export default function Cadastro({navigation}) {
       setErrorSenha("Preencha sua senha corretamente")
       error = true
     }
+    if (nome == null)
+      setErrorNome("Preencha seu nome")
     return !error
   }
 
