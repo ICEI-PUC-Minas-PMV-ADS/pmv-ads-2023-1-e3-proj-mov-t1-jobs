@@ -47,7 +47,7 @@ export default function Login({navigation}) {
           />
 
       <Button
-        title="LOG IN"
+        title="LOGIN"
         buttonStyle={{
           backgroundColor: 'black',
           borderWidth: 2,
@@ -64,7 +64,7 @@ export default function Login({navigation}) {
         />
 
       <Button
-        title="REGISTRE-SE"
+        title="REGISTRAR-SE"
         icon={{
         name: 'user',
         type: 'font-awesome',
