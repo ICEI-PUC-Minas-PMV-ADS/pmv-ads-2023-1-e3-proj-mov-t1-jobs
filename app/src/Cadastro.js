@@ -7,6 +7,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
+import {LinearGradient} from 'expo-linear-gradient';
 
 export default function Cadastro({navigation}) {
 
@@ -81,9 +82,9 @@ export default function Cadastro({navigation}) {
     }
 
   return (
+    <LinearGradient colors={['#E6E6EB', '#C9D6D1']} style={{flex:1, padding:10}}>
     <KeyboardAvoidingView
     behavior={Platform.OS == "ios" ? "padding" : "height"}
-    style={[styles.container, specificStyle.specificContainer]}
     keyboardVerticalOffset={80}>
       <ScrollView style={{width: "100%"}}>
         <Text h1 style={specificStyle.titulo}>Cadastro</Text>
@@ -182,14 +183,11 @@ export default function Cadastro({navigation}) {
 
       </ScrollView>
     </KeyboardAvoidingView>
+    </LinearGradient>
   );
 }
 
 const specificStyle = StyleSheet.create({
-  specificContainer: {
-    backgroundColor: "#fff",
-    padding: 10
-  },
   titulo:{
     fontWeight: 'bold',
     marginTop: 20,

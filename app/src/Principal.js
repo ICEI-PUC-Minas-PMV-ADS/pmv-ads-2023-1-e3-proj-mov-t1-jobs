@@ -3,12 +3,13 @@ import { Text, View, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 
 function Inicio() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <LinearGradient colors={['#081B39', '#051326', '#040F25']} style={{flex: 1, justifyContent: 'center', alignTtems: 'center'}}>
       <Text>Início!</Text>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -46,52 +47,52 @@ const Tab = createBottomTabNavigator();
 
 export default function Principal() {
   return (
-    <Tab.Navigator
-      initialRouteName="Início"
-      screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
-      }}
-    >
-      <Tab.Screen
-        name="Início"
-        component={Inicio}
-        options={{
-          tabBarLabel: 'Início',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
+      <Tab.Navigator
+        initialRouteName="Início"
+        screenOptions={{
+          tabBarActiveTintColor: '#000',
         }}
-      />
-      <Tab.Screen
-        name="Buscar Serviço"
-        component={BuscarServico}
-        options={{
-          tabBarLabel: 'Buscar Serviço',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="magnify" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Cadastrar Serviço"
-        component={CadastrarServico}
-        options={{
-          tabBarLabel: 'Cadastrar Serviço',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="plus" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Perfil"
-        component={Perfil}
-        options={{
-          tabBarLabel: 'Perfil',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
+      >
+        <Tab.Screen
+          name="Início"
+          component={Inicio}
+          options={{
+            tabBarLabel: 'Início',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Buscar Serviço"
+          component={BuscarServico}
+          options={{
+            tabBarLabel: 'Buscar Serviço',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="magnify" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Cadastrar Serviço"
+          component={CadastrarServico}
+          options={{
+            tabBarLabel: 'Cadastrar Serviço',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="plus" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{
+            tabBarLabel: 'Perfil',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="account" color={color} size={size} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
   );
 }
