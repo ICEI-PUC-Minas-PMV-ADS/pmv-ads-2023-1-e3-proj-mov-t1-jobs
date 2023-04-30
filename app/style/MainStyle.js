@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#FFFFFF',
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -32,7 +32,21 @@ const styles = StyleSheet.create({
       marginLeft: 15,
       color: "#f00",
       fontSize: 12
+    },
+    inputNumber: {
+      marginLeft: 10,
+      fontWeight: 'bold',
+      color: "#86919A",
+      fontSize: 16
+    },
+    headerCadastro: {
+      backgroundColor: '#BFBDB8',
+      marginBottom: 40,
+      height: 100,
+      borderBottomLeftRadius: 6,
+      borderBottomRightRadius: 6,
     }
+
     
   });
 

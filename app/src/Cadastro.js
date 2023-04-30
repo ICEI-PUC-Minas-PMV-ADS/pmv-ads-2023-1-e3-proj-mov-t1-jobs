@@ -7,7 +7,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
-import {LinearGradient} from 'expo-linear-gradient';
 
 export default function Cadastro({navigation}) {
 
@@ -82,14 +81,23 @@ export default function Cadastro({navigation}) {
     }
 
   return (
-    <LinearGradient colors={['#E6E6EB', '#C9D6D1']} style={{flex:1, padding:10}}>
     <KeyboardAvoidingView
     behavior={Platform.OS == "ios" ? "padding" : "height"}
-    keyboardVerticalOffset={80}>
+    style={[styles.container, specificStyle.specificContainer]}
+    keyboardVerticalOffset={85}>
       <ScrollView style={{width: "100%"}}>
+        <View style={styles.headerCadastro}>
         <Text h1 style={specificStyle.titulo}>Cadastro</Text>
+        </View>
         <Input
-          placeholder="E-mail"
+        label="Nome"
+          placeholder="Digite seu nome"
+          onChangeText={value => setNome(value)}
+          errorMessage={errorNome}
+          />
+        <Input
+        label="E-mail"
+          placeholder="Digite seu e-mail"
           onChangeText={value => {
             setEmail(value)
             setErrorEmail(null)
@@ -97,14 +105,10 @@ export default function Cadastro({navigation}) {
           keyboardType="email-address"
           errorMessage={errorEmail}
         />
-        <Input
-          placeholder="Nome"
-          onChangeText={value => setNome(value)}
-          errorMessage={errorNome}
-          />
+        <Text style={styles.inputNumber}>CPF</Text>
         <View style={styles.containerMask}>
         <TextInputMask
-          placeholder="CPF"
+          placeholder="Digite seu CPF"
           type={'cpf'}
           value={cpf}
           onChangeText={value => {
@@ -118,9 +122,10 @@ export default function Cadastro({navigation}) {
           />
         </View>
         <Text style={styles.errorMessage}>{errorCpf}</Text>
+        <Text style={styles.inputNumber}>Telefone</Text>
         <View style={styles.containerMask}>
         <TextInputMask
-          placeholder="Telefone"
+          placeholder="Digite seu telefone"
           type={'cel-phone'}
           options={{
             maskType: 'BRL',
@@ -136,9 +141,9 @@ export default function Cadastro({navigation}) {
           />
         </View>
         <Text style={styles.errorMessage}>{errorTelefone}</Text>
-
         <Input
-          placeholder="Senha"
+        label="Senha"
+          placeholder="Digite sua senha"
           onChangeText={value => setSenha(value)}
           errorMessage={errorSenha}
           secureTextEntry={true}
@@ -183,14 +188,18 @@ export default function Cadastro({navigation}) {
 
       </ScrollView>
     </KeyboardAvoidingView>
-    </LinearGradient>
   );
 }
 
 const specificStyle = StyleSheet.create({
+  specificContainer: {
+    flex: 1,
+    backgroundColor: '#EBEBEB'
+  },
   titulo:{
     fontWeight: 'bold',
-    marginTop: 20,
-    marginBottom: 50
-  }
+    color: '#63625F',
+    textAlign: 'center',
+    marginTop: 25,
+  },
 })
