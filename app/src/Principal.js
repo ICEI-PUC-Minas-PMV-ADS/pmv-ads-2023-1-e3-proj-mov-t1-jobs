@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 function Inicio() {
   return (
-    <LinearGradient colors={['#081B39', '#051326', '#040F25']} style={{flex: 1, justifyContent: 'center', alignTtems: 'center'}}>
+    <LinearGradient colors={['#010007', '#201337', '#24153A']} style={{flex: 1, justifyContent: 'center', alignTtems: 'center'}}>
       <Text>Início!</Text>
     </LinearGradient>
   );

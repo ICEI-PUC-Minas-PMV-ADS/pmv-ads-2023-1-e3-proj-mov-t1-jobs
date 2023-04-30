@@ -149,7 +149,7 @@ export default function Cadastro({navigation}) {
             checkedIcon="check"
             uncheckedIcon="square-o"
             checkedColor="green"
-            uncheckedColor="red"
+            uncheckedColor="black"
             checked={isSelected}
             onPress={() => setSelected(!isSelected)}
         />
