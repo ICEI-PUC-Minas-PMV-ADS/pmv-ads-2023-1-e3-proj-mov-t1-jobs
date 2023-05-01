@@ -7,6 +7,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default function Cadastro({navigation}) {
 
@@ -86,13 +87,14 @@ export default function Cadastro({navigation}) {
     style={[styles.container, specificStyle.specificContainer]}
     keyboardVerticalOffset={85}>
       <ScrollView style={{width: "100%"}}>
-        <View style={styles.headerCadastro}>
+        <View style={specificStyle.headerCadastro}>
         <Text h1 style={specificStyle.titulo}>Cadastro</Text>
         </View>
         <Input
         label="Nome"
           placeholder="Digite seu nome"
           onChangeText={value => setNome(value)}
+          color="#ffffff"
           errorMessage={errorNome}
           />
         <Input
@@ -102,19 +104,22 @@ export default function Cadastro({navigation}) {
             setEmail(value)
             setErrorEmail(null)
           }}
+          color="#ffffff"
           keyboardType="email-address"
           errorMessage={errorEmail}
         />
-        <Text style={styles.inputNumber}>CPF</Text>
+        <Text style={specificStyle.inputNumber}>CPF</Text>
         <View style={styles.containerMask}>
         <TextInputMask
           placeholder="Digite seu CPF"
+          placeholderTextColor="#777A8D"
           type={'cpf'}
           value={cpf}
           onChangeText={value => {
             setCpf(value)
             setErrorCpf(null)
           }}
+          color="#ffffff"
           keyboardType="number-pad"
           returnKeyType="done"
           style={styles.maskedInput}
@@ -122,10 +127,11 @@ export default function Cadastro({navigation}) {
           />
         </View>
         <Text style={styles.errorMessage}>{errorCpf}</Text>
-        <Text style={styles.inputNumber}>Telefone</Text>
+        <Text style={specificStyle.inputNumber}>Telefone</Text>
         <View style={styles.containerMask}>
         <TextInputMask
           placeholder="Digite seu telefone"
+          placeholderTextColor="#777A8D"
           type={'cel-phone'}
           options={{
             maskType: 'BRL',
@@ -134,6 +140,7 @@ export default function Cadastro({navigation}) {
           }}
           value={telefone}
           onChangeText={value => setTelefone(value)}
+          color="#ffffff"
           keyboardType="phone-pad"
           returnKeyType="done"
           style={styles.maskedInput}
@@ -145,6 +152,7 @@ export default function Cadastro({navigation}) {
         label="Senha"
           placeholder="Digite sua senha"
           onChangeText={value => setSenha(value)}
+          color="#ffffff"
           errorMessage={errorSenha}
           secureTextEntry={true}
           />
@@ -165,26 +173,32 @@ export default function Cadastro({navigation}) {
         
         { !isLoading &&
         <Button
-        title=" Salvar"
-          icon={
-            <Icon
-              name="check"
-              size={15}
-              color="white"
-            />
-          }
-          buttonStyle={{
-            backgroundColor: '#1E592B',
-            borderColor: 'white',
-          }}
-          containerStyle={{
-            width: '50%',
-            height: 80,
-            marginTop: 20,
+        title=" Salvar dados"
+          icon={{
+            name: 'check',
+            size: 20,
+            color: 'white',
+            }}
+            iconRight
+            iconContainerStyle={{ marginLeft: 10 }}
+            titleStyle={{ fontWeight: '800' }}
+            buttonStyle={{
+              backgroundColor: '#44BD72',
+              borderColor: 'transparent',
+              borderWidth: 0,
+              borderRadius: 10,
+            }}
+            containerStyle={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: 20,
+          
           }}
           onPress={() => salvar()}
         />
       }
+
 
       </ScrollView>
     </KeyboardAvoidingView>
@@ -194,12 +208,25 @@ export default function Cadastro({navigation}) {
 const specificStyle = StyleSheet.create({
   specificContainer: {
     flex: 1,
-    backgroundColor: '#EBEBEB'
+    backgroundColor: '#1F1930'
   },
   titulo:{
     fontWeight: 'bold',
     color: '#63625F',
     textAlign: 'center',
     marginTop: 25,
+  },
+  inputNumber: {
+    marginLeft: 10,
+    fontWeight: 'bold',
+    color: "#86919A",
+    fontSize: 16
+  },
+  headerCadastro: {
+    backgroundColor: '#BFBDB8',
+    marginBottom: 40,
+    height: 100,
+    borderBottomLeftRadius: 6,
+    borderBottomRightRadius: 6,
   },
 })
