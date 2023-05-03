@@ -7,8 +7,6 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
-import { AppLoading } from 'expo';
-import * as Font from 'expo-font';
 
 export default function Cadastro({navigation}) {
 
@@ -235,7 +233,7 @@ const specificStyle = StyleSheet.create({
     
   },
   headerCadastro: {
-    backgroundColor: '#d1284f',
+    backgroundColor: '#278ED5',
     marginBottom: 40,
     height: 100,
     borderBottomLeftRadius: 6,

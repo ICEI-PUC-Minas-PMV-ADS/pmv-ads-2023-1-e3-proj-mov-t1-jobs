@@ -30,17 +30,19 @@ export default function Login({navigation}) {
         <ScrollView style={{width: "100%"}}>
           <View style={[styles.container, specificStyle.specificContainer]}>
           <Image
-          source={require('../assets/jobslogo.png')}
+          source={require('../assets/jobsLogo2.png')}
           style={specificStyle.logo}
           />
           <Input style={[styles.input, specificStyle.specificContainer]}
-            placeholder="E-mail"
+            placeholder="  E-mail"
+            placeholderTextColor="#000"
             leftIcon={{ type: 'font-awesome', name: 'envelope' }}
             onChangeText={value => setEmail(value)}
             keyboardType="email-address"
           />
           <Input style={[styles.input, specificStyle.specificContainer]}
-            placeholder="Sua senha"
+            placeholder="    Senha"
+            placeholderTextColor="#000"
             leftIcon={{ type: 'font-awesome', name: 'lock' }}
             onChangeText={value => setPassword(value)}
             secureTextEntry={true}
@@ -97,16 +99,14 @@ export default function Login({navigation}) {
 
 const specificStyle = StyleSheet.create({
   specificContainer: {
-    backgroundColor: "#000"
+    backgroundColor: "#278ED5",
+    padding: 10
   },
   logo:{
-    marginTop: 180,
+    marginTop: 150,
+    marginBottom: 30,
     width: 400,
     height: 200
-  },
-  campos:{
-    marginTop: 20,
-    marginBottom: 50
   },
  }
 )
