@@ -103,10 +103,10 @@ const specificStyle = StyleSheet.create({
     padding: 10
   },
   logo:{
-    marginTop: 150,
-    marginBottom: 30,
-    width: 400,
-    height: 200
+    marginTop: 180,
+    marginBottom: 10,
+    width: 600,
+    height: 200,
   },
  }
 )
