@@ -4,12 +4,13 @@ import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import styles from '../style/MainStyle';
 
 function Inicio() {
   return (
-    <LinearGradient colors={['#010007', '#201337', '#24153A']} style={{flex: 1, justifyContent: 'center', alignTtems: 'center'}}>
+    <View style={styles.containerHome}>
       <Text>Início!</Text>
-    </LinearGradient>
+    </View>
   );
 }
 

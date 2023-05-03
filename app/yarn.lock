@@ -1089,6 +1089,11 @@
   resolved "https://registry.npmjs.org/@expo-google-fonts/jost/-/jost-0.2.3.tgz"
   integrity sha512-KQfz/mlNMAPdLxz9ZtiItUND81U0mqGbd1pysKQicUuwd7ZlB1VI1aFiaQRajcYZ3tp7OTefCPDdSww0DSqi9A==
 
+"@expo-google-fonts/open-sans@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.npmjs.org/@expo-google-fonts/open-sans/-/open-sans-0.2.3.tgz"
+  integrity sha512-HjEue5908n2yTtNSo47lAN3UFi2sAp00u6E3tx9nSEr0P2SDFDjYgsA89nPaAYOyxDN0EPGtNTa2K/VUe3jgmA==
+
 "@expo/bunyan@^4.0.0", "@expo/bunyan@4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@expo/bunyan/-/bunyan-4.0.0.tgz"

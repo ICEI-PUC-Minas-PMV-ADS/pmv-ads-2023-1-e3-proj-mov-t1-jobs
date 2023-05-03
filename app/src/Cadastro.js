@@ -7,7 +7,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import usuarioService from '../services/UsuarioService';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
 
 export default function Cadastro({navigation}) {
 
@@ -84,31 +85,33 @@ export default function Cadastro({navigation}) {
   return (
     <KeyboardAvoidingView
     behavior={Platform.OS == "ios" ? "padding" : "height"}
-    style={[styles.container, specificStyle.specificContainer]}
+    style={[styles.container]}
     keyboardVerticalOffset={85}>
       <ScrollView style={{width: "100%"}}>
         <View style={specificStyle.headerCadastro}>
         <Text h1 style={specificStyle.titulo}>Cadastro</Text>
         </View>
+        <View style={styles.container}>
+        <View style={styles.formContainer}>
         <Input
-        label="Nome"
+          label="Nome"
           placeholder="Digite seu nome"
           onChangeText={value => setNome(value)}
-          color="#ffffff"
           errorMessage={errorNome}
+          style={styles.input}
           />
         <Input
-        label="E-mail"
+          label="E-mail"
           placeholder="Digite seu e-mail"
           onChangeText={value => {
             setEmail(value)
             setErrorEmail(null)
           }}
-          color="#ffffff"
           keyboardType="email-address"
           errorMessage={errorEmail}
+          style={styles.input}
         />
-        <Text style={specificStyle.inputNumber}>CPF</Text>
+        <Text style={specificStyle.inputLabelNumber}>CPF</Text>
         <View style={styles.containerMask}>
         <TextInputMask
           placeholder="Digite seu CPF"
@@ -119,7 +122,6 @@ export default function Cadastro({navigation}) {
             setCpf(value)
             setErrorCpf(null)
           }}
-          color="#ffffff"
           keyboardType="number-pad"
           returnKeyType="done"
           style={styles.maskedInput}
@@ -127,10 +129,11 @@ export default function Cadastro({navigation}) {
           />
         </View>
         <Text style={styles.errorMessage}>{errorCpf}</Text>
-        <Text style={specificStyle.inputNumber}>Telefone</Text>
+        <Text style={specificStyle.inputLabelNumber}>Telefone</Text>
         <View style={styles.containerMask}>
         <TextInputMask
           placeholder="Digite seu telefone"
+          backgroundColor="white"
           placeholderTextColor="#777A8D"
           type={'cel-phone'}
           options={{
@@ -140,7 +143,6 @@ export default function Cadastro({navigation}) {
           }}
           value={telefone}
           onChangeText={value => setTelefone(value)}
-          color="#ffffff"
           keyboardType="phone-pad"
           returnKeyType="done"
           style={styles.maskedInput}
@@ -149,10 +151,9 @@ export default function Cadastro({navigation}) {
         </View>
         <Text style={styles.errorMessage}>{errorTelefone}</Text>
         <Input
-        label="Senha"
+          label="Senha"
           placeholder="Digite sua senha"
           onChangeText={value => setSenha(value)}
-          color="#ffffff"
           errorMessage={errorSenha}
           secureTextEntry={true}
           />
@@ -198,7 +199,8 @@ export default function Cadastro({navigation}) {
           onPress={() => salvar()}
         />
       }
-
+        </View>
+        </View>
 
       </ScrollView>
     </KeyboardAvoidingView>
@@ -208,25 +210,35 @@ export default function Cadastro({navigation}) {
 const specificStyle = StyleSheet.create({
   specificContainer: {
     flex: 1,
-    backgroundColor: '#1F1930'
+    backgroundColor: '#AFB7A0'
   },
   titulo:{
     fontWeight: 'bold',
-    color: '#63625F',
+    color: 'white',
     textAlign: 'center',
-    marginTop: 25,
+    marginTop: 50,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.50,
+    shadowRadius: 4.84,
+    elevation: 5,
   },
-  inputNumber: {
+  inputLabelNumber: {
     marginLeft: 10,
+    marginRight: 10,
     fontWeight: 'bold',
     color: "#86919A",
-    fontSize: 16
+    fontSize: 16,
+    
   },
   headerCadastro: {
-    backgroundColor: '#BFBDB8',
+    backgroundColor: '#d1284f',
     marginBottom: 40,
     height: 100,
     borderBottomLeftRadius: 6,
     borderBottomRightRadius: 6,
-  },
+  }
 })
