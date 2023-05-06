@@ -33,17 +33,17 @@ export default function Login({navigation}) {
           source={require('../assets/jobsLogo2.png')}
           style={specificStyle.logo}
           />
-          <Input style={[styles.input, specificStyle.specificContainer]}
+          <Input style={[specificStyle.inputLogin, specificStyle.specificContainer]}
             placeholder="  E-mail"
-            placeholderTextColor="#000"
-            leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+            placeholderTextColor="white"
+            leftIcon={{ type: 'font-awesome', name: 'envelope', color: 'white' }}
             onChangeText={value => setEmail(value)}
             keyboardType="email-address"
           />
-          <Input style={[styles.input, specificStyle.specificContainer]}
+          <Input style={[specificStyle.inputLogin, specificStyle.specificContainer]}
             placeholder="    Senha"
-            placeholderTextColor="#000"
-            leftIcon={{ type: 'font-awesome', name: 'lock' }}
+            placeholderTextColor="white"
+            leftIcon={{ type: 'font-awesome', name: 'lock', color: 'white'}}
             onChangeText={value => setPassword(value)}
             secureTextEntry={true}
           />
@@ -100,7 +100,8 @@ export default function Login({navigation}) {
 const specificStyle = StyleSheet.create({
   specificContainer: {
     backgroundColor: "#278ED5",
-    padding: 10
+    padding: 10,
+    
   },
   logo:{
     marginTop: 180,
@@ -108,5 +109,10 @@ const specificStyle = StyleSheet.create({
     width: 600,
     height: 200,
   },
+  inputLogin: {
+    flexGrow: 1,
+    height: 40,
+    color: 'white'
+  }
  }
 )

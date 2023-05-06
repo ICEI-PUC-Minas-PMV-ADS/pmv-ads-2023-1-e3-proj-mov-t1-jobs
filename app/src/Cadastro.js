@@ -220,8 +220,8 @@ const specificStyle = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.50,
-    shadowRadius: 4.84,
+    shadowOpacity: 0.30,
+    shadowRadius: 2.84,
     elevation: 5,
   },
   inputLabelNumber: {
