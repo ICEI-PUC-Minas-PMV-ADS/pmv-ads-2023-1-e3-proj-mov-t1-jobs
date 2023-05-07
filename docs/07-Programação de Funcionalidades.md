@@ -1,5 +1,5 @@
 
 <p align="center">
-  <img width="470" height="300" app="app/assets/cadastro.gif">
+  <img width="470" height="300" src="app/assets/cadastro.gif">
  </p>
 
