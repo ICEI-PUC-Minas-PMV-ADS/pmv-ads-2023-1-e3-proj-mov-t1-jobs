@@ -1,13 +1,5 @@
 # Plano de Testes de Usabilidade
 
-## TESTE DE USABILIDADE
-
-O teste de usabilidade é o método a qual é possível mensurar a experiência do usuário final quanto as aplicações oferecidas pelo sistema desenvolvido. Para que o teste seja útil, é importante que haja diversidade entre os usuários escolhidos para a pesquisa, assim como a definição de um público alvo, tendo em mente que o público alvo pode variar com o tempo de disponibilização do projeto. De acordo com Jakob Nielsen, criador do movimento “Engenharia de usabilidade com desconto” e inventor da avaliação heurística em métodos de usabilidade, é possível encontrar 80% dos erros de usabilidade com testes realizados apenas com 5 usuários, como observado no gráfico abaixo: 
-
-![image](https://user-images.githubusercontent.com/101372729/193459384-1ae994cd-b158-4741-a4fb-d33a8090be27.png)
-
-Portanto, a execução dos testes de usabilidade da plataforma JOBS contará com o número mínimo de 5 testes de experiências de usuários para cada tarefa especificada.
-
 ## Descobertas 
 
 `PROBLEMAS DE USABILIDADE`<br>
@@ -40,10 +32,9 @@ Portanto, a execução dos testes de usabilidade da plataforma JOBS contará com
  O teste de usabilidade será realizado com 5 usuários.
  
  `EQUIPAMENTOS E SOFTWARES NECESSÁRIOS`<br>
- - Computador com microfone, autofalante e webcam; <br>
+ - Smartphone <br>
  - Conexão com internet; <br>
- - Acesso a software de reunião remota (Google Meet ou Zoom); <br>
- - A equipe fornecerá acesso ao link da solução web; <br>
+ - A equipe fornecerá acesso ao aplicativo teste; <br>
 
 `CONVITE PARA TESTES`<br>
 
