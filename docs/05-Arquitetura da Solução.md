@@ -40,3 +40,17 @@
 <li> Analisabilidade: Facilidade de analisar os erros do sistema.
 <li> Instalabilidade: Avalia a facilidade de se instalar o software.
  
+**Métricas**
+<li>  Resolução do problema: 
+ 1. A plataforma atende ao objetivo principal
+ 2. A plataforma é simples de manusear
+ 3. Os usuários estão realizando as tarefas desejadas?
+ 4. Quanto tempo o usuário passa no aplicativo?
+ 5. Quanto tempo é gasto para a realização de uma tarefa ?
+ <br>
+ <li> Efetividade:
+  1. Frequência de erros pelo usuário
+  2. Frequência de erros pelo sistema
+  <br>
+  <li> Avaliação:
+  1. Grau de satisfação dos usuários
