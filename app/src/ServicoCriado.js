@@ -31,28 +31,56 @@ const ServicoCriado = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Serviço Criado</Text>
-      <Text style={styles.text}>Nome: {nome}</Text>
-      <Text style={styles.text}>Descrição: {descricao}</Text>
-      <Text style={styles.text}>Preço: {preco}</Text>
-      <Text style={styles.text}>Telefone: {telefone}</Text>
-      <Button title="Editar" onPress={handleEditar} />
-      <Button title="Salvar" onPress={handleSalvar} />
+      <View style={styles.infoContainer}>
+        <Text style={styles.label}>Nome:</Text>
+        <Text style={styles.text}>{nome}</Text>
+      </View>
+      <View style={styles.infoContainer}>
+        <Text style={styles.label}>Descrição:</Text>
+        <Text style={styles.text}>{descricao}</Text>
+      </View>
+      <View style={styles.infoContainer}>
+        <Text style={styles.label}>Preço:</Text>
+        <Text style={styles.text}>{preco}</Text>
+      </View>
+      <View style={styles.infoContainer}>
+        <Text style={styles.label}>Telefone:</Text>
+        <Text style={styles.text}>{telefone}</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button title="Editar" onPress={handleEditar} />
+        <Button title="Salvar" onPress={handleSalvar} />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     padding: 16,
+    backgroundColor: '#fff',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
   },
+  infoContainer: {
+    marginBottom: 8,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginRight: 8,
+  },
   text: {
     fontSize: 16,
-    marginBottom: 8,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 16,
   },
 });
 

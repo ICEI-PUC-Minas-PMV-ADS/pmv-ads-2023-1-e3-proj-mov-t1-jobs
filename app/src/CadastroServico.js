@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert, TouchableOpacity, Text } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 
-const CadastroServicosForm = ({ navigation }) => {
+export default CadastroServicos = ({ navigation }) => { 
+
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
@@ -68,7 +69,8 @@ const CadastroServicosForm = ({ navigation }) => {
           dddMask: '(99) ',
         }}
       />
-      <Button title="Cadastrar" onPress={handleCadastro} />
+      <TouchableOpacity style={styles.button} onPress={handleCadastro}>
+        <Text style={styles.buttonText}>Cadastrar</Text>
     </View>
   );
 };
@@ -76,14 +78,27 @@ const CadastroServicosForm = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    backgroundColor: '#fff',
+    flex: 1,
   },
   input: {
     marginBottom: 16,
-    padding: 8,
+    padding: 12,
     borderWidth: 1,
     borderColor: '#000',
     borderRadius: 4,
+    fontSize: 16,
+  },
+  button: {
+    backgroundColor: '#007bff',
+    padding: 12,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
-export default CadastroServicosForm;
