@@ -7,5 +7,12 @@ Representação de tudo que já foi implementado e ideias que estão sendo desen
 
 Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
 
+![cadastro-sucesso](https://user-images.githubusercontent.com/103579574/236703755-f85fdeff-33ef-404d-994a-06341f94d44d.gif)
+
+Aqui podemos ver o cadastro feito com sucesso. Com informaçoes indo para o banco de dados como pode ver nas imagens abaixo
+
+![API-rodando](https://user-images.githubusercontent.com/103579574/236703827-89fc75a1-0a2c-4fda-b3c7-634b03150e2e.png)
+
+![Mysql](https://user-images.githubusercontent.com/103579574/236703863-fffa1b8a-1d76-48e5-a26f-2b4b4043d3eb.png)
 
 
