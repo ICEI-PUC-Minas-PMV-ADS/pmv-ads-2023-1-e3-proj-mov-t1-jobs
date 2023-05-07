@@ -179,11 +179,14 @@ O gráfico abaixo é uma ferramenta utilizada para controlar e gerenciar o crono
 
 ![Gráfico do cronograma](/docs/img/Cronograma.png)
 
+![image](https://user-images.githubusercontent.com/103225086/236684130-3304fda8-6bee-43af-9530-afc376d0abcf.png)
+
+
 ## Gerenciamento de Equipe
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](/docs/img/RecursosHumanos.png)
+![image](https://user-images.githubusercontent.com/103225086/236684224-71f85ba6-2894-45f2-8a64-3dac9bfecb5e.png)
 
 ## Gestão de Orçamento
 
