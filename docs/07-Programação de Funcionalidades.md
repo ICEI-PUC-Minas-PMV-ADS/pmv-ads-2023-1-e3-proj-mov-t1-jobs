@@ -1,7 +1,7 @@
 # Programação de Funcionalidades
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
 
-![image](https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png)
+![Cadastro gif](file:///C:/Users/Meu%20Computador/Documents/pmv-ads-2023-1-e3-proj-mov-t1-jobs/app/assets/cadastro.gif.mp4)
 
 Tela App.js
 
