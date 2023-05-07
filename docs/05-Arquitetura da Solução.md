@@ -41,16 +41,16 @@
 <li> Instalabilidade: Avalia a facilidade de se instalar o software.
  
 **Métricas**
-<li>  Resolução do problema: 
- 1. A plataforma atende ao objetivo principal
- 2. A plataforma é simples de manusear
- 3. Os usuários estão realizando as tarefas desejadas?
- 4. Quanto tempo o usuário passa no aplicativo?
- 5. Quanto tempo é gasto para a realização de uma tarefa ?
+<li>  Resolução do problema: <br>
+ 1. A plataforma atende ao objetivo principal<br>
+ 2. A plataforma é simples de manusear<br>
+ 3. Os usuários estão realizando as tarefas desejadas?<br>
+ 4. Quanto tempo o usuário passa no aplicativo?<br>
+ 5. Quanto tempo é gasto para a realização de uma tarefa ?<br>
  <br>
- <li> Efetividade:
-  1. Frequência de erros pelo usuário
-  2. Frequência de erros pelo sistema
+ <li> Efetividade:<br>
+  1. Frequência de erros pelo usuário<br>
+  2. Frequência de erros pelo sistema<br>
   <br>
-  <li> Avaliação:
+  <li> Avaliação:<br>
   1. Grau de satisfação dos usuários
