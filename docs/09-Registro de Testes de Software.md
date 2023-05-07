@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/103225086/236685834-d424ec53-244e-4104
 
 **Busca de serviços**
 
-<link>
+Colocar aqui o vídeo da busca do serviço
 
 ## Avaliação
 
