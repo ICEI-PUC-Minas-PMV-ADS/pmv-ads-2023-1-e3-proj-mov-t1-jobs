@@ -23,3 +23,20 @@
 <li> Ferramentas:             Microsoft Teams, GitHub, Whatsapp
 <li> Banco de dados:          MySQL
 <li> Criação de Protótipo:    Miro
+
+ ## Qualidade de Sotware
+ ![image](https://user-images.githubusercontent.com/103225086/236692113-fd3ea3fc-982c-4b3f-ae38-e1e7a11efd04.png)
+
+<li> Completude funcional: O software possibilita executar as funções devidas.
+<li> Funcionalidade apropriada: Indica o grau em que as funções facilitam a realização de tarefas e objetivos para os quais o sistema foi especificado.
+<li> Comportamento em relação ao tempo: Mede o tempo que o software leva para processar suas funções dentro do servidor.
+<li> Coexistência: Avalia o desempenho do software quando esse compartilha a execução de outras funções em planos diferentes.
+<li> Inteligibilidade: Grau de usabilidade funcional.
+<li> Apropriação reconhecível: Atendimento ao público-alvo
+<li> Estética de interface com usuário: Grau de usabilidade estético.
+<li> Maturidade: freqüência com que um software apresenta defeitos.
+<li> Integridade: Segurança do sistema quanto a dados sensíveis em compartilhamento.
+<li> Confidencialidade: Segurança do sistema quanto a dados sensíveis internos.
+<li> Analisabilidade: Facilidade de analisar os erros do sistema.
+<li> Instalabilidade: Avalia a facilidade de se instalar o software.
+ 
