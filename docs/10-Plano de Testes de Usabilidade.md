@@ -20,7 +20,7 @@
 ## Objetivos 
 
 `OBJETIVO PRINCIPAL`<br>
-- Entender a experiência do usuário quanto à procura de serviços dentro da plataforma, cadastramento de serviços próprios e troca de informações entre o demandante e ofertante.  
+- Entender a experiência do usuário quanto ao cadastro de conta dentro da plataforma, login, cadastramento de serviços e produtos e a busca por serviços ou produtos.
 
 `PERGUNTAS DE PESQUISA`<br>
 - Deseja-se saber onde os usuários estão encontrando dificuldades para encontrar o serviço desejado, seja durante a pesquisa na plataforma, na seleção de filtro, organização da página, entre outros.<br>
