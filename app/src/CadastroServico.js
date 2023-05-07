@@ -3,6 +3,7 @@ import { View, TextInput, Button, StyleSheet, Alert, TouchableOpacity, Text } fr
 import { TextInputMask } from 'react-native-masked-text';
 
 export default CadastroServicos = ({ navigation }) => { 
+
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
@@ -70,7 +71,6 @@ export default CadastroServicos = ({ navigation }) => {
       />
       <TouchableOpacity style={styles.button} onPress={handleCadastro}>
         <Text style={styles.buttonText}>Cadastrar</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -101,3 +101,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
