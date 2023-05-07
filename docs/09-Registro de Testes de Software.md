@@ -1,7 +1,12 @@
 # Registro de Testes de Software
 
+** Cadastro de usuário e login**
+
 https://user-images.githubusercontent.com/103225086/236685834-d424ec53-244e-4104-acf9-4e5a1dd5333b.MP4
 
+** Busca de serviços**
+
+<link>
 
 ## Avaliação
 
@@ -15,6 +20,7 @@ Assim, são atendidos os requisitos:
 <li> RF-002: O usuário cadastrado deve conseguir fazer o login em sua conta.	
 <li> RF-004: O anunciante deve conseguir publicar serviços na aplicação móvel.
 <li> RF-005: O anunciante deve conseguir informar valores do seu serviço.	
+*<li> RF-006: O usuário deve conseguir buscar por serviços na aplicação.*
 <li> RF-014: A aplicação móvel deve conter uma tela principal 	
 <li> RF-015: A aplicação móvel deve conter tela de login 	
 <li> RNF-03: A aplicação deve ter ícones representando visualmente as funcionalidades.	
