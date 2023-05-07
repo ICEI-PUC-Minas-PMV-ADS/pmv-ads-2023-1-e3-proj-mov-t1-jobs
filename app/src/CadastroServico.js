@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert, TouchableOpacity, Text } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 
-const CadastroServicosForm = ({ navigation }) => {
+export default CadastroServicos = ({ navigation }) => { 
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
@@ -101,5 +101,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default CadastroServicosForm;

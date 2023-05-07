@@ -1,47 +1,24 @@
 import * as React from 'react';
-import { Text, View, Button } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import styles from '../style/MainStyle';
 
-function Inicio() {
-  return (
-    <View style={styles.containerHome}>
-      <Text>Início!</Text>
-    </View>
-  );
-}
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button } from 'react-native-elements';
+import { AsyncStorage } from 'react-native';
+import Perfil from './Perfil';
+import CadastroServico from './CadastroServico';
+import Inicio from './Inicio';
+import Notificacoes from './Notificacoes';
+import BuscarServico from './BuscarServico';
 
-function CadastrarServico() {
-  const navigation = useNavigation();
-
-  const handlePress = () => {
-    navigation.navigate('CadastroServico');
-  }
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>No nosso app, você pode cadastrar os serviços que desejar! Para inicar, toque abaixo:</Text>
-      <Button title="Cadastrar Serviço" onPress={handlePress}></Button>
-    </View>
-  );
-}
-
-function BuscarServico() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Buscar Serviço!</Text>
-    </View>
-  );
-}
-
-function Perfil() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Perfil!</Text>
-    </View>
-  );
+const logout = (navigation) => {
+  AsyncStorage.removeItem("TOKEN")
+  navigation.reset({
+    index: 0,
+    routes: [{name: "Login"}]
+  })
 }
 
 const Tab = createBottomTabNavigator();
@@ -49,7 +26,7 @@ const Tab = createBottomTabNavigator();
 export default function Principal() {
   return (
       <Tab.Navigator
-        initialRouteName="Início"
+        initialRouteName="Feed"
         screenOptions={{
           tabBarActiveTintColor: '#000',
         }}
@@ -65,20 +42,30 @@ export default function Principal() {
           }}
         />
         <Tab.Screen
+          name="Notificações"
+          component={Notificacoes}
+          options={{
+            tabBarLabel: 'Notificações',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="bell" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
           name="Buscar Serviço"
           component={BuscarServico}
           options={{
-            tabBarLabel: 'Buscar Serviço',
+            tabBarLabel: 'Buscar',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="magnify" color={color} size={size} />
             ),
           }}
         />
         <Tab.Screen
-          name="Cadastrar Serviço"
-          component={CadastrarServico}
+          name="Cadastro de serviços"
+          component={CadastroServico}
           options={{
-            tabBarLabel: 'Cadastrar Serviço',
+            tabBarLabel: 'Cadastrar serviço',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="plus" color={color} size={size} />
             ),

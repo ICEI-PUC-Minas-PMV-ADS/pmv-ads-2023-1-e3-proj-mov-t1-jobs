@@ -53,7 +53,7 @@ export default function Login({navigation}) {
         buttonStyle={{
           backgroundColor: 'black',
           borderWidth: 2,
-          borderColor: 'grey',
+          borderColor: '#45484F',
           borderRadius: 30,
         }}
         containerStyle={{
@@ -67,6 +67,12 @@ export default function Login({navigation}) {
 
       <Button
         title="REGISTRAR-SE"
+        buttonStyle={{
+          backgroundColor: 'rgba(199, 43, 98, 1)',
+          borderWidth: 2,
+          borderColor: '#A93C4B',
+          borderRadius: 30
+        }}
         icon={{
         name: 'user',
         type: 'font-awesome',
@@ -76,12 +82,6 @@ export default function Login({navigation}) {
         iconRight
         iconContainerStyle={{ marginLeft: 10 }}
         titleStyle={{ fontWeight: '700' }}
-        buttonStyle={{
-          backgroundColor: 'rgba(199, 43, 98, 1)',
-          borderColor: 'transparent',
-          borderWidth: 0,
-          borderRadius: 30,
-        }}
         containerStyle={{
           width: 200,
           marginHorizontal: 50,
