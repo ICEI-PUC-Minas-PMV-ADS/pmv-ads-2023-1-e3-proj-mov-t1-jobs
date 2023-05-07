@@ -61,10 +61,10 @@ Quando finalizar uma fase, peço que me informe para que eu encerre minhas medi�
 E não se esqueça, você não está sendo avaliada. Portanto, tente agir como se estivesse sozinha e tivesse que utilizar nosso software. Pode ir comentando e pensando em voz alta enquanto realiza o teste. O seu feedback é o ponto mais importante deste teste de usabilidade!* 
 
 `Tarefas a serem executadas`<br>
-1-	Cadastro de conta no sistema;
-2-	Login;
-3-	Cadastrar um serviço na plataforma;
-4-	Buscar um serviço
+1-	Cadastro de conta no sistema;<br>
+2-	Login;<br>
+3-	Cadastrar um serviço na plataforma;<br>
+4-	Buscar um serviço<br>
 
 `Resultados esperados`<br>
 **Para tarefa 1:**
