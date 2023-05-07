@@ -1,7 +1,7 @@
 # Programação de Funcionalidades
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
 
-![image](https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png)
+![image]([https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png](https://www.canva.com/design/DAFiRJcO10A/a8xn2KXu4msQLxwQD50VLQ/watch?utm_content=DAFiRJcO10A&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel))
 
 Tela App.js
 
