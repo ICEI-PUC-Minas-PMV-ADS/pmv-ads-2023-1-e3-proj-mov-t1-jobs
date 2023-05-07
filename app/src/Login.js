@@ -30,18 +30,20 @@ export default function Login({navigation}) {
         <ScrollView style={{width: "100%"}}>
           <View style={[styles.container, specificStyle.specificContainer]}>
           <Image
-          source={require('../assets/jobslogo.png')}
+          source={require('../assets/jobsLogo2.png')}
           style={specificStyle.logo}
           />
-          <Input style={[styles.input, specificStyle.specificContainer]}
-            placeholder="E-mail"
-            leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+          <Input style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            placeholder="  E-mail"
+            placeholderTextColor="white"
+            leftIcon={{ type: 'font-awesome', name: 'envelope', color: 'white' }}
             onChangeText={value => setEmail(value)}
             keyboardType="email-address"
           />
-          <Input style={[styles.input, specificStyle.specificContainer]}
-            placeholder="Sua senha"
-            leftIcon={{ type: 'font-awesome', name: 'lock' }}
+          <Input style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            placeholder="    Senha"
+            placeholderTextColor="white"
+            leftIcon={{ type: 'font-awesome', name: 'lock', color: 'white'}}
             onChangeText={value => setPassword(value)}
             secureTextEntry={true}
           />
@@ -51,7 +53,7 @@ export default function Login({navigation}) {
         buttonStyle={{
           backgroundColor: 'black',
           borderWidth: 2,
-          borderColor: 'grey',
+          borderColor: '#45484F',
           borderRadius: 30,
         }}
         containerStyle={{
@@ -65,6 +67,12 @@ export default function Login({navigation}) {
 
       <Button
         title="REGISTRAR-SE"
+        buttonStyle={{
+          backgroundColor: 'rgba(199, 43, 98, 1)',
+          borderWidth: 2,
+          borderColor: '#A93C4B',
+          borderRadius: 30
+        }}
         icon={{
         name: 'user',
         type: 'font-awesome',
@@ -74,12 +82,6 @@ export default function Login({navigation}) {
         iconRight
         iconContainerStyle={{ marginLeft: 10 }}
         titleStyle={{ fontWeight: '700' }}
-        buttonStyle={{
-          backgroundColor: 'rgba(199, 43, 98, 1)',
-          borderColor: 'transparent',
-          borderWidth: 0,
-          borderRadius: 30,
-        }}
         containerStyle={{
           width: 200,
           marginHorizontal: 50,
@@ -97,16 +99,20 @@ export default function Login({navigation}) {
 
 const specificStyle = StyleSheet.create({
   specificContainer: {
-    backgroundColor: "#000"
+    backgroundColor: "#278ED5",
+    padding: 10,
+    
   },
   logo:{
     marginTop: 180,
-    width: 400,
-    height: 200
+    marginBottom: 10,
+    width: 600,
+    height: 200,
   },
-  campos:{
-    marginTop: 20,
-    marginBottom: 50
-  },
+  inputLogin: {
+    flexGrow: 1,
+    height: 40,
+    color: 'white'
+  }
  }
 )
