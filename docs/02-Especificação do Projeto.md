@@ -69,11 +69,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Nos últimos anos, o Brasil tem observado um aumento significativo no número de trabalhadores autônomos. Esse crescimento pode ser explicado por diversos fatores, como a crise econômica que afetou o país, o aumento do desemprego e a busca por maior flexibilidade no trabalho. Com a facilidade de acesso à tecnologia e às redes sociais, muitos brasileiros têm optado por empreender e trabalhar por conta própria, buscando alternativas para garantir sua renda e independência financeira. 
+Atualmente, existem diversas tecnologias que facilitam a busca e oferta de serviços autônomos. Plataformas online como Workana, 99Freelas e GetNinjas permitem que profissionais ofereçam seus serviços de maneira fácil e acessível, conectando-os com clientes em busca de soluções específicas. Além disso, aplicativos como Uber e iFood possibilitam que pessoas realizem trabalhos temporários de motorista ou entregador, respectivamente. As redes sociais também se tornaram um meio popular de divulgação de serviços, permitindo que autônomos alcancem um público maior e construam sua reputação online.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta é criar um ambiente virtual em que seja intuitivo qualquer pessoa com um smartphone ofertar um produto ou um serviço e ser remunerado por isto. A diferença dessa plataforma (JOBS.) para as outras seriam a facilidade de uso dentro do sistema, com informações diretas e simples, sem a poluição visual presente nos outros sistemas. A ideia é a criação de uma plataforma em aplicativo de celular que seja fácil e rápido de usar, ligando o fornecedor ao contratante com poucos cliques.
 
 ### Processo 1 – LOGIN DO USUÁRIO
 
