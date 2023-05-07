@@ -71,6 +71,7 @@ export default CadastroServicos = ({ navigation }) => {
       />
       <TouchableOpacity style={styles.button} onPress={handleCadastro}>
         <Text style={styles.buttonText}>Cadastrar</Text>
+        </TouchableOpacity>
     </View>
   );
 };
