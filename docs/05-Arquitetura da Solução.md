@@ -12,9 +12,6 @@
 
 ![image](https://user-images.githubusercontent.com/103579574/229217896-ceb301ff-2da2-4ac3-9983-ddc62eee0a60.png)
 
-## Modelo Físico
-
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
 
 ## Tecnologias Utilizadas
 
