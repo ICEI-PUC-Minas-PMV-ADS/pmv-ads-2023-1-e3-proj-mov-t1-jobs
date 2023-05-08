@@ -2,11 +2,20 @@
 
 **Cadastro de usuário e login**
 
-https://user-images.githubusercontent.com/103225086/236685834-d424ec53-244e-4104-acf9-4e5a1dd5333b.MP4
+https://user-images.githubusercontent.com/103579574/236709080-6b1d0a1e-67f0-4d6d-b9e8-f215919593d2.mp4
+
+https://user-images.githubusercontent.com/103579574/236709140-f1884a8b-311d-4b98-832c-55b9ca1b590e.mp4
+
 
 **Busca de serviços**
 
-Colocar aqui o vídeo da busca do serviço
+https://user-images.githubusercontent.com/103579574/236709276-5aa8811e-f09c-42a6-b967-6b8ccdf4586a.mp4
+
+
+**Cadastro de serviços**
+
+https://user-images.githubusercontent.com/103579574/236709278-34f7e9e4-c8f6-410b-ba63-7a5645c60496.mp4
+
 
 ## Avaliação
 
