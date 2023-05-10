@@ -6,52 +6,16 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 
 Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-|João Paiva| ![alt text](/docs/img/persona1.png) |
-|-----------------------|-|
-|Idade:|41|
-|Ocupação:| Segurança de empresa privada e gesseiro. |
-|Aplicativos:| WhatsApp, Instagram, LinkedIn, Aplicativos de bancos. |
-|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família. |
-|Frustrações | Não conseguir entregar uma obra dentro do prazo. |
-|Hobbies | Gosta de ler, Ouvir música |
 
-|Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
-|-----------------------|-|
-|Idade:|22|
-|Ocupação:| Técnico em Informática. |
-|Aplicativos:| WhatsApp, Instagram, Twitch, Youtube, Discord  |
-|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
-|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
-|Hobbies | Assistir séries , jogar jogos online |
+|    Persona    | Idade |           Ocupação           |                        Aplicativos                       |                      Motivações                     |                           Frustrações                          |                           Hobbies                          |
+|:-------------:|:-----:|:---------------------------:|:--------------------------------------------------------:|:--------------------------------------------------:|:----------------------------------------------------------------:|:---------------------------------------------------------:|
+| Daniel Santos ![alt text](/docs/img/persona1.png) |   41  | Segurança de empresa privada | WhatsApp, Instagram, LinkedIn, Aplicativos de bancos    | Trabalhar visando proporcionar uma boa qualidade de vida para a família. | Não conseguir entregar uma obra dentro do prazo. | Gosta de ler, Ouvir música |
+| Gabriel Gamber ![alt text](/docs/img/persona3.png) |   22  |     Técnico em Informática   | WhatsApp, Instagram, Twitch, Youtube, Discord           | Entregar ao cliente o resultado que ele mesmo gostaria de receber. | Sentir que seu trabalho não está sendo bem feito. | Assistir séries, jogar jogos online |
+| Ricardo Ornelas ![alt text](/docs/img/persona2.png) | 39 |         Film Maker          | WhatsApp, Facebook, Instagram                           | Procura de staff qualificada para apoio em seus projetos. | Falta de oportunidades para iniciar sua carreira. | Aprimorar o conhecimento em sua área de atuação. |
+| Heloísa Pimenta ![alt text](/docs/img/persona4.png) |   25  | Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem | WhatsApp, Instagram, TikTok, Youtube | Crescer como profissional da saúde. | Sentir que seu trabalho não está sendo bem feito. | Praticar exercícios físicos, ler. |
+|    Maria Gomes ![alt text](/docs/img/persona5.png) |   24  |   Designer de interiores e empresaria   | WhatsApp, Instagram, TikTok                            | Crescer sua empresa e maximizar seus lucros.      | Falta de resultados expressivos na busca de mão de obra qualificada. | Academia, Maquiagem. |
 
-|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
-|-----------------------|-|
-|Idade:|39|
-|Ocupação:| Film Maker, Criador de conteúdo. |
-|Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
-|Frustrações | Falta de oportunidades para iniciar sua carreira. |
-|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
-
-|Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
-|-----------------------|-|
-|Idade:|25|
-|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.  |
-|Aplicativos:| WhatsApp, Instagram, TikTok, Youtube. |
-|Motivações | Crescer como profissional da saúde. |
-|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
-|Hobbies | Praticar exercícios físicos, ler. |
-
-|Maria Gomes | ![alt text](/docs/img/persona5.png) |
-|-----------------------|-|
-|Idade:|24|
-|Ocupação:| Designer de interiores e empresaria. |
-|Aplicativos:| WhatsApp, Instagram, TikTok. |
-|Motivações |  Crescer sua empresa e maximizar seus lucros.  |
-|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada.     |
-|Hobbies | Academia, Maquiagem. |
-
-> - [Imagens das personas retiradas do site](https://br.freepik.com/)
+> - [Imagens das personas retiradas deste site](https://br.freepik.com/)
 
 ## Histórias de Usuários
 
@@ -59,7 +23,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`         |PARA ... `MOTIVO/VALOR`                               |
 |--------------------|--------------------------------------------|------------------------------------------------------|
-|João Paiva         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
+|Daniel Santos         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
 |Ricardo Ornelas      |Estabelecer conexões com outros profissionais afim de trocar ideias sobre a execução dos serviços                           |Encontrar procedimentos visando otimizar o tempo total de uma obra|
 |Gabriel Gamber        |Encontrar pessoas e estabelecimentos que buscam serviços de qualidade        |Ampliar suas experiências e obter mais resultados satisfatórios  |
 |Heloísa Pimenta       |Sentir satisfação ao ver pessoas que passaram sob seus cuidados recuperadas e com qualidade de vida           |Retribuição moral e pessoal
