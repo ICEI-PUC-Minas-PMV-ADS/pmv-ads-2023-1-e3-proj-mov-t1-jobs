@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import { Input, Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import Icon  from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import { Button } from '@rneui/themed';
+import CadastroServico from './CadastroServico';
 
 
 export default function Login({navigation}) {
@@ -65,30 +66,9 @@ export default function Login({navigation}) {
         onPress={() => entrar()}
         />
 
-      <Button
-        title="REGISTRAR-SE"
-        buttonStyle={{
-          backgroundColor: 'rgba(199, 43, 98, 1)',
-          borderWidth: 2,
-          borderColor: '#A93C4B',
-          borderRadius: 30
-        }}
-        icon={{
-        name: 'user',
-        type: 'font-awesome',
-        size: 15,
-        color: 'white',
-        }}
-        iconRight
-        iconContainerStyle={{ marginLeft: 10 }}
-        titleStyle={{ fontWeight: '700' }}
-        containerStyle={{
-          width: 200,
-          marginHorizontal: 50,
-          marginVertical: 10,
-        }}
-        onPress={() => cadastrar()}
-      />
+      <TouchableOpacity onPress={cadastrar} style={specificStyle.buttonRegister}>
+      <Text style={specificStyle.textRegister}>Registrar-se</Text>
+      </TouchableOpacity>
 
 
     </View>
@@ -113,6 +93,18 @@ const specificStyle = StyleSheet.create({
     flexGrow: 1,
     height: 40,
     color: 'white'
+  },
+  buttonRegister: {
+    padding: 10,
+    width: 200,
+    alignItems: 'center',
+    marginTop: 20,
+    fontWeight: 'bold',
+  },
+  textRegister: {
+    color: '#A83641',
+    fontSize: 18,
+    fontWeight: 'bold',
   }
  }
 )

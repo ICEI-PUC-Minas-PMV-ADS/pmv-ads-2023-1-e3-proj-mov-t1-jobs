@@ -42,16 +42,6 @@ export default function Principal() {
           }}
         />
         <Tab.Screen
-          name="Notificações"
-          component={Notificacoes}
-          options={{
-            tabBarLabel: 'Notificações',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="bell" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
           name="Buscar Serviço"
           component={BuscarServico}
           options={{
