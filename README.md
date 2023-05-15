@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/103579574/234741738-bacc0646-91a2-4f4e-9fee-ef552149328e.png)
+![image](https://user-images.githubusercontent.com/103579574/236628729-5f91c770-4917-4780-882f-e5de31626d61.png)
 
 # JOBS
 

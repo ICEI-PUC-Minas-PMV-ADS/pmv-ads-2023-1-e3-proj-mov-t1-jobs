@@ -12,38 +12,45 @@
 
 ![image](https://user-images.githubusercontent.com/103579574/229217896-ceb301ff-2da2-4ac3-9983-ddc62eee0a60.png)
 
-## Modelo Físico
-
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+<li> Linguagem Front:         End	JavaScript
+<li> Framework:               ReactNative
+<li> Linguagem Back-End:      C#
+<li> Bibliotecas:             React Native Paper, React Navigation, Json server
+<li> IDE:                     Visual Studio Code
+<li> Ferramentas:             Microsoft Teams, GitHub, Whatsapp
+<li> Banco de dados:          MySQL
+<li> Criação de Protótipo:    Miro
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+ ## Qualidade de Sotware
+ ![image](https://user-images.githubusercontent.com/103225086/236692113-fd3ea3fc-982c-4b3f-ae38-e1e7a11efd04.png)
 
-## Hospedagem
-
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
-
-## Qualidade de Software
-
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
-
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
-
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+<li> Completude funcional: O software possibilita executar as funções devidas.
+<li> Funcionalidade apropriada: Indica o grau em que as funções facilitam a realização de tarefas e objetivos para os quais o sistema foi especificado.
+<li> Comportamento em relação ao tempo: Mede o tempo que o software leva para processar suas funções dentro do servidor.
+<li> Coexistência: Avalia o desempenho do software quando esse compartilha a execução de outras funções em planos diferentes.
+<li> Inteligibilidade: Grau de usabilidade funcional.
+<li> Apropriação reconhecível: Atendimento ao público-alvo
+<li> Estética de interface com usuário: Grau de usabilidade estético.
+<li> Maturidade: freqüência com que um software apresenta defeitos.
+<li> Integridade: Segurança do sistema quanto a dados sensíveis em compartilhamento.
+<li> Confidencialidade: Segurança do sistema quanto a dados sensíveis internos.
+<li> Analisabilidade: Facilidade de analisar os erros do sistema.
+<li> Instalabilidade: Avalia a facilidade de se instalar o software.
+ 
+**Métricas**
+<li>  Resolução do problema: <br>
+ 1. A plataforma atende ao objetivo principal<br>
+ 2. A plataforma é simples de manusear<br>
+ 3. Os usuários estão realizando as tarefas desejadas?<br>
+ 4. Quanto tempo o usuário passa no aplicativo?<br>
+ 5. Quanto tempo é gasto para a realização de uma tarefa ?<br>
+ <br>
+ <li> Efetividade:<br>
+  1. Frequência de erros pelo usuário<br>
+  2. Frequência de erros pelo sistema<br>
+  <br>
+  <li> Avaliação:<br>
+  1. Grau de satisfação dos usuários

@@ -6,52 +6,16 @@ A definição exata do problema e os pontos mais relevantes a serem tratados nes
 
 Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-|João Paiva| ![alt text](/docs/img/persona1.png) |
-|-----------------------|-|
-|Idade:|41|
-|Ocupação:| Segurança de empresa privada e gesseiro. |
-|Aplicativos:| WhatsApp, Instagram, LinkedIn, Aplicativos de bancos. |
-|Motivações | Trabalhar visando proporcionar uma boa qualidade de vida para a família. |
-|Frustrações | Não conseguir entregar uma obra dentro do prazo. |
-|Hobbies | Gosta de ler, Ouvir música |
 
-|Gabriel Gamber|  ![alt text](/docs/img/persona3.png) |
-|-----------------------|-|
-|Idade:|22|
-|Ocupação:| Técnico em Informática. |
-|Aplicativos:| WhatsApp, Instagram, Twitch, Youtube, Discord  |
-|Motivações | Entregar ao cliente o resultado que ele mesmo gostaria de receber.    |
-|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
-|Hobbies | Assistir séries , jogar jogos online |
+|    Persona    | Idade |           Ocupação           |                        Aplicativos                       |                      Motivações                     |                           Frustrações                          |                           Hobbies                          |
+|:-------------:|:-----:|:---------------------------:|:--------------------------------------------------------:|:--------------------------------------------------:|:----------------------------------------------------------------:|:---------------------------------------------------------:|
+| Daniel Santos ![alt text](/docs/img/persona1.png) |   41  | Segurança de empresa privada | WhatsApp, Instagram, LinkedIn, Aplicativos de bancos    | Trabalhar visando proporcionar uma boa qualidade de vida para a família. | Não conseguir entregar uma obra dentro do prazo. | Gosta de ler, Ouvir música |
+| Gabriel Gamber ![alt text](/docs/img/persona3.png) |   22  |     Técnico em Informática   | WhatsApp, Instagram, Twitch, Youtube, Discord           | Entregar ao cliente o resultado que ele mesmo gostaria de receber. | Sentir que seu trabalho não está sendo bem feito. | Assistir séries, jogar jogos online |
+| Ricardo Ornelas ![alt text](/docs/img/persona2.png) | 39 |         Film Maker          | WhatsApp, Facebook, Instagram                           | Procura de staff qualificada para apoio em seus projetos. | Falta de oportunidades para iniciar sua carreira. | Aprimorar o conhecimento em sua área de atuação. |
+| Heloísa Pimenta ![alt text](/docs/img/persona4.png) |   25  | Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem | WhatsApp, Instagram, TikTok, Youtube | Crescer como profissional da saúde. | Sentir que seu trabalho não está sendo bem feito. | Praticar exercícios físicos, ler. |
+|    Maria Gomes ![alt text](/docs/img/persona5.png) |   24  |   Designer de interiores e empresaria   | WhatsApp, Instagram, TikTok                            | Crescer sua empresa e maximizar seus lucros.      | Falta de resultados expressivos na busca de mão de obra qualificada. | Academia, Maquiagem. |
 
-|Ricardo Ornelas| ![alt text](/docs/img/persona2.png) |
-|-----------------------|-|
-|Idade:|39|
-|Ocupação:| Film Maker, Criador de conteúdo. |
-|Aplicativos:| WhatsApp, Facebook, Instagram. |
-|Motivações | Procura de staff qualificada para apoio em seus projetos.             |
-|Frustrações | Falta de oportunidades para iniciar sua carreira. |
-|Hobbies | Aprimorar o conhecimento em sua área de atuação. |
-
-|Heloísa Pimenta| ![alt text](/docs/img/persona4.png) |
-|-----------------------|-|
-|Idade:|25|
-|Ocupação:| Cuidadora de Idosos, acompanhante hospitalar e estudante de Enfermagem.  |
-|Aplicativos:| WhatsApp, Instagram, TikTok, Youtube. |
-|Motivações | Crescer como profissional da saúde. |
-|Frustrações | Sentir que seu trabalho não está sendo bem feito. |
-|Hobbies | Praticar exercícios físicos, ler. |
-
-|Maria Gomes | ![alt text](/docs/img/persona5.png) |
-|-----------------------|-|
-|Idade:|24|
-|Ocupação:| Designer de interiores e empresaria. |
-|Aplicativos:| WhatsApp, Instagram, TikTok. |
-|Motivações |  Crescer sua empresa e maximizar seus lucros.  |
-|Frustrações | Falta de resultados expressivos na busca de mão de obra qualificada.     |
-|Hobbies | Academia, Maquiagem. |
-
-> - [Imagens das personas retiradas do site](https://br.freepik.com/)
+> - [Imagens das personas retiradas deste site](https://br.freepik.com/)
 
 ## Histórias de Usuários
 
@@ -59,7 +23,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`         |PARA ... `MOTIVO/VALOR`                               |
 |--------------------|--------------------------------------------|------------------------------------------------------|
-|João Paiva         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
+|Daniel Santos         |Encontrar clientes de forma rápida e objetiva                        |Prestar seus serviços com mais tranquilidade afim de complementar sua renda       |
 |Ricardo Ornelas      |Estabelecer conexões com outros profissionais afim de trocar ideias sobre a execução dos serviços                           |Encontrar procedimentos visando otimizar o tempo total de uma obra|
 |Gabriel Gamber        |Encontrar pessoas e estabelecimentos que buscam serviços de qualidade        |Ampliar suas experiências e obter mais resultados satisfatórios  |
 |Heloísa Pimenta       |Sentir satisfação ao ver pessoas que passaram sob seus cuidados recuperadas e com qualidade de vida           |Retribuição moral e pessoal
@@ -69,11 +33,17 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Nos últimos anos, o Brasil tem observado um aumento significativo no número de trabalhadores autônomos. Esse crescimento pode ser explicado por diversos fatores, como a crise econômica que afetou o país, o aumento do desemprego e a busca por maior flexibilidade no trabalho. Com a facilidade de acesso à tecnologia e às redes sociais, muitos brasileiros têm optado por empreender e trabalhar por conta própria, buscando alternativas para garantir sua renda e independência financeira. 
+Atualmente, existem diversas tecnologias que facilitam a busca e oferta de serviços autônomos. Plataformas online como Workana, 99Freelas e GetNinjas permitem que profissionais ofereçam seus serviços de maneira fácil e acessível, conectando-os com clientes em busca de soluções específicas. Além disso, aplicativos como Uber e iFood possibilitam que pessoas realizem trabalhos temporários de motorista ou entregador, respectivamente. As redes sociais também se tornaram um meio popular de divulgação de serviços, permitindo que autônomos alcancem um público maior e construam sua reputação online.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A proposta é criar um ambiente virtual em que seja intuitivo qualquer pessoa com um smartphone ofertar um produto ou um serviço e ser remunerado por isto. A diferença dessa plataforma (JOBS.) para as outras seriam a facilidade de uso dentro do sistema, com informações diretas e simples, sem a poluição visual presente nos outros sistemas. A ideia é a criação de uma plataforma em aplicativo de celular que seja fácil e rápido de usar, ligando o fornecedor ao contratante com poucos cliques.
+
+### Oportunidades de melhoria para o processo de negócio
+Os aplicativos de smartphones se tornaram extremamente populares nos últimos anos, devido à facilidade de uso e acessibilidade. Com apenas alguns toques na tela do celular, é possível baixar e utilizar uma grande variedade de aplicativos para diversas finalidades, como comunicação, entretenimento, finanças e trabalho. Além disso, muitos aplicativos oferecem interfaces intuitivas e simples, o que facilita o uso mesmo para pessoas sem experiência em tecnologia. Com essa facilidade, os aplicativos se tornaram parte essencial do cotidiano de muitas pessoas, tornando a vida mais prática e conveniente. 
+Os aplicativos de procura e oferta de serviços existentes possuem muita informação, filtros desnecessários e poluição visual com ofertas patrocinadas e propagandas geradas por cookies relacionados ao cliente. Os aplicativos deixam de ser intuitivos e práticos, demando maior tempo das pessoas nesses para poderem aprender a utilizar a plataforma. A JOBS. veio com o intuito de democratizar esse tipo de plataforma gerando facilidade e comodidade aos seus clientes, permitindo que de maneira limpa e intuitiva, os objetivos de oferta e busca de serviço estejam a poucos cliques.
+
 
 ### Processo 1 – LOGIN DO USUÁRIO
 
@@ -179,11 +149,14 @@ O gráfico abaixo é uma ferramenta utilizada para controlar e gerenciar o crono
 
 ![Gráfico do cronograma](/docs/img/Cronograma.png)
 
+![image](https://user-images.githubusercontent.com/103225086/236684130-3304fda8-6bee-43af-9530-afc376d0abcf.png)
+
+
 ## Gerenciamento de Equipe
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](/docs/img/RecursosHumanos.png)
+![image](https://user-images.githubusercontent.com/103225086/236684224-71f85ba6-2894-45f2-8a64-3dac9bfecb5e.png)
 
 ## Gestão de Orçamento
 

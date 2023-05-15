@@ -1,63 +1,47 @@
 # Programação de Funcionalidades
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
 
-![image](https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png)
+## Tela de Cadastro
+Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
 
-Tela App.js
+![cadastro](https://user-images.githubusercontent.com/103579574/236703168-28207bbb-2cd7-4edb-adfb-e15c156c0c7e.gif)
 
-![image](https://user-images.githubusercontent.com/103579574/229380130-56c1e7f2-b802-4bf7-bb63-3ac57f29df1d.png)
+Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados.
 
+![cadastro-sucesso](https://user-images.githubusercontent.com/103579574/236703755-f85fdeff-33ef-404d-994a-06341f94d44d.gif)
 
-## Tela Login (Vinicius)
-Requisitos 
+Com a API rodando através do comando 'npm run start', o back-end do aplicativo é integrado e as informações podem ser salvas no banco de dados.
 
--RF-001	O usuário deve conseguir cadastrar uma conta na aplicação móvel.
+![API-rodando](https://user-images.githubusercontent.com/103579574/236705347-889317bc-6064-4298-aade-1273abc579e2.png)
 
--RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
+Dados guardados no Banco de dados Myql.
 
-![image](https://user-images.githubusercontent.com/103579574/229380469-93b1d739-1fc8-465a-96a9-ba28428871a1.png)
+![Mysql](https://user-images.githubusercontent.com/103579574/236705344-20680e1e-659d-4d76-83fd-6df92564770a.png)
 
-![image](https://user-images.githubusercontent.com/103579574/229380020-92f64ccb-96a9-4862-b30c-c43bdcd194cf.png)
+## Tela de Login
+É possível ver o login feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal, com opções de navegar para outras telas clicando em ícones da aba inferior. Usuário vai para tela de Início que será implementada com opções de serviços.
 
-Vinicius: "Botão que leva à tela de cadastro para o caso do usuário que não tem uma conta e quer registrar-se, será inserido na tela de login. Além de funcionalidades para bloquear o login caso a senha ou e-mail estejam incorretos."
+![login](https://user-images.githubusercontent.com/103579574/236705913-65a1d3dd-aa2c-42cc-83aa-a418462c84ae.gif)
 
-## Tela Principal (Leonardo Xavier)
-Requisitos 
+## Tela de Busca de serviços
+Nessa tela, usuário pesquisa o serviço desejado. Funcionalidade que pesquisa os serviços no banco de dados ainda será implementada.
 
--RF-006	O usuário deve conseguir buscar por serviços na aplicação.
+![busca](https://user-images.githubusercontent.com/103579574/236706231-92f8996d-552c-46ee-ae83-67ae51a01209.gif)
 
--RF-014	A aplicação móvel deve conter uma tela principal. 
+## Tela de Cadastro de serviços
+Na tela de cadastro de serviços o usuário deve colocar informações pedidas para criar seu serviço. Funcionalidade para enviar informações para o banco de dados será implementada.
 
-![image](https://user-images.githubusercontent.com/103579574/229380866-ed578349-6c6c-43f9-9e5d-b9314f0a51a4.png)
+![cadastro-servicos](https://user-images.githubusercontent.com/103579574/236706597-44246143-49e6-49d4-8819-d522631c52f7.gif)
 
-![image](https://user-images.githubusercontent.com/103579574/229380050-a205b994-b1a6-4dfe-a32c-0e60261dcfb3.png)
+## Tela de Notificações
+Ainda será implementada as notificações do usuário.
 
-Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços."
+![notificacoes](https://user-images.githubusercontent.com/103579574/236707155-fb985a91-021b-4f79-9c77-0f79bd55387f.jpeg)
 
-## Tela de Busca de Seriços (Alisson)
-Requisitos 
+## Tela de Perfil
+Será implementada informações do usuário e possibilidade de alterá-las.
 
--RF-006	O usuário deve conseguir buscar por serviços na aplicação.	
+![perfil](https://user-images.githubusercontent.com/103579574/236707213-ee5291be-c5dc-4aea-90a7-498d196d4682.jpeg)
 
--RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante. 
-
-![image](https://user-images.githubusercontent.com/103579574/229380908-f84c46f8-52cc-4e95-93c2-63e4ac2f30ad.png)
-
-![image](https://user-images.githubusercontent.com/103579574/229380089-681feb36-e95e-470a-86c4-4262acfe3924.png)
-
-Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria." 
-
-## Tela de Cadastro de serviços (Crislaine)
-Requisitos
-
--RF-004	O anunciante deve conseguir publicar serviços na aplicação móvel.
-
--RF-005	O anunciante deve conseguir informar valores do seu serviço.
-
-![image](https://user-images.githubusercontent.com/103579574/229380929-b508e7f0-3eef-46dd-8123-a1a0c4647ac0.png)
-
-![image](https://user-images.githubusercontent.com/103579574/229380276-5c70b4d9-c501-4285-9d56-90bf1c592618.png)
-
-Crislaine: "Barras serão inseridas para que o usuário consiga preencher de acordo com as informações do seu serviço."
 
 
