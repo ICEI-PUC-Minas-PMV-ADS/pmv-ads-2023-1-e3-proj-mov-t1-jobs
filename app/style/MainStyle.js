@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   input: {
     flexGrow: 1,
     height: 40,
-    
+    borderBottomColor: "#999",
   },
   maskedInput: {
     flexGrow: 1,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   containerHome: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: "#278ED5",
     justifyContent: 'center',
     alignItems: 'center',
   }
