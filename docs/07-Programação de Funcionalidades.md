@@ -43,5 +43,18 @@ Será implementada informações do usuário e possibilidade de alterá-las.
 
 ![perfil](https://user-images.githubusercontent.com/103579574/236707213-ee5291be-c5dc-4aea-90a7-498d196d4682.jpeg)
 
+## Tela de Exclusão de Serviço
+Quando o usuário optar por excluir um serviço, será redirecionado para a tela de exclusão com os detalhes do serviço para que ele possa conferir e excluir.
+
+![WhatsApp Image 2023-05-20 at 17 52 03](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/365d3e7d-139b-4f0f-afc8-9f12ab078d81)
+
+
+![WhatsApp Image 2023-05-20 at 17 52 03 (1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/1700f5e8-8cb8-4cfb-8687-9574bb24c1df)
+
+
+![deletarServico](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/3e62d521-9cdd-447b-81ab-d4b3c66ea503)
+
+
+
 
 
