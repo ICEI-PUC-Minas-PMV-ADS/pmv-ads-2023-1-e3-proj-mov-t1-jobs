@@ -4,10 +4,12 @@ import { UsuarioService } from './usuario.service';
 import { UsuarioCadastrarDto } from './dto/usuario.cadastrar.dto';
 import { ResultadoDto } from 'src/dto/resultado.dto';
 import { AuthGuard } from '@nestjs/passport/dist/auth.guard';
+import { AuthService } from 'src/auth/auth.service';
 
 @Controller('usuario')
 export class UsuarioController {
-  constructor(private readonly usuarioService: UsuarioService) {}
+  constructor(private readonly usuarioService: UsuarioService,
+    private authService: AuthService) {}
 
   @Get('listar')
   async listar(): Promise<Usuario[]>{
@@ -22,6 +24,6 @@ export class UsuarioController {
   @UseGuards(AuthGuard('local'))
   @Post('login')
   async login(@Request() req) {
-    return req.user;
+    return this.authService.login(req.user);
   }
 }
