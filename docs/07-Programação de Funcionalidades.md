@@ -39,7 +39,7 @@ Busca do usuário deve retornar serviços cadastrados no banco de dados.
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/4f42c789-8f80-49f9-a0b7-3240ccc01669)
 
 
-## Tela de Cadastro de serviços (Alisson)
+## Tela de Cadastro de Serviços (Alisson)
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/100442612/fb940b92-347c-42ef-991c-8740c5e37f54)
 
