@@ -3,6 +3,7 @@ import { Repository } from 'typeorm';
 import { Usuario } from './usuario.entity';
 import { UsuarioCadastrarDto } from './dto/usuario.cadastrar.dto';
 import { ResultadoDto } from 'src/dto/resultado.dto';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsuarioService {
@@ -19,7 +20,7 @@ export class UsuarioService {
     let usuario = new Usuario()
     usuario.email = data.email
     usuario.name = data.nome
-    usuario.password = data.senha
+    usuario.password = bcrypt.hashSync(data.senha, 8)
     usuario.telefone = data.telefone
     usuario.cpf = data.cpf
     return this.usuarioRepository.save(usuario)
@@ -35,5 +36,9 @@ export class UsuarioService {
         mensagem: "Houve um erro ao cadastrar usuário"
       }
     })
+  }
+
+  async findOne(email: string): Promise<Usuario | undefined> {
+    return this.usuarioRepository.findOne({where: {email: email}});
   }
 }

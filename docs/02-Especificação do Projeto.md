@@ -151,12 +151,17 @@ O gráfico abaixo é uma ferramenta utilizada para controlar e gerenciar o crono
 
 ![image](https://user-images.githubusercontent.com/103225086/236684130-3304fda8-6bee-43af-9530-afc376d0abcf.png)
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103225086/427cd652-aab9-486e-b537-3c872eb1b011)
+
+
 
 ## Gerenciamento de Equipe
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
 ![image](https://user-images.githubusercontent.com/103225086/236684224-71f85ba6-2894-45f2-8a64-3dac9bfecb5e.png)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103225086/93304cc4-222c-479b-ad74-3db24cbced58)
 
 ## Gestão de Orçamento
 
