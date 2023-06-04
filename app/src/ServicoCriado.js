@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Alert, TextInput } from 'react-native';
 
 const ServicoCriado = ({ route, navigation }) => {
   const { servico } = route.params;
   const [isEditing, setIsEditing] = useState(false);
   const [avaliacao, setAvaliacao] = useState(0);
   const [comentario, setComentario] = useState('');
+  const [comentarios, setComentarios] = useState(['']);
 
   const handleEdit = () => {
     setIsEditing(true);
@@ -37,6 +38,8 @@ const ServicoCriado = ({ route, navigation }) => {
     // Aqui você pode fazer o salvamento do comentário no servidor
     // Por exemplo, enviar uma requisição para adicionar o comentário ao serviço
     // e exibir uma mensagem de sucesso após a conclusão
+    setComentarios([...comentarios, comentario]);
+    setComentario('');
     Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
   };
 
@@ -67,25 +70,41 @@ const ServicoCriado = ({ route, navigation }) => {
               <Text style={styles.buttonText}>Entrar em Contato</Text>
             </TouchableOpacity>
           )}
-          <Text style={styles.sectionTitle}>Avaliação</Text>
-          <View style={styles.ratingContainer}>
-            {[1, 2, 3, 4, 5].map((rating) => (
-              <TouchableOpacity
-                key={rating}
-                style={[styles.ratingButton, rating <= avaliacao && styles.ratingButtonActive]}
-                onPress={() => handleRating(rating)}
-              >
-                <Text style={styles.ratingButtonText}>{rating}</Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-          <Text style={styles.sectionTitle}>Comentários</Text>
-          {/* Aqui você pode exibir os comentários existentes */}
-          {/* E fornecer um formulário para adicionar novos comentários */}
-          {/* Por exemplo, um TextInput para o comentário e um botão para enviar */}
-          {/* Quando um comentário é enviado, você pode chamar a função handleComment */}
         </>
       )}
+
+      <Text style={styles.sectionTitle}>Avaliações</Text>
+      <View style={styles.ratingContainer}>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(1)}>
+          <Text style={styles.ratingText}>{avaliacao >= 1 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(2)}>
+          <Text style={styles.ratingText}>{avaliacao >= 2 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(3)}>
+          <Text style={styles.ratingText}>{avaliacao >= 3 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(4)}>
+          <Text style={styles.ratingText}>{avaliacao >= 4 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(5)}>
+          <Text style={styles.ratingText}>{avaliacao >= 5 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+      </View>
+
+      <Text style={styles.sectionTitle}>Comentários</Text>
+      {comentarios.map((comentario, index) => (
+        <Text key={index} style={styles.comment}>{comentario}</Text>
+      ))}
+      <TextInput
+        style={styles.commentInput}
+        placeholder="Digite seu comentário"
+        value={comentario}
+        onChangeText={(text) => setComentario(text)}
+      />
+      <TouchableOpacity style={styles.button} onPress={handleComment}>
+        <Text style={styles.buttonText}>Adicionar Comentário</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -93,60 +112,58 @@ const ServicoCriado = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 16,
+    marginBottom: 10,
   },
   label: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 8,
+    marginTop: 10,
   },
   value: {
     fontSize: 16,
-    marginBottom: 16,
+    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop: 16,
-    marginBottom: 8,
-  },
-  button: {
-    backgroundColor: '#007bff',
-    padding: 12,
-    borderRadius: 4,
-    alignItems: 'center',
-    marginTop: 16,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+    marginTop: 20,
   },
   ratingContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 16,
+    justifyContent: 'center',
+    marginTop: 10,
   },
   ratingButton: {
-    padding: 8,
-    borderRadius: 4,
+    marginLeft: 5,
+  },
+  ratingText: {
+    fontSize: 20,
+  },
+  comment: {
+    marginTop: 10,
+  },
+  commentInput: {
     borderWidth: 1,
-    borderColor: '#000',
-  },
-  ratingButtonActive: {
-    backgroundColor: '#007bff',
-    borderColor: '#007bff',
-  },
-  ratingButtonText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#000',
+    borderColor: 'gray',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 10,
   },
 });
 
