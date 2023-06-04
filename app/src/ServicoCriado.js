@@ -1,23 +1,36 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert, TextInput } from 'react-native';
+import { View, Text, Button, StyleSheet, Alert, TextInput, TouchableOpacity } from 'react-native';
+import { atualizarServico } from '../services/ServicoDB';
+import { useNavigation } from '@react-navigation/native';
 
-const ServicoCriado = ({ route, navigation }) => {
+const ServicoCriado = ({ route }) => {
   const { servico } = route.params;
-  const [isEditing, setIsEditing] = useState(false);
+  const [nome, setNome] = useState(servico.nome);
+  const [descricao, setDescricao] = useState(servico.descricao);
+  const [preco, setPreco] = useState(servico.preco);
+  const [telefone, setTelefone] = useState(servico.telefone);
   const [avaliacao, setAvaliacao] = useState(0);
   const [comentario, setComentario] = useState('');
   const [comentarios, setComentarios] = useState(['']);
+  
+  const navigation = useNavigation();
 
-  const handleEdit = () => {
-    setIsEditing(true);
+  const handleEditar = () => {
+    navigation.navigate('CadastroServico', { servico });
   };
 
-  const handleSave = () => {
-    setIsEditing(false);
-    // Aqui você pode fazer o salvamento dos dados editados
-    // Por exemplo, você pode enviar uma requisição para atualizar os dados no servidor
-    // e exibir uma mensagem de sucesso após a conclusão
-    Alert.alert('Sucesso', 'Os dados foram atualizados com sucesso.');
+  const handleConcluir = () => {
+    Alert.alert('Sucesso', 'Seu serviço foi cadastrado com sucesso!', [
+      {
+        text: 'OK',
+        onPress: () => {
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Principal' }],
+          });
+        },
+      },
+    ]);
   };
 
   const handleContact = () => {
@@ -43,6 +56,7 @@ const ServicoCriado = ({ route, navigation }) => {
     Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
   };
 
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{servico.nome}</Text>
@@ -55,23 +69,9 @@ const ServicoCriado = ({ route, navigation }) => {
       <Text style={styles.label}>Telefone:</Text>
       <Text style={styles.value}>{servico.telefone}</Text>
 
-      {isEditing ? (
-        <TouchableOpacity style={styles.button} onPress={handleSave}>
-          <Text style={styles.buttonText}>Salvar</Text>
+        <TouchableOpacity style={styles.button} onPress={handleConcluir}>
+          <Text style={styles.buttonText}>Concluir</Text>
         </TouchableOpacity>
-      ) : (
-        <>
-          {servico.criador === 'usuario_atual' ? (
-            <TouchableOpacity style={styles.button} onPress={handleEdit}>
-              <Text style={styles.buttonText}>Editar</Text>
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity style={styles.button} onPress={handleContact}>
-              <Text style={styles.buttonText}>Entrar em Contato</Text>
-            </TouchableOpacity>
-          )}
-        </>
-      )}
 
       <Text style={styles.sectionTitle}>Avaliações</Text>
       <View style={styles.ratingContainer}>
@@ -91,20 +91,6 @@ const ServicoCriado = ({ route, navigation }) => {
           <Text style={styles.ratingText}>{avaliacao >= 5 ? '★' : '☆'}</Text>
         </TouchableOpacity>
       </View>
-
-      <Text style={styles.sectionTitle}>Comentários</Text>
-      {comentarios.map((comentario, index) => (
-        <Text key={index} style={styles.comment}>{comentario}</Text>
-      ))}
-      <TextInput
-        style={styles.commentInput}
-        placeholder="Digite seu comentário"
-        value={comentario}
-        onChangeText={(text) => setComentario(text)}
-      />
-      <TouchableOpacity style={styles.button} onPress={handleComment}>
-        <Text style={styles.buttonText}>Adicionar Comentário</Text>
-      </TouchableOpacity>
     </View>
   );
 };
