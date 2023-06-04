@@ -1,55 +1,95 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, Alert, TextInput, TouchableOpacity } from 'react-native';
+import { atualizarServico } from '../services/ServicoDB';
+import { useNavigation } from '@react-navigation/native';
 
-const ServicoCriado = ({ route, navigation }) => {
+const ServicoCriado = ({ route }) => {
   const { servico } = route.params;
   const [nome, setNome] = useState(servico.nome);
   const [descricao, setDescricao] = useState(servico.descricao);
   const [preco, setPreco] = useState(servico.preco);
   const [telefone, setTelefone] = useState(servico.telefone);
+  const [avaliacao, setAvaliacao] = useState(0);
+  const [comentario, setComentario] = useState('');
+  const [comentarios, setComentarios] = useState(['']);
+  
+  const navigation = useNavigation();
 
   const handleEditar = () => {
     navigation.navigate('CadastroServico', { servico });
   };
 
-  const handleSalvar = () => {
-    const servico = {
-      nome: nome,
-      descricao: descricao,
-      preco: preco,
-      telefone: telefone
-    };
-
-    servico.nome = nome;
-    servico.descricao = descricao;
-    servico.preco = preco;
-    servico.telefone = telefone;
-
-    alert('Dados salvos com sucesso!');
+  const handleConcluir = () => {
+    Alert.alert('Sucesso', 'Seu serviço foi cadastrado com sucesso!', [
+      {
+        text: 'OK',
+        onPress: () => {
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Principal' }],
+          });
+        },
+      },
+    ]);
   };
+
+  const handleContact = () => {
+    // Aqui você pode implementar a lógica para entrar em contato com o criador do serviço
+    // Por exemplo, abrir um modal de contato com as opções de telefone, e-mail, etc.
+    Alert.alert('Contato', `Entre em contato com ${servico.nome}`);
+  };
+
+  const handleRating = (rating) => {
+    setAvaliacao(rating);
+    // Aqui você pode fazer o salvamento da avaliação no servidor
+    // Por exemplo, enviar uma requisição para registrar a avaliação do usuário
+    // e exibir uma mensagem de sucesso após a conclusão
+    Alert.alert('Sucesso', 'Avaliação registrada com sucesso.');
+  };
+
+  const handleComment = () => {
+    // Aqui você pode fazer o salvamento do comentário no servidor
+    // Por exemplo, enviar uma requisição para adicionar o comentário ao serviço
+    // e exibir uma mensagem de sucesso após a conclusão
+    setComentarios([...comentarios, comentario]);
+    setComentario('');
+    Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
+  };
+
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Serviço Criado</Text>
-      <View style={styles.infoContainer}>
-        <Text style={styles.label}>Nome:</Text>
-        <Text style={styles.text}>{nome}</Text>
-      </View>
-      <View style={styles.infoContainer}>
-        <Text style={styles.label}>Descrição:</Text>
-        <Text style={styles.text}>{descricao}</Text>
-      </View>
-      <View style={styles.infoContainer}>
-        <Text style={styles.label}>Preço:</Text>
-        <Text style={styles.text}>{preco}</Text>
-      </View>
-      <View style={styles.infoContainer}>
-        <Text style={styles.label}>Telefone:</Text>
-        <Text style={styles.text}>{telefone}</Text>
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Editar" onPress={handleEditar} />
-        <Button title="Salvar" onPress={handleSalvar} />
+      <Text style={styles.title}>{servico.nome}</Text>
+      <Text style={styles.label}>Descrição:</Text>
+      <Text style={styles.value}>{servico.descricao}</Text>
+      <Text style={styles.label}>Preço:</Text>
+      <Text style={styles.value}>{servico.preco}</Text>
+      <Text style={styles.label}>Localização:</Text>
+      <Text style={styles.value}>{servico.localizacao}</Text>
+      <Text style={styles.label}>Telefone:</Text>
+      <Text style={styles.value}>{servico.telefone}</Text>
+
+        <TouchableOpacity style={styles.button} onPress={handleConcluir}>
+          <Text style={styles.buttonText}>Concluir</Text>
+        </TouchableOpacity>
+
+      <Text style={styles.sectionTitle}>Avaliações</Text>
+      <View style={styles.ratingContainer}>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(1)}>
+          <Text style={styles.ratingText}>{avaliacao >= 1 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(2)}>
+          <Text style={styles.ratingText}>{avaliacao >= 2 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(3)}>
+          <Text style={styles.ratingText}>{avaliacao >= 3 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(4)}>
+          <Text style={styles.ratingText}>{avaliacao >= 4 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(5)}>
+          <Text style={styles.ratingText}>{avaliacao >= 5 ? '★' : '☆'}</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -58,29 +98,58 @@ const ServicoCriado = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  infoContainer: {
-    marginBottom: 8,
+    marginBottom: 10,
   },
   label: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginRight: 8,
+    marginTop: 10,
   },
-  text: {
+  value: {
     fontSize: 16,
+    marginBottom: 10,
   },
-  buttonContainer: {
+  button: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 20,
+  },
+  ratingContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 16,
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  ratingButton: {
+    marginLeft: 5,
+  },
+  ratingText: {
+    fontSize: 20,
+  },
+  comment: {
+    marginTop: 10,
+  },
+  commentInput: {
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+    padding: 10,
+    marginTop: 10,
   },
 });
 
