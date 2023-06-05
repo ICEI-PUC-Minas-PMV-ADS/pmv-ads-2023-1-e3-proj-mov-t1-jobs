@@ -33,7 +33,7 @@ Nessa tela, usuário pesquisa o serviço desejado.
 ### Funcionalidade a ser implementada:
 Busca do usuário deve retornar serviços cadastrados no banco de dados.
 
-![busca](https://user-images.githubusercontent.com/103579574/236706231-92f8996d-552c-46ee-ae83-67ae51a01209.gif)
+![ezgif com-video-to-gif (1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/3d6788a0-64f6-4c3e-800d-3da1920b93dc)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/4f42c789-8f80-49f9-a0b7-3240ccc01669)
 
 
