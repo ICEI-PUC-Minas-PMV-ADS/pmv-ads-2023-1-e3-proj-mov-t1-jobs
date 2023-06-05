@@ -2,39 +2,51 @@
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
 
 ## Tela de Cadastro (Vinicius)
+
+Na tela de cadastro, é usado o useState para armazenar os valores dos campos do formulário, como email, nome, CPF, senha, telefone, etc. O useEffect é usado para criar a tabela de usuários no banco de dados assim que a tela é renderizada. A função validar é chamada antes de salvar os dados do usuário no banco de dados e verifica se todos os campos foram preenchidos corretamente. A função salvar é responsável por salvar os dados do usuário no banco de dados.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/f3024ac8-22df-48a5-bae8-87315aee8186)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/7a6a73a8-d88f-426e-9db9-243341056013)
+
 Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
 
-![cadastro](https://user-images.githubusercontent.com/103579574/236703168-28207bbb-2cd7-4edb-adfb-e15c156c0c7e.gif)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/8257ac7b-e0d9-43a2-9ab3-4b3798404f8a)
+![ezgif com-video-to-gif (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/7058bc71-ae4f-421f-adb0-265ff675ca9e)
 
-Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados. 
 
-### Funcionalidade a ser implementada:
-Após a mensagem de sucesso do serviço criado, retornar usuário de volta a Tela de Login.
+Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados. E em seguida, usuário volta para a tela de Login e seus dados no tela de Cadastro são limpos.
 
-![cadastro-sucesso](https://user-images.githubusercontent.com/103579574/236703755-f85fdeff-33ef-404d-994a-06341f94d44d.gif)
+![ezgif com-video-to-gif (4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/9960410a-e978-48b3-beb9-051c7de29370)
+
+## Tela de Login (Vinicius)
+
+Na tela de login, é utilizado um useState para armazenar os valores dos campos de email e senha. A função entrar é chamada ao pressionar o botão de login e verifica se os campos foram preenchidos corretamente. Em seguida, ela chama a função buscarUsuario do arquivo UsuarioDB.js para verificar se as credenciais estão corretas. Se o usuário for encontrado, a tela é redirecionada para a tela principal. Se não for encontrado, aparece uma mensagem de erro informando que informações não são válidas.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/106fa4f6-6552-477c-ad0b-a019120c2c42)
+
+Abaixo, campo de senha não foi preenchido, e mensagem de erro recebida.
+
+![login-fail)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/44e2d709-4354-4783-b595-a2a6090489ee)
+
+É possível ver primeiro a mensagem de erro pelo preenchiemtno do campo da senha errado, após usuários inserir dados corretos, o login sendo feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal.
+
+![login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/801400fb-c591-438f-909d-78013bd28c29)
 
 ### UsuarioDB (Vinicius)
 
+O arquivo UsuarioDB.js contém funções relacionadas ao banco de dados SQLite. A função criarTabelaUsuarios é usada para criar a tabela de usuários se ela ainda não existir. A função salvarUsuario é responsável por inserir um novo usuário no banco de dados. A função getCadastroUsuarios é usada para recuperar todos os usuários cadastrados no banco de dados. E a função buscarUsuario é usada para buscar um usuário específico pelo email e senha.
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/6490aad7-3dfd-4cb0-82f7-9ccc89fad328)
 
-Banco de dados no arquivo UsuarioDB, usando o SQLite. Recebe os usuários cadastrados.
 
-## Tela de Login (Vinicius)
-É possível ver o login feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal, com opções de navegar para outras telas clicando em ícones da aba inferior. Usuário vai para tela de Início que será implementada com opções de serviços.
+## Tela de Início (Crislaine)
 
-![login](https://user-images.githubusercontent.com/103579574/236705913-65a1d3dd-aa2c-42cc-83aa-a418462c84ae.gif)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/d8e7d176-694d-4dd0-9b49-67535c8a97ce)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/60985c83-f6ce-4a23-a314-dd7de3e4f8f0)
 
+Após fazer login, usuário chega na tela principal, com opções de navegar para outras telas clicando em ícones da aba inferior. Tela de Início possui serviços cadastrados e barra de pesquisa para procurar esses serviços no banco de dados.
 
-## Tela de Busca de serviços (Crislaine)
-Nessa tela, usuário pesquisa o serviço desejado. 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/2d53d12c-6aaf-41bc-b893-9fb97b17cb5e)
 
-### Funcionalidade a ser implementada:
-Busca do usuário deve retornar serviços cadastrados no banco de dados.
-
-![ezgif com-video-to-gif (1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/3d6788a0-64f6-4c3e-800d-3da1920b93dc)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/4f42c789-8f80-49f9-a0b7-3240ccc01669)
+![Busca](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/3d6788a0-64f6-4c3e-800d-3da1920b93dc)
 
 
 ## Tela de Cadastro de Serviços (Alisson)
