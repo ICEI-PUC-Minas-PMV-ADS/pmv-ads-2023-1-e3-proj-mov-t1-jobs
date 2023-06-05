@@ -1,63 +1,72 @@
 # Programação de Funcionalidades
 Representação de tudo que já foi implementado e ideias que estão sendo desenvolvidas pelo grupo para a aplicação. Usando o VS Code, cada componente do grupo vem desenvolvendo, em diferentes branches, sua tela.
 
-![image](https://user-images.githubusercontent.com/103579574/229379920-02c21e38-9c00-49bd-872d-702549640b73.png)
+## Tela de Cadastro (Vinicius)
+Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
 
-Tela App.js
+![cadastro](https://user-images.githubusercontent.com/103579574/236703168-28207bbb-2cd7-4edb-adfb-e15c156c0c7e.gif)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/8257ac7b-e0d9-43a2-9ab3-4b3798404f8a)
 
-![image](https://user-images.githubusercontent.com/103579574/229380130-56c1e7f2-b802-4bf7-bb63-3ac57f29df1d.png)
+Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados. 
+
+### Funcionalidade a ser implementada:
+Após a mensagem de sucesso do serviço criado, retornar usuário de volta a Tela de Login
+
+![cadastro-sucesso](https://user-images.githubusercontent.com/103579574/236703755-f85fdeff-33ef-404d-994a-06341f94d44d.gif)
+
+Com a API rodando através do comando 'npm run start', o back-end do aplicativo é integrado e as informações podem ser salvas no banco de dados.
+
+![API-rodando](https://user-images.githubusercontent.com/103579574/236705347-889317bc-6064-4298-aade-1273abc579e2.png)
+
+Dados guardados no Banco de dados Myql.
+
+![Mysql](https://user-images.githubusercontent.com/103579574/236705344-20680e1e-659d-4d76-83fd-6df92564770a.png)
+
+## Tela de Login (Vinicius)
+É possível ver o login feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal, com opções de navegar para outras telas clicando em ícones da aba inferior. Usuário vai para tela de Início que será implementada com opções de serviços.
+
+![login](https://user-images.githubusercontent.com/103579574/236705913-65a1d3dd-aa2c-42cc-83aa-a418462c84ae.gif)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/d8e7d176-694d-4dd0-9b49-67535c8a97ce)
 
 
-## Tela Login (Vinicius)
-Requisitos 
+## Tela de Busca de serviços (Crislaine)
+Nessa tela, usuário pesquisa o serviço desejado. 
 
--RF-001	O usuário deve conseguir cadastrar uma conta na aplicação móvel.
+### Funcionalidade a ser implementada:
+Busca do usuário deve retornar serviços cadastrados no banco de dados.
 
--RF-002	O usuário cadastrado deve conseguir fazer o login em sua conta.
+![busca](https://user-images.githubusercontent.com/103579574/236706231-92f8996d-552c-46ee-ae83-67ae51a01209.gif)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/4f42c789-8f80-49f9-a0b7-3240ccc01669)
 
-![image](https://user-images.githubusercontent.com/103579574/229380469-93b1d739-1fc8-465a-96a9-ba28428871a1.png)
 
-![image](https://user-images.githubusercontent.com/103579574/229380020-92f64ccb-96a9-4862-b30c-c43bdcd194cf.png)
+## Tela de Cadastro de serviços (Alisson)
+Na tela de cadastro de serviços o usuário deve colocar informações pedidas para criar seu serviço. Funcionalidade para enviar informações para o banco de dados será implementada.
+### Funcionalidade a ser implementada:
+Serviços cadastrados devem ser salvos no banco de dados.
 
-Vinicius: "Botão que leva à tela de cadastro para o caso do usuário que não tem uma conta e quer registrar-se, será inserido na tela de login. Além de funcionalidades para bloquear o login caso a senha ou e-mail estejam incorretos."
+![cadastro-servicos](https://user-images.githubusercontent.com/103579574/236706597-44246143-49e6-49d4-8819-d522631c52f7.gif)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/9e75ec1c-f5f1-4bfb-a112-182bf370936f)
 
-## Tela Principal (Leonardo Xavier)
-Requisitos 
+## Tela de Perfil (Leonardo)
 
--RF-006	O usuário deve conseguir buscar por serviços na aplicação.
+### Funcionalidade a ser implementada:
+Será implementada informações do usuário e possibilidade de alterá-las.
 
--RF-014	A aplicação móvel deve conter uma tela principal. 
+![perfil](https://user-images.githubusercontent.com/103579574/236707213-ee5291be-c5dc-4aea-90a7-498d196d4682.jpeg)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/86bbb067-3c66-4be7-889b-2b0d96612abe)
 
-![image](https://user-images.githubusercontent.com/103579574/229380866-ed578349-6c6c-43f9-9e5d-b9314f0a51a4.png)
+## Tela de Exclusão de Serviço
+Quando o usuário optar por excluir um serviço, será redirecionado para a tela de exclusão com os detalhes do serviço para que ele possa conferir e excluir.
 
-![image](https://user-images.githubusercontent.com/103579574/229380050-a205b994-b1a6-4dfe-a32c-0e60261dcfb3.png)
+![WhatsApp Image 2023-05-20 at 17 52 03](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/365d3e7d-139b-4f0f-afc8-9f12ab078d81)
 
-Leonardo: "Bottom-tabs-navigation será implementado na tela Principal com telas que levam para notificações e perfil do usuário. Além de barra de pesquisa para serviços."
 
-## Tela de Busca de Seriços (Alisson)
-Requisitos 
+![WhatsApp Image 2023-05-20 at 17 52 03 (1)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/1700f5e8-8cb8-4cfb-8687-9574bb24c1df)
 
--RF-006	O usuário deve conseguir buscar por serviços na aplicação.	
 
--RF-007	O usuário deve conseguir buscar por serviços vinculados a um determinado anunciante. 
+![deletarServico](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/90863834/3e62d521-9cdd-447b-81ab-d4b3c66ea503)
 
-![image](https://user-images.githubusercontent.com/103579574/229380908-f84c46f8-52cc-4e95-93c2-63e4ac2f30ad.png)
 
-![image](https://user-images.githubusercontent.com/103579574/229380089-681feb36-e95e-470a-86c4-4262acfe3924.png)
 
-Alisson: "Tela de busca terá barra de pesquisa que busca serviços já cadastrados. Bottom-tab-navigation também será inserido para separar serviços por categoria." 
-
-## Tela de Cadastro de serviços (Crislaine)
-Requisitos
-
--RF-004	O anunciante deve conseguir publicar serviços na aplicação móvel.
-
--RF-005	O anunciante deve conseguir informar valores do seu serviço.
-
-![image](https://user-images.githubusercontent.com/103579574/229380929-b508e7f0-3eef-46dd-8123-a1a0c4647ac0.png)
-
-![image](https://user-images.githubusercontent.com/103579574/229380276-5c70b4d9-c501-4285-9d56-90bf1c592618.png)
-
-Crislaine: "Barras serão inseridas para que o usuário consiga preencher de acordo com as informações do seu serviço."
 
 
