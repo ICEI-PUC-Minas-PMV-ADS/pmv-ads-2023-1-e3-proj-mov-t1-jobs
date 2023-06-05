@@ -1,32 +1,41 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Alert, TouchableOpacity, Text, Image } from 'react-native';
+import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
+import { useNavigation } from '@react-navigation/native';
+import { salvarServico, atualizarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
-const CadastroServicos = ({ navigation }) => {
+export default function CadastroServicos() {
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
   const [localizacao, setLocalizacao] = useState('');
   const [telefone, setTelefone] = useState('');
+  const navigation = useNavigation();
   const [imagens, setImagens] = useState([]);
 
-  const handleCadastro = () => {
+  const handleCadastro = async () => {
     if (nome === '' || descricao === '' || preco === '' || telefone === '') {
       Alert.alert('Erro', 'Por favor, preencha todos os campos');
     } else {
       const servicoCriado = {
-        nome,
-        descricao,
-        preco,
-        localizacao,
-        telefone,
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        telefone: telefone,
         imagens: imagens || [],
       };
-      navigation.navigate('ServicoCriado', { servico: servicoCriado });
+  
+      try {
+        await salvarServico(servicoCriado);
+        navigation.navigate('ServicoCriado', { servico: servicoCriado });
+      } catch (error) {
+        console.error('Erro ao salvar o serviço:', error);
+      }
     }
   };
-
+  
   const handleSelecionarImagem = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {
@@ -48,6 +57,11 @@ const CadastroServicos = ({ navigation }) => {
   };
 
   return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+      style={[styles.container]}
+      keyboardVerticalOffset={150}>
+      <ScrollView style={{ width: "100%" }}>
     <View style={styles.container}>
       <TextInput
         style={styles.input}
@@ -77,6 +91,7 @@ const CadastroServicos = ({ navigation }) => {
         style={styles.input}
         placeholder="Preço do serviço"
         keyboardType="numeric"
+        returnKeyType="done"
         value={preco}
         onChangeText={(formattedValue, rawValue) => {
           setPreco(formattedValue);
@@ -98,23 +113,29 @@ const CadastroServicos = ({ navigation }) => {
       />
       <TextInputMask
         style={styles.input}
-        placeholder="Telefone de contato"
-        keyboardType="phone-pad"
+        placeholder="Digite seu telefone"
+        backgroundColor="white"
+        placeholderTextColor="#777A8D"
+        type={'cel-phone'}
+        options={{
+          maskType: 'BRL',
+          withDDD: true,
+          dddMask: '(99)'
+        }}
         value={telefone}
         onChangeText={(formattedValue, rawValue) => {
           setTelefone(formattedValue);
         }}
-        type="cel-phone"
-        options={{
-          maskType: 'BRL',
-          withDDD: true,
-          dddMask: '(99) ',
-        }}
+        keyboardType="phone-pad"
+        returnKeyType="done"
+        ref={(ref) => telefoneField = ref}
       />
       <TouchableOpacity style={styles.button} onPress={handleCadastro}>
         <Text style={styles.buttonText}>Cadastrar</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -169,5 +190,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default CadastroServicos;

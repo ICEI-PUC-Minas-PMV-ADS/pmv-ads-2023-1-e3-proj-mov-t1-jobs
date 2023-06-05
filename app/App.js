@@ -10,6 +10,7 @@ import Principal from './src/Principal';
 import Cadastro from './src/Cadastro';
 import CadastroServico from './src/CadastroServico';
 import ServicoCriado from './src/ServicoCriado';
+import Inicio from './src/Inicio';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ function MyStack() {
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="CadastroServico" component={CadastroServico} />
       <Stack.Screen name="ServicoCriado" component={ServicoCriado} />
+      <Stack.Screen name="Início" component={Inicio} />
     </Stack.Navigator>
   );
 }

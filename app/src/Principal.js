@@ -10,7 +10,6 @@ import { AsyncStorage } from 'react-native';
 import Perfil from './Perfil';
 import CadastroServico from './CadastroServico';
 import Inicio from './Inicio';
-import Notificacoes from './Notificacoes';
 import BuscarServico from './BuscarServico';
 
 const logout = (navigation) => {
