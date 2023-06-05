@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: '#278ED5',
   },
   listContainer: {
     paddingBottom: 20,
@@ -88,8 +89,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 25,
     paddingHorizontal: 10,
+    paddingVertical: 15,
     backgroundColor: '#f5f5f5',
     borderRadius: 5,
   },
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   searchContainer: {
+    backgroundColor: 'white',
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,

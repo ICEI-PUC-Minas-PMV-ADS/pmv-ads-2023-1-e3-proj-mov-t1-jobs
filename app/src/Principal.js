@@ -1,11 +1,6 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { Button } from 'react-native-elements';
 import { AsyncStorage } from 'react-native';
 import Perfil from './Perfil';
 import CadastroServico from './CadastroServico';
