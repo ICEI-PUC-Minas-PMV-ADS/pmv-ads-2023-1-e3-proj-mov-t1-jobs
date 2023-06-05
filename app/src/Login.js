@@ -2,20 +2,39 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Input, Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import { Button } from '@rneui/themed';
+import * as UsuarioDB from '../services/UsuarioDB';
+import { Alert } from 'react-native';
 
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [nomeUsuario, setNomeUsuario] = useState(null);
 
-  const entrar = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Principal' }],
-    });
+  const entrar = async () => {
+    if (!email || !password) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+      return;
+    }
+
+    try {
+      const usuario = await UsuarioDB.buscarUsuario(email, password);
+
+      if (usuario) {
+        setNomeUsuario(usuario.nome);
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Principal' }],
+        });
+      } else {
+        Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
+      }
+    } catch (error) {
+      Alert.alert('Erro', 'Houve um erro ao fazer login. Por favor, tente novamente mais tarde.');
+      console.error('Erro ao fazer login:', error);
+    }
   };
 
   const cadastrar = () => {

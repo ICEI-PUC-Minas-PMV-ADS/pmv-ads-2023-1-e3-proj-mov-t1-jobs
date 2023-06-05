@@ -123,7 +123,6 @@ export default function CadastroServicos() {
         style={styles.input}
         placeholder="Digite seu telefone"
         backgroundColor="white"
-        placeholderTextColor="#777A8D"
         type={'cel-phone'}
         options={{
           maskType: 'BRL',
@@ -151,7 +150,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#278ED5',
   },
   input: {
     marginBottom: 16,
@@ -160,6 +159,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     borderRadius: 4,
     fontSize: 16,
+    backgroundColor: 'white',
   },
   descricaoInput: {
     height: 100,
@@ -167,6 +167,9 @@ const styles = StyleSheet.create({
   imagensContainer: {
     flexDirection: 'row',
     marginBottom: 16,
+    backgroundColor: 'white',
+    width: 79,
+    borderRadius: 5
   },
   imagem: {
     width: 80,
@@ -187,7 +190,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#0000CD',
     padding: 12,
     borderRadius: 4,
     alignItems: 'center',

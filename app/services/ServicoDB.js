@@ -45,30 +45,6 @@ export const salvarServico = (servicoCriado) => {
 };
 
 
-
-export const atualizarServico = (servicoAtualizado) => {
-  return new Promise((resolve, reject) => {
-    db.transaction(tx => {
-      tx.executeSql(
-        'UPDATE servicos SET nome=?, descricao=?, preco=?, telefone=? WHERE id=?',
-        [servicoAtualizado.nome, servicoAtualizado.descricao, servicoAtualizado.preco, servicoAtualizado.telefone, servicoAtualizado.id],
-        (_, { rowsAffected }) => {
-          if (rowsAffected > 0) {
-            console.log('Serviço atualizado com sucesso');
-            resolve(); // Resolva a promessa quando o serviço for atualizado com sucesso
-          } else {
-            reject('Falha ao atualizar o serviço');
-          }
-        },
-        error => {
-          reject('Erro ao atualizar o serviço no banco de dados: ' + error.message);
-        }
-      );
-    });
-  });
-};
-
-
 export const getCadastroServico = (searchQuery) => {
   return new Promise((resolve, reject) => {
     db.transaction(tx => {

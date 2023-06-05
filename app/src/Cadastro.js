@@ -4,7 +4,6 @@ import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Button, CheckBox, Input, Text } from 'react-native-elements';
 import { TextInputMask } from 'react-native-masked-text';
 import { ScrollView } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import * as UsuarioDB from '../services/UsuarioDB';
 
@@ -55,6 +54,17 @@ export default function Cadastro({ navigation }) {
     return !error
   }
 
+  useEffect(() => {
+    UsuarioDB.criarTabelaUsuarios()
+      .then(() => {
+        console.log('Tabela de usuários criada com sucesso');
+      })
+      .catch((error) => {
+        console.error('Erro ao criar tabela de usuários:', error);
+      });
+  }, []);
+
+
   const salvar = () => {
     if (validar()) {
       setLoading(true)
@@ -67,10 +77,12 @@ export default function Cadastro({ navigation }) {
         senha: senha
       }
 
-      salvarUsuario(usuarioCriado)
+      UsuarioDB.salvarUsuario(usuarioCriado)
         .then(() => {
-          setLoading(false);     
-          navigation.navigate('Perfil');
+          setLoading(false);
+          Alert.alert('Sucesso', 'Usuário cadastrado com sucesso', [
+            { text: 'OK', onPress: () => navigation.goBack() }
+          ]);
         })
         .catch((error) => {
           setLoading(false);
