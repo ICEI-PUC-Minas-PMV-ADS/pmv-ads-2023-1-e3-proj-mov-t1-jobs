@@ -67,6 +67,16 @@ export default function Cadastro({ navigation }) {
         senha: senha
       }
 
+      useEffect(() => {
+        UsuarioDB.criarTabelaUsuarios()
+          .then(() => {
+            console.log('Tabela de usuários criada com sucesso');
+          })
+          .catch((error) => {
+            console.error('Erro ao criar tabela de usuários:', error);
+          });
+      }, []);
+
       UsuarioDB.salvarUsuario(usuarioCriado)
         .then(() => {
           setLoading(false);     

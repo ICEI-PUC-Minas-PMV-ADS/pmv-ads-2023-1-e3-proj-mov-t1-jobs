@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
-import { salvarServico, atualizarServico } from '../services/ServicoDB';
+import { criarTabelaServicos, salvarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
 export default function CadastroServicos() {
@@ -15,6 +15,14 @@ export default function CadastroServicos() {
   const navigation = useNavigation();
   const [imagens, setImagens] = useState([]);
 
+  useEffect(() => {
+    criarTabelaServicos().then(() => {
+      console.log('Tabela de serviços criada com sucesso.');
+    }).catch(error => {
+      console.error('Erro ao criar tabela de serviços:', error);
+    });
+  }, []);
+
   const handleCadastro = async () => {
     if (nome === '' || descricao === '' || preco === '' || telefone === '') {
       Alert.alert('Erro', 'Por favor, preencha todos os campos');
@@ -25,6 +33,7 @@ export default function CadastroServicos() {
         preco: preco,
         telefone: telefone,
         imagens: imagens || [],
+        criador: 'usuario_atual',
       };
   
       try {
@@ -35,7 +44,7 @@ export default function CadastroServicos() {
       }
     }
   };
-  
+
   const handleSelecionarImagem = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {
@@ -48,7 +57,7 @@ export default function CadastroServicos() {
       allowsEditing: true,
       quality: 1,
       multiple: true,
-      maxSelected: 5 - imagens.length, // Limita a 5 imagens
+      maxSelected: 5 - imagens.length,
     });
 
     if (!result.cancelled) {

@@ -3,6 +3,7 @@ import * as SQLite from 'expo-sqlite';
 const db = SQLite.openDatabase('mydatabase.db');
 
 export const criarTabelaUsuarios = () => {
+  return new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, email TEXT, cpf TEXT, telefone TEXT, senha TEXT)',
@@ -15,7 +16,8 @@ export const criarTabelaUsuarios = () => {
         }
       );
     });
-  };
+  })
+};
 
   export const salvarUsuario = (usuarioCriado, callback) => {
     return new Promise((resolve, reject) => {
