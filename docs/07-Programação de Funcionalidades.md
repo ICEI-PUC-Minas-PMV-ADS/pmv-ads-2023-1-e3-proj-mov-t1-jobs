@@ -10,17 +10,15 @@ Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou 
 Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados. 
 
 ### Funcionalidade a ser implementada:
-Após a mensagem de sucesso do serviço criado, retornar usuário de volta a Tela de Login
+Após a mensagem de sucesso do serviço criado, retornar usuário de volta a Tela de Login.
 
 ![cadastro-sucesso](https://user-images.githubusercontent.com/103579574/236703755-f85fdeff-33ef-404d-994a-06341f94d44d.gif)
 
-Com a API rodando através do comando 'npm run start', o back-end do aplicativo é integrado e as informações podem ser salvas no banco de dados.
+### UsuarioDB (Vinicius)
 
-![API-rodando](https://user-images.githubusercontent.com/103579574/236705347-889317bc-6064-4298-aade-1273abc579e2.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/6490aad7-3dfd-4cb0-82f7-9ccc89fad328)
 
-Dados guardados no Banco de dados Myql.
-
-![Mysql](https://user-images.githubusercontent.com/103579574/236705344-20680e1e-659d-4d76-83fd-6df92564770a.png)
+Banco de dados no arquivo UsuarioDB, usando o SQLite. Recebe os usuários cadastrados.
 
 ## Tela de Login (Vinicius)
 É possível ver o login feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal, com opções de navegar para outras telas clicando em ícones da aba inferior. Usuário vai para tela de Início que será implementada com opções de serviços.
@@ -108,6 +106,12 @@ O componente ServicoCriado é exportado para que possa ser utilizado em outros l
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/100442612/6f154a76-1ddf-44ef-a51e-032bb8b81727)
 
 Acima podemos ver uma visão geral de como a tela é renderizada atualmente, demais funcionalidades serão implementadas, assim como correção de erros e alterações de estilo.
+
+### ServicoDB (Vinicius)
+
+![ServicoDB](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/810b73b0-8322-4778-85ec-928dfc6f4ddf)
+
+Banco de dados no arquivo ServicoDB, usando o SQLite. Recebe os serviços cadastrados.
 
 ## Tela de Perfil (Leonardo)
 
