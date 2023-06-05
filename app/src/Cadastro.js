@@ -67,7 +67,7 @@ export default function Cadastro({ navigation }) {
         senha: senha
       }
 
-      UsuarioDB.salvarUsuario(usuarioCriado)
+      salvarUsuario(usuarioCriado)
         .then(() => {
           setLoading(false);     
           navigation.navigate('Perfil');

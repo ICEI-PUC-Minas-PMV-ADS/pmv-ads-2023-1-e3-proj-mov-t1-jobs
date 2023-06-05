@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
-import { salvarServico, atualizarServico } from '../services/ServicoDB';
+import { criarTabelaServicos, salvarServico, atualizarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
 export default function CadastroServicos() {
@@ -14,6 +14,14 @@ export default function CadastroServicos() {
   const [telefone, setTelefone] = useState('');
   const navigation = useNavigation();
   const [imagens, setImagens] = useState([]);
+
+  useEffect(() => {
+    criarTabelaServicos().then(() => {
+      console.log('Tabela de serviços criada com sucesso. O aplicativo está pronto para usar.');
+    }).catch(error => {
+      console.error('Erro ao criar tabela de serviços:', error);
+    });
+  }, []);
 
   const handleCadastro = async () => {
     if (nome === '' || descricao === '' || preco === '' || telefone === '') {

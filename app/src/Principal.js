@@ -10,7 +10,6 @@ import { AsyncStorage } from 'react-native';
 import Perfil from './Perfil';
 import CadastroServico from './CadastroServico';
 import Inicio from './Inicio';
-import BuscarServico from './BuscarServico';
 
 const logout = (navigation) => {
   AsyncStorage.removeItem("TOKEN")
@@ -37,16 +36,6 @@ export default function Principal() {
             tabBarLabel: 'Início',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Buscar Serviço"
-          component={BuscarServico}
-          options={{
-            tabBarLabel: 'Buscar',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="magnify" color={color} size={size} />
             ),
           }}
         />

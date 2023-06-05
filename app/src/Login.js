@@ -60,11 +60,11 @@ export default function Login({ navigation }) {
           />
 
           <Button
-            title="LOGIN"
+            title="Login"
             buttonStyle={{
               backgroundColor: '#A9A9A9',
               borderWidth: 2,
-              borderRadius: 15,
+              borderRadius: 13,
             }}
             containerStyle={{
               width: 120,
@@ -101,9 +101,10 @@ const specificStyle = StyleSheet.create({
     color: 'white',
   },
   registrarTexto: {
-    marginTop: 20,
+    marginTop: 30,
     color: 'white',
     textAlign: 'center',
     textDecorationLine: 'underline',
+    fontSize: 14,
   },
 });
