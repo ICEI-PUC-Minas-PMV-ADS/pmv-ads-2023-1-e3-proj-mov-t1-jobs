@@ -3,29 +3,44 @@ Representação de tudo que já foi implementado e ideias que estão sendo desen
 
 ## Tela de Cadastro (Vinicius)
 
-Na tela de cadastro, é usado o useState para armazenar os valores dos campos do formulário, como email, nome, CPF, senha, telefone, etc. O useEffect é usado para criar a tabela de usuários no banco de dados assim que a tela é renderizada. A função validar é chamada antes de salvar os dados do usuário no banco de dados e verifica se todos os campos foram preenchidos corretamente. A função salvar é responsável por salvar os dados do usuário no banco de dados.
+Na tela de cadastro, é usado o useState para armazenar os valores dos campos do formulário, como email, nome, CPF, senha, telefone, etc. O useEffect é usado para criar a tabela de usuários no banco de dados assim que a tela é renderizada. A função validar é chamada antes de salvar os dados do usuário no banco de dados e verifica se todos os campos foram preenchidos corretamente, usando expressões regulares para verificar se o e-mail está no formato correto e se o CPF é válido. Em seguida, verifica se os campos de telefone, senha e nome foram preenchidos. Se algum erro de validação for encontrado, o estado correspondente de erro é atualizado. A função retorna um valor booleano indicando se a validação foi bem-sucedida ou não.
+A função salvar é responsável por salvar os dados do usuário no banco de dados. Antes de salvar os dados, a função validar é chamada para garantir que os campos estejam preenchidos corretamente. Se a validação for bem-sucedida, os dados do usuário são coletados em um objeto e passados para a função salvarUsuario do módulo UsuarioDB. Se a operação for concluída com sucesso, um alerta é exibido e a navegação é redirecionada para a tela anterior. Caso contrário, um alerta de erro é exibido.
+
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/f3024ac8-22df-48a5-bae8-87315aee8186)
+
+
+O retorno do componente é uma estrutura de interface do usuário usando os componentes do React Native e React Native Elements. É usado um KeyboardAvoidingView para ajustar a interface quando o teclado é exibido. O formulário de cadastro é envolto por um ScrollView para permitir a rolagem quando necessário. Os campos de entrada são estilizados usando os estilos definidos no arquivo styles.js.
+
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/7a6a73a8-d88f-426e-9db9-243341056013)
 
-Podemos ver que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
+
+Podemos ver abaixo que todos os campos são obrigatórios e quando não preenchidos ou preenchidos de maneira incorreta o usuário recebe a mensagem de erro.
+
 
 ![ezgif com-video-to-gif (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/7058bc71-ae4f-421f-adb0-265ff675ca9e)
 
 
 Já na imagem abaixo, é possível ver o cadastro sendo feito com sucesso. Com informações do usuário indo para o banco de dados. E em seguida, usuário volta para a tela de Login e seus dados no tela de Cadastro são limpos.
 
+
 ![ezgif com-video-to-gif (4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/9960410a-e978-48b3-beb9-051c7de29370)
 
 ## Tela de Login (Vinicius)
 
-Na tela de login, é utilizado um useState para armazenar os valores dos campos de email e senha. A função entrar é chamada ao pressionar o botão de login e verifica se os campos foram preenchidos corretamente. Em seguida, ela chama a função buscarUsuario do arquivo UsuarioDB.js para verificar se as credenciais estão corretas. Se o usuário for encontrado, a tela é redirecionada para a tela principal. Se não for encontrado, aparece uma mensagem de erro informando que informações não são válidas.
+Na tela de login, é utilizado um useState para armazenar os valores dos campos de email e senha. A função entrar é chamada quando o usuário clica no botão "Login". Ela verifica se os campos de email e senha estão preenchidos. Se algum deles estiver vazio, exibe um alerta informando ao usuário que é necessário preencher todos os campos. Caso ambos os campos estejam preenchidos, a função UsuarioDB.buscarUsuario é chamada para verificar se existe um usuário registrado com o email e senha fornecidos. Se um usuário for encontrado, o nome do usuário é armazenado no estado nomeUsuario e a navegação é resetada para a tela principal. Caso contrário, um alerta é exibido informando ao usuário que as credenciais são inválidas. 
+A função cadastrar é chamada quando o usuário clica no texto "Não tem conta? Registrar-se". Ela navega para a tela de cadastro.
+
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/106fa4f6-6552-477c-ad0b-a019120c2c42)
 
+
 Abaixo, campo de senha não foi preenchido, e mensagem de erro recebida.
 
+
 ![login-fail)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs/assets/103579574/44e2d709-4354-4783-b595-a2a6090489ee)
+
 
 É possível ver primeiro a mensagem de erro pelo preenchiemtno do campo da senha errado, após usuários inserir dados corretos, o login sendo feito com sucesso (sem caracteres no campo de senha por proteção do iphone na gravação de tela). Login encaminha o usuário para a tela principal.
 
