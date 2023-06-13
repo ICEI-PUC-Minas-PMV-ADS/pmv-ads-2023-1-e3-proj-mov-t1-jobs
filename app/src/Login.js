@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView, TextInput } from 'react-native';
 import { Input, Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from '../style/MainStyle';
@@ -54,30 +54,41 @@ export default function Login({ navigation }) {
             style={specificStyle.logo}
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="  E-mail"
             placeholderTextColor="white"
             leftIcon={{
               type: 'font-awesome',
               name: 'envelope',
               color: 'white',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setEmail(value)}
             keyboardType="email-address"
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="    Senha"
             placeholderTextColor="white"
             leftIcon={{
               type: 'font-awesome',
               name: 'lock',
               color: 'white',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setPassword(value)}
             secureTextEntry={true}
           />
-
           <Button
             title="Login"
             buttonStyle={{
@@ -126,4 +137,20 @@ const specificStyle = StyleSheet.create({
     textDecorationLine: 'underline',
     fontSize: 14,
   },
+  inputTransparent: {
+    backgroundColor: 'transparent',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderBottomWidth: 0.5,
+    borderColor: 'white',
+  },
+  inputContainerStyle: {
+    borderBottomWidth: 0,
+    paddingHorizontal: 0, // Remova o espaçamento horizontal
+    paddingVertical: 5,
+    paddingLeft: 10, // Adicione um espaçamento interno à esquerda
+  },
+  iconContainer: {
+    marginLeft: 10 , 
+  }
 });
