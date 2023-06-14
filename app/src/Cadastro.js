@@ -6,6 +6,7 @@ import { TextInputMask } from 'react-native-masked-text';
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from '../style/MainStyle';
 import * as UsuarioDB from '../services/UsuarioDB';
+import { AsyncStorage } from 'react-native';
 
 export default function Cadastro({ navigation }) {
 
@@ -80,6 +81,7 @@ export default function Cadastro({ navigation }) {
       UsuarioDB.salvarUsuario(usuarioCriado)
         .then(() => {
           setLoading(false);
+          AsyncStorage.setItem('usuario', JSON.stringify(usuarioCriado)); // Armazene os dados do usuário
           Alert.alert('Sucesso', 'Usuário cadastrado com sucesso', [
             { text: 'OK', onPress: () => navigation.goBack() }
           ]);

@@ -24,10 +24,32 @@ export default function Login({ navigation }) {
 
       if (usuario) {
         setNomeUsuario(usuario.nome);
+
+        // Restante do seu código...
+
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Principal' }],
+          routes: [
+            {
+              name: 'Principal', // Nome da rota que contém as outras rotas
+              state: {
+                routes: [
+                  { name: 'Inicio' },
+                  {
+                    name: 'Perfil',
+                    params: {
+                      nome: usuario.nome,
+                      telefone: usuario.telefone,
+                      cpf: usuario.cpf,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
         });
+        
+        // Restante do seu código...
       } else {
         Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
       }
@@ -62,7 +84,7 @@ export default function Login({ navigation }) {
             inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="  E-mail"
             placeholderTextColor="white"
-            leftIcon={{
+            rightIcon={{
               type: 'font-awesome',
               name: 'envelope',
               color: 'white',
@@ -80,7 +102,7 @@ export default function Login({ navigation }) {
             inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="    Senha"
             placeholderTextColor="white"
-            leftIcon={{
+            rightIcon={{
               type: 'font-awesome',
               name: 'lock',
               color: 'white',
@@ -147,10 +169,10 @@ const specificStyle = StyleSheet.create({
   inputContainerStyle: {
     borderBottomWidth: 0,
     paddingHorizontal: 0, // Remova o espaçamento horizontal
-    paddingVertical: 5,
-    paddingLeft: 10, // Adicione um espaçamento interno à esquerda
+    paddingVertical: -10,
+    paddingLeft: 5, // Adicione um espaçamento interno à esquerda
   },
   iconContainer: {
-    marginLeft: 10 , 
+    marginLeft: -40 , 
   }
 });
