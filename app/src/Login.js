@@ -39,8 +39,10 @@ export default function Login({ navigation }) {
                     name: 'Perfil',
                     params: {
                       nome: usuario.nome,
-                      telefone: usuario.telefone,
+                      email: usuario.email,
                       cpf: usuario.cpf,
+                      telefone: usuario.telefone,
+                      senha: usuario.senha
                     },
                   },
                 ],
@@ -112,15 +114,14 @@ export default function Login({ navigation }) {
             secureTextEntry={true}
           />
           <Button
-            title="Login"
-            buttonStyle={{
-              backgroundColor: '#A9A9A9',
-              borderWidth: 2,
-              borderRadius: 13,
-            }}
+            title="LOGIN"
+            buttonStyle={[
+              specificStyle.loginButton, 
+              { width: '100%' }, 
+            ]}
             containerStyle={{
-              width: 120,
-              marginHorizontal: 50,
+              width: '90%', 
+              alignSelf: 'center',
               marginVertical: 10,
             }}
             titleStyle={{ fontWeight: 'bold' }}
@@ -152,12 +153,17 @@ const specificStyle = StyleSheet.create({
     height: 40,
     color: 'white',
   },
+  loginButton: {
+    backgroundColor: '#A9A9A9',
+    borderWidth: 1,
+    borderRadius: 10,
+  },
   registrarTexto: {
-    marginTop: 30,
+    marginTop: 20,
     color: 'white',
     textAlign: 'center',
     textDecorationLine: 'underline',
-    fontSize: 14,
+    fontSize: 15,
   },
   inputTransparent: {
     backgroundColor: 'transparent',
@@ -168,9 +174,9 @@ const specificStyle = StyleSheet.create({
   },
   inputContainerStyle: {
     borderBottomWidth: 0,
-    paddingHorizontal: 0, // Remova o espaçamento horizontal
+    paddingHorizontal: 5, 
     paddingVertical: -10,
-    paddingLeft: 5, // Adicione um espaçamento interno à esquerda
+    paddingLeft: 10, // Adicione um espaçamento interno à esquerda
   },
   iconContainer: {
     marginLeft: -40 , 

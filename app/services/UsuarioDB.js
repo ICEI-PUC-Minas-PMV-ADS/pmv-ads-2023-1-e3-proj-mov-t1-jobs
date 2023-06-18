@@ -105,3 +105,38 @@ export const buscarUsuario = async (email, senha) => {
     });
   });
 };
+
+export const atualizarUsuario = (id, novosDados) => {
+  console.log('ID do usuário:', id);
+  console.log('Novos dados:', novosDados);
+  return new Promise((resolve, reject) => {
+    db.transaction(
+      (tx) => {
+        tx.executeSql(
+          'UPDATE usuarios SET nome = ?, email = ?, cpf = ?, telefone = ? WHERE id = ?',
+          [novosDados.nome, novosDados.email, novosDados.cpf, novosDados.telefone, id],
+          (_, { rowsAffected }) => {
+            if (rowsAffected > 0) {
+              console.log('Usuário atualizado com sucesso');
+              resolve();
+            } else {
+              console.error('Falha ao atualizar o usuário');
+              reject(new Error('Falha ao atualizar o usuário: nenhum registro afetado'));
+            }
+          },
+          (error) => {
+            console.error('Erro ao atualizar o usuário no banco de dados: ', error);
+            reject(new Error(`Erro ao atualizar o usuário: ${error.message}`));
+          }
+        );
+      },
+      (transactionError) => {
+        console.error('Erro durante a transação: ', transactionError);
+        reject(new Error(`Erro durante a transação: ${transactionError.message}`));
+      },
+      () => {
+        console.log('Transação concluída');
+      }
+    );
+  });
+};
