@@ -1,21 +1,64 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView, TextInput } from 'react-native';
 import { Input, Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/MainStyle';
 import { Button } from '@rneui/themed';
+import * as UsuarioDB from '../services/UsuarioDB';
+import { Alert } from 'react-native';
 
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [nomeUsuario, setNomeUsuario] = useState(null);
 
-  const entrar = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Principal' }],
-    });
+  const entrar = async () => {
+    if (!email || !password) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+      return;
+    }
+
+    try {
+      const usuario = await UsuarioDB.buscarUsuario(email, password);
+
+      if (usuario) {
+        setNomeUsuario(usuario.nome);
+
+        // Restante do seu código...
+
+        navigation.reset({
+          index: 0,
+          routes: [
+            {
+              name: 'Principal', // Nome da rota que contém as outras rotas
+              state: {
+                routes: [
+                  { name: 'Inicio' },
+                  {
+                    name: 'Perfil',
+                    params: {
+                      nome: usuario.nome,
+                      email: usuario.email,
+                      cpf: usuario.cpf,
+                      telefone: usuario.telefone,
+                      senha: usuario.senha
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        });
+        
+        // Restante do seu código...
+      } else {
+        Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
+      }
+    } catch (error) {
+      Alert.alert('Erro', 'Houve um erro ao fazer login. Por favor, tente novamente mais tarde.');
+      console.error('Erro ao fazer login:', error);
+    }
   };
 
   const cadastrar = () => {
@@ -35,40 +78,50 @@ export default function Login({ navigation }) {
             style={specificStyle.logo}
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="  E-mail"
             placeholderTextColor="white"
-            leftIcon={{
+            rightIcon={{
               type: 'font-awesome',
               name: 'envelope',
               color: 'white',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setEmail(value)}
             keyboardType="email-address"
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
             placeholder="    Senha"
             placeholderTextColor="white"
-            leftIcon={{
+            rightIcon={{
               type: 'font-awesome',
               name: 'lock',
               color: 'white',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setPassword(value)}
             secureTextEntry={true}
           />
-
           <Button
             title="LOGIN"
-            buttonStyle={{
-              backgroundColor: '#A9A9A9',
-              borderWidth: 2,
-              borderRadius: 15,
-            }}
+            buttonStyle={[
+              specificStyle.loginButton, 
+              { width: '100%' }, 
+            ]}
             containerStyle={{
-              width: 120,
-              marginHorizontal: 50,
+              width: '90%', 
+              alignSelf: 'center',
               marginVertical: 10,
             }}
             titleStyle={{ fontWeight: 'bold' }}
@@ -100,10 +153,32 @@ const specificStyle = StyleSheet.create({
     height: 40,
     color: 'white',
   },
+  loginButton: {
+    backgroundColor: '#A9A9A9',
+    borderWidth: 1,
+    borderRadius: 10,
+  },
   registrarTexto: {
     marginTop: 20,
     color: 'white',
     textAlign: 'center',
     textDecorationLine: 'underline',
+    fontSize: 15,
   },
+  inputTransparent: {
+    backgroundColor: 'transparent',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderBottomWidth: 0.5,
+    borderColor: 'white',
+  },
+  inputContainerStyle: {
+    borderBottomWidth: 0,
+    paddingHorizontal: 5, 
+    paddingVertical: -10,
+    paddingLeft: 10, // Adicione um espaçamento interno à esquerda
+  },
+  iconContainer: {
+    marginLeft: -40 , 
+  }
 });

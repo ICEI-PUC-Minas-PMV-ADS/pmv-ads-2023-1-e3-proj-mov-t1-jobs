@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, Alert, TextInput, TouchableOpacity } from 'react-native';
-import { atualizarServico } from '../services/ServicoDB';
 import { useNavigation } from '@react-navigation/native';
 
 const ServicoCriado = ({ route }) => {
@@ -14,10 +13,6 @@ const ServicoCriado = ({ route }) => {
   const [comentarios, setComentarios] = useState(['']);
   
   const navigation = useNavigation();
-
-  const handleEditar = () => {
-    navigation.navigate('CadastroServico', { servico });
-  };
 
   const handleConcluir = () => {
     Alert.alert('Sucesso', 'Seu serviço foi cadastrado com sucesso!', [
@@ -33,27 +28,9 @@ const ServicoCriado = ({ route }) => {
     ]);
   };
 
-  const handleContact = () => {
-    // Aqui você pode implementar a lógica para entrar em contato com o criador do serviço
-    // Por exemplo, abrir um modal de contato com as opções de telefone, e-mail, etc.
-    Alert.alert('Contato', `Entre em contato com ${servico.nome}`);
-  };
-
   const handleRating = (rating) => {
     setAvaliacao(rating);
-    // Aqui você pode fazer o salvamento da avaliação no servidor
-    // Por exemplo, enviar uma requisição para registrar a avaliação do usuário
-    // e exibir uma mensagem de sucesso após a conclusão
     Alert.alert('Sucesso', 'Avaliação registrada com sucesso.');
-  };
-
-  const handleComment = () => {
-    // Aqui você pode fazer o salvamento do comentário no servidor
-    // Por exemplo, enviar uma requisição para adicionar o comentário ao serviço
-    // e exibir uma mensagem de sucesso após a conclusão
-    setComentarios([...comentarios, comentario]);
-    setComentario('');
-    Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
   };
 
 
@@ -115,7 +92,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: '#0000CD',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
-import { salvarServico, atualizarServico } from '../services/ServicoDB';
+import { criarTabelaServicos, salvarServico, atualizarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
 export default function CadastroServicos() {
@@ -14,6 +14,14 @@ export default function CadastroServicos() {
   const [telefone, setTelefone] = useState('');
   const navigation = useNavigation();
   const [imagens, setImagens] = useState([]);
+
+  useEffect(() => {
+    criarTabelaServicos().then(() => {
+      console.log('Tabela de serviços criada com sucesso. O aplicativo está pronto para usar.');
+    }).catch(error => {
+      console.error('Erro ao criar tabela de serviços:', error);
+    });
+  }, []);
 
   const handleCadastro = async () => {
     if (nome === '' || descricao === '' || preco === '' || telefone === '') {
@@ -115,7 +123,6 @@ export default function CadastroServicos() {
         style={styles.input}
         placeholder="Digite seu telefone"
         backgroundColor="white"
-        placeholderTextColor="#777A8D"
         type={'cel-phone'}
         options={{
           maskType: 'BRL',
@@ -143,7 +150,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#278ED5',
   },
   input: {
     marginBottom: 16,
@@ -152,6 +159,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     borderRadius: 4,
     fontSize: 16,
+    backgroundColor: 'white',
   },
   descricaoInput: {
     height: 100,
@@ -159,6 +167,9 @@ const styles = StyleSheet.create({
   imagensContainer: {
     flexDirection: 'row',
     marginBottom: 16,
+    backgroundColor: 'white',
+    width: 79,
+    borderRadius: 5
   },
   imagem: {
     width: 80,
@@ -179,7 +190,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   button: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#0000CD',
     padding: 12,
     borderRadius: 4,
     alignItems: 'center',
