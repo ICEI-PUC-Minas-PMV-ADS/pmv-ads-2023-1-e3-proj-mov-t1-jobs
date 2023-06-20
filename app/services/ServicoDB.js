@@ -108,12 +108,6 @@ export const deleteCadastroServico = (id) => {
           reject(error);
         }
       );
-    });
-  });
+    });
+  });
 };
-
-
-
-
-
-
