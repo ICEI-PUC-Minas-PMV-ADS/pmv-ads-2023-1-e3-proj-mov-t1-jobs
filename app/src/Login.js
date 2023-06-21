@@ -38,6 +38,7 @@ export default function Login({ navigation }) {
                   {
                     name: 'Perfil',
                     params: {
+                      id: usuario.id,
                       nome: usuario.nome,
                       email: usuario.email,
                       cpf: usuario.cpf,
