@@ -31,6 +31,7 @@ export default function CadastroServicos() {
         nome: nome,
         descricao: descricao,
         preco: preco,
+        localizacao: localizacao,
         telefone: telefone,
         imagens: imagens || [],
         criador: 'usuario_atual',
@@ -38,13 +39,33 @@ export default function CadastroServicos() {
   
       try {
         await salvarServico(servicoCriado);
-        navigation.navigate('ServicoCriado', { servico: servicoCriado });
+        Alert.alert(
+          'Sucesso',
+          'Serviço criado com sucesso!',
+          [
+            {
+              text: 'Início',
+              onPress: () => navigation.navigate('Inicio'),
+            },
+            {
+              text: 'Novo Serviço',
+              onPress: () => {
+                setNome('');
+                setDescricao('');
+                setPreco('');
+                setLocalizacao('');
+                setTelefone('');
+                setImagens([]);
+              },
+            },
+          ]
+        );
       } catch (error) {
         console.error('Erro ao salvar o serviço:', error);
       }
     }
   };
-
+  
   const handleSelecionarImagem = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {

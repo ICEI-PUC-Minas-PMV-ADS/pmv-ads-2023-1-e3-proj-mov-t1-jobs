@@ -1,221 +1,217 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert, TextInput } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const ServicoCriado = ({ route, navigation }) => {
-  const { servico } = route.params;
-  const [isEditing, setIsEditing] = useState(false);
+export default function ServicoCriado({ route }) {
+  const [servico, setServico] = useState(null);
   const [avaliacao, setAvaliacao] = useState(0);
   const [comentario, setComentario] = useState('');
   const [comentarios, setComentarios] = useState([]);
 
-  const handleEdit = () => {
-    setIsEditing(true);
+  useEffect(() => {
+    // Obtenha o serviço do parâmetro de rota
+    const { servico } = route.params;
+    setServico(servico);
+  }, []);
+
+  const calcularMediaAvaliacoes = () => {
+    // Calcula a média das avaliações
+    const somaAvaliacoes = comentarios.reduce((total, comment) => total + comment.avaliacao, 0);
+    const media = somaAvaliacoes / comentarios.length;
+    return isNaN(media) ? 0 : media.toFixed(1);
   };
 
-  const handleSave = () => {
-    setIsEditing(false);
-    Alert.alert('Sucesso', 'Os dados foram atualizados com sucesso.');
-  };
-
-  const handleContact = () => {
-    Alert.alert('Contato', `Entre em contato com ${servico.nome}`);
-  };
-
-  const handleRating = (rating) => {
-    setAvaliacao(rating);
-    Alert.alert('Sucesso', 'Avaliação registrada com sucesso.');
-  };
-
-  const handleComment = () => {
-    const newComment = { texto: comentario, resposta: '', curtidas: 0 };
-    setComentarios([...comentarios, newComment]);
+  const handleAvaliar = () => {
+    // Adiciona um novo comentário com a avaliação
+    const novoComentario = { avaliacao, comentario, curtidas: 0 };
+    setComentarios([...comentarios, novoComentario]);
+    setAvaliacao(0);
     setComentario('');
-    Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
   };
 
-  const handleReply = (index) => {
-    const updatedComentarios = [...comentarios];
-    updatedComentarios[index].resposta = 'Resposta do criador do serviço';
-    setComentarios(updatedComentarios);
+  const handleCurtir = (index) => {
+    // Alterna o estado de curtido do comentário selecionado
+    const novosComentarios = [...comentarios];
+    novosComentarios[index].curtido = !novosComentarios[index].curtido;
+    setComentarios(novosComentarios);
   };
 
-  const handleLike = (index) => {
-    const updatedComentarios = [...comentarios];
-    updatedComentarios[index].curtidas += 1;
-    setComentarios(updatedComentarios);
-  };
+  const renderAvaliacao = () => {
+    let stars = [];
+    for (let i = 1; i <= 5; i++) {
+      const iconName = i <= avaliacao ? 'star' : 'star-outline';
+      const starColor = i <= avaliacao ? '#FFD700' : '#C0C0C0';
+      stars.push(
+        <TouchableOpacity
+          key={i}
+          onPress={() => setAvaliacao(i)}
+          activeOpacity={0.8}
+          style={styles.starButton}
+        >
+          <Ionicons name={iconName} size={24} color={starColor} />
+        </TouchableOpacity>
+      );
+    }
+    return <View style={styles.avaliacaoContainer}>{stars}</View>;
+  };  
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{servico.nome}</Text>
-      <Text style={styles.label}>Descrição:</Text>
-      <Text style={styles.value}>{servico.descricao}</Text>
-      <Text style={styles.label}>Preço:</Text>
-      <Text style={styles.value}>{servico.preco}</Text>
-      <Text style={styles.label}>Localização:</Text>
-      <Text style={styles.value}>{servico.localizacao}</Text>
-      <Text style={styles.label}>Telefone:</Text>
-      <Text style={styles.value}>{servico.telefone}</Text>
-
-      {isEditing ? (
-        <TouchableOpacity style={styles.button} onPress={handleSave}>
-          <Text style={styles.buttonText}>Salvar</Text>
-        </TouchableOpacity>
-      ) : (
+      {servico && (
         <>
-          {servico.criador === 'usuario_atual' ? (
-            <TouchableOpacity style={styles.button} onPress={handleEdit}>
-              <Text style={styles.buttonText}>Editar</Text>
-            </TouchableOpacity>
+          <Text style={styles.nomeServico}>{servico.nome}</Text>
+          <Text style={styles.descricaoServico}>{servico.descricao}</Text>
+          <Text style={styles.precoServico}>{servico.preco}</Text>
+          <Text style={styles.localizacaoServico}>{servico.localizacao}</Text>
+          <Text style={styles.telefoneServico}>{servico.telefone}</Text>
+          <Text style={styles.mediaAvaliacoes}>Média das Avaliações: {calcularMediaAvaliacoes()}</Text>
+          <Text style={styles.tituloComentarios}>Comentários:</Text>
+          {comentarios.length === 0 ? (
+            <Text style={styles.semComentarios}>Esse serviço ainda não foi avaliado!</Text>
           ) : (
-            <TouchableOpacity style={styles.button} onPress={handleContact}>
-              <Text style={styles.buttonText}>Entrar em Contato</Text>
-            </TouchableOpacity>
+            <FlatList
+              data={comentarios}
+              renderItem={({ item, index }) => (
+                <View style={styles.comentarioContainer}>
+                  <Text style={styles.avaliacaoComentario}>{item.avaliacao.toFixed(1)}</Text>
+                  <Text style={styles.textoComentario}>{item.comentario}</Text>
+                  <Text style={styles.curtidasComentario}>{item.curtidas} curtida(s)</Text>
+                  <TouchableOpacity
+                    style={styles.botaoCurtir}
+                    onPress={() => handleCurtir(index)}
+                  >
+                    <Text>{item.curtido ? 'Descurtir' : 'Curtir'}</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+              keyExtractor={(item, index) => index.toString()}
+            />
           )}
-        </>
-      )}
-
-      <Text style={styles.sectionTitle}>Avaliações</Text>
-      <View style={styles.ratingContainer}>
-        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(1)}>
-          <Text style={styles.ratingText}>{avaliacao >= 1 ? '★' : '☆'}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(2)}>
-          <Text style={styles.ratingText}>{avaliacao >= 2 ? '★' : '☆'}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(3)}>
-          <Text style={styles.ratingText}>{avaliacao >= 3 ? '★' : '☆'}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(4)}>
-          <Text style={styles.ratingText}>{avaliacao >= 4 ? '★' : '☆'}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.ratingButton} onPress={() => handleRating(5)}>
-          <Text style={styles.ratingText}>{avaliacao >= 5 ? '★' : '☆'}</Text>
-        </TouchableOpacity>
-      </View>
-
-      <Text style={styles.sectionTitle}>Comentários</Text>
-      {comentarios.map((comentario, index) => (
-        <View key={index} style={styles.commentContainer}>
-          <Text style={styles.commentText}>{comentario.texto}</Text>
-          {comentario.resposta !== '' && (
-            <View style={styles.replyContainer}>
-              <Text style={styles.replyText}>{comentario.resposta}</Text>
-            </View>
-          )}
-          <View style={styles.commentActions}>
-            <TouchableOpacity style={styles.likeButton} onPress={() => handleLike(index)}>
-              <Ionicons name="thumbs-up-outline" size={18} color="gray" />
-              <Text style={styles.likeCount}>{comentario.curtidas}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.replyButton} onPress={() => handleReply(index)}>
-              <Ionicons name="chatbubble-outline" size={18} color="gray" />
+          <View style={styles.novoComentarioContainer}>
+            <Text style={styles.tituloNovoComentario}>Novo Comentário:</Text>
+            {renderAvaliacao()}
+            <TextInput
+              style={styles.inputComentario}
+              placeholder="Digite seu comentário"
+              value={comentario}
+              onChangeText={setComentario}
+              multiline
+            />
+            <TouchableOpacity style={styles.botaoAvaliar} onPress={handleAvaliar}>
+              <Text style={styles.textoBotaoAvaliar}>Avaliar</Text>
             </TouchableOpacity>
           </View>
-        </View>
-      ))}
-      <TextInput
-        style={styles.commentInput}
-        placeholder="Digite seu comentário"
-        value={comentario}
-        onChangeText={(text) => setComentario(text)}
-      />
-      <TouchableOpacity style={styles.button} onPress={handleComment}>
-        <Text style={styles.buttonText}>Adicionar Comentário</Text>
-      </TouchableOpacity>
+          <TouchableOpacity style={styles.botaoContratar}>
+            <Text style={styles.textoBotaoContratar}>Contratar</Text>
+          </TouchableOpacity>
+        </>
+      )}
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 16,
+    backgroundColor: '#fff',
   },
-  title: {
-    fontSize: 20,
+  nomeServico: {
+    fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 8,
   },
-  label: {
+  descricaoServico: {
     fontSize: 16,
-    fontWeight: 'bold',
-    marginTop: 10,
+    marginBottom: 8,
   },
-  value: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: 'blue',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
-  },
-  buttonText: {
-    color: 'white',
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  sectionTitle: {
+  precoServico: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop: 20,
+    marginBottom: 8,
   },
-  ratingContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 10,
+  localizacaoServico: {
+    fontSize: 16,
+    marginBottom: 8,
   },
-  ratingButton: {
-    marginLeft: 5,
+  telefoneServico: {
+    fontSize: 16,
+    marginBottom: 16,
   },
-  ratingText: {
+  mediaAvaliacoes: {
+    fontSize: 18,
+    marginBottom: 16,
+  },
+  tituloComentarios: {
     fontSize: 20,
-  },
-  commentContainer: {
-    marginTop: 10,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 5,
-  },
-  commentText: {
-    marginBottom: 10,
-  },
-  replyContainer: {
-    backgroundColor: 'lightgray',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-  },
-  replyText: {
     fontWeight: 'bold',
+    marginBottom: 8,
   },
-  commentActions: {
+  comentarioContainer: {
+    marginBottom: 16,
+  },
+  avaliacaoContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    marginBottom: 16,
   },
-  likeButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  avaliacaoComentario: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 4,
   },
-  likeCount: {
-    marginLeft: 5,
+  textoComentario: {
+    fontSize: 16,
+    marginBottom: 4,
+  },
+  curtidasComentario: {
+    fontSize: 14,
+    marginBottom: 4,
     color: 'gray',
   },
-  replyButton: {
-    marginLeft: 10,
+  botaoCurtir: {
+    color: 'blue',
+    marginBottom: 4,
   },
-  commentInput: {
+  novoComentarioContainer: {
+    marginBottom: 16,
+  },
+  tituloNovoComentario: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  inputComentario: {
     borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 5,
-    padding: 10,
-    marginTop: 10,
+    borderColor: '#000',
+    borderRadius: 4,
+    marginBottom: 8,
+    padding: 8,
+    textAlignVertical: 'top',
+  },
+  botaoAvaliar: {
+    backgroundColor: '#007bff',
+    borderRadius: 4,
+    padding: 8,
+    alignItems: 'center',
+  },
+  textoBotaoAvaliar: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  botaoContratar: {
+    backgroundColor: '#28a745',
+    borderRadius: 4,
+    padding: 12,
+    alignItems: 'center',
+  },
+  textoBotaoContratar: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  semComentarios: {
+    fontSize: 16,
+    marginBottom: 16,
   },
 });
-
-export default ServicoCriado;

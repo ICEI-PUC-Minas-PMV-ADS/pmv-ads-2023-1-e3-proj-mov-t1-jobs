@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, Button, StyleSheet, Image } from 'react-native';
+import { View, Text, FlatList, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { getCadastroServico, deleteCadastroServico } from '../services/ServicoDB';
 import { TextInput } from 'react-native';
@@ -8,7 +8,6 @@ const Inicio = ({ navigation }) => {
   const [servicos, setServicos] = useState([]);
   const route = useRoute(); // Utilize o hook useRoute para acessar a propriedade "route"
   const [searchQuery, setSearchQuery] = useState('');
-
 
   useEffect(() => {
     fetchServicos();
@@ -22,7 +21,7 @@ const Inicio = ({ navigation }) => {
       console.error('Erro ao buscar os serviços:', error);
     }
   };
-  
+
   const handleDelete = async (id) => {
     try {
       await deleteCadastroServico(id);
@@ -34,8 +33,12 @@ const Inicio = ({ navigation }) => {
   };
 
   const renderServico = ({ item }) => {
+    const handleSelecionarServico = () => {
+      navigation.navigate('ServicoCriado', { servico: item });
+    };
+
     return (
-      <View style={styles.servicoContainer}>
+      <TouchableOpacity onPress={handleSelecionarServico} style={styles.servicoContainer}>
         <View style={styles.servicoInfo}>
           <Text style={styles.servicoNome}>Nome: {item.nome}</Text>
           <Text style={styles.servicoDescricao}>Descrição: {item.descricao}</Text>
@@ -43,14 +46,13 @@ const Inicio = ({ navigation }) => {
           <Text style={styles.servicoTelefone}>Telefone: {item.telefone}</Text>
         </View>
         <Button title="Excluir" onPress={() => handleDelete(item.id)} />
-      </View>
+      </TouchableOpacity>
     );
   };
 
   const handleSearch = (query) => {
     setSearchQuery(query);
   };
-
 
   return (
     <View style={styles.container}>
@@ -61,10 +63,7 @@ const Inicio = ({ navigation }) => {
           value={searchQuery}
           onChangeText={handleSearch}
         />
-        <Image
-          source={require('../assets/lupa.png')}
-          style={styles.searchIcon}
-        />
+        <Image source={require('../assets/lupa.png')} style={styles.searchIcon} />
       </View>
       <FlatList
         data={servicos}
