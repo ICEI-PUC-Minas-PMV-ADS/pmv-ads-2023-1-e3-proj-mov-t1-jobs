@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView} from 'react-native';
+import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvoidingView, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
