@@ -3,7 +3,7 @@ import { View, TextInput, StyleSheet, TouchableOpacity, Text, Alert, KeyboardAvo
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
-import { criarTabelaServicos, salvarServico, atualizarServico } from '../services/ServicoDB';
+import { criarTabelaServicos, salvarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
 export default function CadastroServicos() {
@@ -17,7 +17,7 @@ export default function CadastroServicos() {
 
   useEffect(() => {
     criarTabelaServicos().then(() => {
-      console.log('Tabela de serviços criada com sucesso. O aplicativo está pronto para usar.');
+      console.log('Tabela de serviços criada com sucesso.');
     }).catch(error => {
       console.error('Erro ao criar tabela de serviços:', error);
     });
@@ -31,13 +31,35 @@ export default function CadastroServicos() {
         nome: nome,
         descricao: descricao,
         preco: preco,
+        localizacao: localizacao,
         telefone: telefone,
         imagens: imagens || [],
+        criador: 'usuario_atual',
       };
   
       try {
         await salvarServico(servicoCriado);
-        navigation.navigate('ServicoCriado', { servico: servicoCriado });
+        Alert.alert(
+          'Sucesso',
+          'Serviço criado com sucesso!',
+          [
+            {
+              text: 'Início',
+              onPress: () => navigation.navigate('Inicio'),
+            },
+            {
+              text: 'Novo Serviço',
+              onPress: () => {
+                setNome('');
+                setDescricao('');
+                setPreco('');
+                setLocalizacao('');
+                setTelefone('');
+                setImagens([]);
+              },
+            },
+          ]
+        );
       } catch (error) {
         console.error('Erro ao salvar o serviço:', error);
       }
@@ -56,7 +78,7 @@ export default function CadastroServicos() {
       allowsEditing: true,
       quality: 1,
       multiple: true,
-      maxSelected: 5 - imagens.length, // Limita a 5 imagens
+      maxSelected: 5 - imagens.length,
     });
 
     if (!result.cancelled) {
@@ -123,6 +145,7 @@ export default function CadastroServicos() {
         style={styles.input}
         placeholder="Digite seu telefone"
         backgroundColor="white"
+        placeholderTextColor="#777A8D"
         type={'cel-phone'}
         options={{
           maskType: 'BRL',
@@ -150,7 +173,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#278ED5',
+    backgroundColor: '#fff',
   },
   input: {
     marginBottom: 16,
@@ -159,7 +182,6 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     borderRadius: 4,
     fontSize: 16,
-    backgroundColor: 'white',
   },
   descricaoInput: {
     height: 100,
@@ -167,9 +189,6 @@ const styles = StyleSheet.create({
   imagensContainer: {
     flexDirection: 'row',
     marginBottom: 16,
-    backgroundColor: 'white',
-    width: 79,
-    borderRadius: 5
   },
   imagem: {
     width: 80,
@@ -190,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   button: {
-    backgroundColor: '#0000CD',
+    backgroundColor: '#007bff',
     padding: 12,
     borderRadius: 4,
     alignItems: 'center',
@@ -199,5 +218,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-  },
+  },
 });
