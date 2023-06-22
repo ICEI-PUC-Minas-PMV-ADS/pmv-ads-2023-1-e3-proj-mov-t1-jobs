@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { criarTabelaServicos, salvarServico } from '../services/ServicoDB';
 import * as ImagePicker from 'expo-image-picker';
 
-export default function CadastroServicos() {
+export default function CadastroServico() {
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
@@ -36,7 +36,7 @@ export default function CadastroServicos() {
         imagens: imagens || [],
         criador: 'usuario_atual',
       };
-  
+
       try {
         await salvarServico(servicoCriado);
         Alert.alert(
@@ -45,17 +45,15 @@ export default function CadastroServicos() {
           [
             {
               text: 'Início',
-              onPress: () => navigation.navigate('Inicio'),
+              onPress: () => {
+                limparFormulario();
+                navigation.navigate('Inicio');
+              },
             },
             {
               text: 'Novo Serviço',
               onPress: () => {
-                setNome('');
-                setDescricao('');
-                setPreco('');
-                setLocalizacao('');
-                setTelefone('');
-                setImagens([]);
+                limparFormulario();
               },
             },
           ]
@@ -65,7 +63,16 @@ export default function CadastroServicos() {
       }
     }
   };
-  
+
+  const limparFormulario = () => {
+    setNome('');
+    setDescricao('');
+    setPreco('');
+    setLocalizacao('');
+    setTelefone('');
+    setImagens([]);
+  };
+
   const handleSelecionarImagem = async () => {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== 'granted') {
@@ -92,79 +99,79 @@ export default function CadastroServicos() {
       style={[styles.container]}
       keyboardVerticalOffset={150}>
       <ScrollView style={{ width: "100%" }}>
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Nome do serviço"
-        value={nome}
-        onChangeText={setNome}
-      />
-      <TextInput
-        style={[styles.input, styles.descricaoInput]}
-        placeholder="Descrição do serviço"
-        multiline
-        numberOfLines={4}
-        value={descricao}
-        onChangeText={setDescricao}
-      />
-      <View style={styles.imagensContainer}>
-        {imagens.map((imagem, index) => (
-          <Image key={index} source={{ uri: imagem }} style={styles.imagem} />
-        ))}
-        {imagens.length < 5 && (
-          <TouchableOpacity style={styles.imagemButton} onPress={handleSelecionarImagem}>
-            <Text style={styles.imagemButtonText}>+</Text>
+        <View style={styles.container}>
+          <TextInput
+            style={styles.input}
+            placeholder="Nome do serviço"
+            value={nome}
+            onChangeText={setNome}
+          />
+          <TextInput
+            style={[styles.input, styles.descricaoInput]}
+            placeholder="Descrição do serviço"
+            multiline
+            numberOfLines={4}
+            value={descricao}
+            onChangeText={setDescricao}
+          />
+          <View style={styles.imagensContainer}>
+            {imagens.map((imagem, index) => (
+              <Image key={index} source={{ uri: imagem }} style={styles.imagem} />
+            ))}
+            {imagens.length < 5 && (
+              <TouchableOpacity style={styles.imagemButton} onPress={handleSelecionarImagem}>
+                <Text style={styles.imagemButtonText}>+</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+          <TextInputMask
+            style={styles.input}
+            placeholder="Preço do serviço"
+            keyboardType="numeric"
+            returnKeyType="done"
+            value={preco}
+            onChangeText={(formattedValue, rawValue) => {
+              setPreco(formattedValue);
+            }}
+            type="money"
+            options={{
+              precision: 2,
+              separator: ',',
+              delimiter: '.',
+              unit: 'R$ ',
+              suffixUnit: '',
+            }}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Localização do serviço"
+            value={localizacao}
+            onChangeText={setLocalizacao}
+          />
+          <TextInputMask
+            style={styles.input}
+            placeholder="Digite seu telefone"
+            backgroundColor="white"
+            placeholderTextColor="#777A8D"
+            type={'cel-phone'}
+            options={{
+              maskType: 'BRL',
+              withDDD: true,
+              dddMask: '(99)'
+            }}
+            value={telefone}
+            onChangeText={(formattedValue, rawValue) => {
+              setTelefone(formattedValue);
+            }}
+            keyboardType="phone-pad"
+            returnKeyType="done"
+            ref={(ref) => telefoneField = ref}
+          />
+          <TouchableOpacity style={styles.button} onPress={handleCadastro}>
+            <Text style={styles.buttonText}>Cadastrar</Text>
           </TouchableOpacity>
-        )}
-      </View>
-      <TextInputMask
-        style={styles.input}
-        placeholder="Preço do serviço"
-        keyboardType="numeric"
-        returnKeyType="done"
-        value={preco}
-        onChangeText={(formattedValue, rawValue) => {
-          setPreco(formattedValue);
-        }}
-        type="money"
-        options={{
-          precision: 2,
-          separator: ',',
-          delimiter: '.',
-          unit: 'R$ ',
-          suffixUnit: '',
-        }}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Localização do serviço"
-        value={localizacao}
-        onChangeText={setLocalizacao}
-      />
-      <TextInputMask
-        style={styles.input}
-        placeholder="Digite seu telefone"
-        backgroundColor="white"
-        placeholderTextColor="#777A8D"
-        type={'cel-phone'}
-        options={{
-          maskType: 'BRL',
-          withDDD: true,
-          dddMask: '(99)'
-        }}
-        value={telefone}
-        onChangeText={(formattedValue, rawValue) => {
-          setTelefone(formattedValue);
-        }}
-        keyboardType="phone-pad"
-        returnKeyType="done"
-        ref={(ref) => telefoneField = ref}
-      />
-      <TouchableOpacity style={styles.button} onPress={handleCadastro}>
-        <Text style={styles.buttonText}>Cadastrar</Text>
-      </TouchableOpacity>
-    </View>
-    </ScrollView>
+        </View>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
@@ -218,5 +225,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-  },
+  },
 });
