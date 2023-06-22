@@ -93,6 +93,12 @@ export default function CadastroServico() {
     }
   };
 
+  const removerImagem = (index) => {
+    const novasImagens = [...imagens];
+    novasImagens.splice(index, 1);
+    setImagens(novasImagens);
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -116,7 +122,15 @@ export default function CadastroServico() {
           />
           <View style={styles.imagensContainer}>
             {imagens.map((imagem, index) => (
-              <Image key={index} source={{ uri: imagem }} style={styles.imagem} />
+              <View key={index} style={styles.imagemContainer}>
+                <Image source={{ uri: imagem }} style={styles.imagem} />
+                <TouchableOpacity
+                  style={styles.removerImagemButton}
+                  onPress={() => removerImagem(index)}
+                >
+                  <Text style={styles.removerImagemButtonText}>x</Text>
+                </TouchableOpacity>
+              </View>
             ))}
             {imagens.length < 5 && (
               <TouchableOpacity style={styles.imagemButton} onPress={handleSelecionarImagem}>
@@ -195,13 +209,33 @@ const styles = StyleSheet.create({
   },
   imagensContainer: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     marginBottom: 16,
+  },
+  imagemContainer: {
+    position: 'relative',
+    marginRight: 8,
+    marginBottom: 8,
   },
   imagem: {
     width: 80,
     height: 80,
-    marginRight: 8,
     borderRadius: 4,
+  },
+  removerImagemButton: {
+    position: 'absolute',
+    top: -8,
+    right: -8,
+    backgroundColor: 'red',
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  removerImagemButtonText: {
+    color: '#fff',
+    fontSize: 12,
   },
   imagemButton: {
     width: 80,
