@@ -63,7 +63,7 @@ export default function Login({ navigation }) {
   };
 
   const cadastrar = () => {
-    navigation.navigate('Cadastro');
+    navigation.navigate('Cadastro do usuário');
   };
 
   return (
@@ -83,14 +83,15 @@ export default function Login({ navigation }) {
               specificStyle.inputLogin,
               specificStyle.inputTransparent,
               specificStyle.specificContainer,
+              { backgroundColor: 'white' }
             ]}
             inputContainerStyle={specificStyle.inputContainerStyle}
-            placeholder="  E-mail"
-            placeholderTextColor="white"
+            placeholder="E-mail"
+            placeholderTextColor="gray"
             rightIcon={{
               type: 'font-awesome',
               name: 'envelope',
-              color: 'white',
+              color: 'black',
               containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setEmail(value)}
@@ -101,14 +102,15 @@ export default function Login({ navigation }) {
               specificStyle.inputLogin,
               specificStyle.inputTransparent,
               specificStyle.specificContainer,
+              { backgroundColor: 'white' }
             ]}
             inputContainerStyle={specificStyle.inputContainerStyle}
-            placeholder="    Senha"
-            placeholderTextColor="white"
+            placeholder="Senha"
+            placeholderTextColor="gray"
             rightIcon={{
               type: 'font-awesome',
               name: 'lock',
-              color: 'white',
+              color: 'black',
               containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setPassword(value)}
@@ -152,10 +154,10 @@ const specificStyle = StyleSheet.create({
   inputLogin: {
     flexGrow: 1,
     height: 40,
-    color: 'white',
+    color: 'black',
   },
   loginButton: {
-    backgroundColor: '#A9A9A9',
+    backgroundColor: '#0000CD',
     borderWidth: 1,
     borderRadius: 10,
   },
@@ -171,7 +173,7 @@ const specificStyle = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderBottomWidth: 0.5,
-    borderColor: 'white',
+    borderColor: 'black',
   },
   inputContainerStyle: {
     borderBottomWidth: 0,

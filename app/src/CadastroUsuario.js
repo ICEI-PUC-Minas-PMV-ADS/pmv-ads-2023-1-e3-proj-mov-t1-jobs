@@ -9,7 +9,7 @@ import * as UsuarioDB from '../services/UsuarioDB';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default function Cadastro({ navigation }) {
+export default function CadastroUsuario({ navigation }) {
 
   const [email, setEmail] = useState(null)
   const [nome, setNome] = useState(null)

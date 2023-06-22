@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { View, Text, TextInput, Button, Alert, StyleSheet, TouchableOpacity } from 'react-native';
 import * as UsuarioDB from '../services/UsuarioDB';
 
 export default function Perfil({ navigation, route }) {
@@ -7,6 +7,7 @@ export default function Perfil({ navigation, route }) {
   const [emailUsuario, setEmailUsuario] = useState(route.params.email);
   const [telefoneUsuario, setTelefoneUsuario] = useState(route.params.telefone);
   const [cpfUsuario, setCpfUsuario] = useState(route.params.cpf);
+  const [senhaUsuario, setSenhaUsuario] = useState(route.params.senha);
 
   const atualizarPerfil = async () => {
     try {
@@ -16,37 +17,95 @@ export default function Perfil({ navigation, route }) {
         email: emailUsuario,
         telefone: telefoneUsuario,
         cpf: cpfUsuario,
+        senha: senhaUsuario
       });
-  
+
       Alert.alert('Perfil atualizado com sucesso.');
-  
+
       navigation.setParams({
         nome: nomeUsuario,
+        email: emailUsuario,
         telefone: telefoneUsuario,
         cpf: cpfUsuario,
+        senha: senhaUsuario
       });
     } catch (error) {
       Alert.alert('Houve um erro ao atualizar o perfil. Por favor, tente novamente mais tarde.');
       console.error('Erro ao atualizar o perfil:', error);
     }
   };
-  
 
   return (
-    <View>
-      <Text>Nome:</Text>
-      <TextInput value={nomeUsuario} onChangeText={setNomeUsuario} />
+    <View style={styles.container}>
+      <Text h1 style = {styles.h1}>Editar dados </Text>
+      <Text style={styles.label}>Nome:</Text>
+      <TextInput style={styles.input} value={nomeUsuario} onChangeText={setNomeUsuario} />
 
-      <Text>E-mail:</Text>
-      <TextInput value={emailUsuario} onChangeText={setEmailUsuario} />
+      <Text style={styles.label}>E-mail:</Text>
+      <TextInput style={styles.input} value={emailUsuario} onChangeText={setEmailUsuario} />
 
-      <Text>Telefone:</Text>
-      <TextInput value={telefoneUsuario} onChangeText={setTelefoneUsuario} />
+      <Text style={styles.label}>Telefone:</Text>
+      <TextInput style={styles.input} value={telefoneUsuario} onChangeText={setTelefoneUsuario} />
 
-      <Text>CPF:</Text>
-      <TextInput value={cpfUsuario} onChangeText={setCpfUsuario} />
+      <Text style={styles.label}>CPF:</Text>
+      <TextInput style={styles.input} value={cpfUsuario} onChangeText={setCpfUsuario} />
 
-      <Button title="Salvar" onPress={atualizarPerfil} />
+      <TouchableOpacity style={styles.button} onPress={atualizarPerfil}>
+        <Text style={styles.buttonText}>Salvar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#278ED5', // Azul claro
+    padding: 16,
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+    color: 'white',
+    fontWeight: 'bold'
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderRadius: 5,
+    borderWidth: 1,
+    marginBottom: 12,
+    paddingHorizontal: 8,
+    fontSize: 16,
+    backgroundColor: 'white',
+  },
+  button: {
+    backgroundColor: '#0000CD',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginTop: 16,
+    width: '100%', // Ocupa toda a largura disponível
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+  },
+  h1: {
+    color: 'white',
+    fontSize: 28,
+    fontWeight: 'bold',
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.20,
+    shadowRadius: 2.24,
+    elevation: 5,
+    marginBottom: 20,
+  }
+});
+
