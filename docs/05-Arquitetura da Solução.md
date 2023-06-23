@@ -17,7 +17,7 @@
 
 <li> Linguagem Front:         End	JavaScript
 <li> Framework:               ReactNative
-<li> Linguagem Back-End:      C#
+<li> Linguagem Back-End:      JavaScript
 <li> Bibliotecas:             React Native Paper, React Navigation, Json server
 <li> IDE:                     Visual Studio Code
 <li> Ferramentas:             Microsoft Teams, GitHub, Whatsapp
