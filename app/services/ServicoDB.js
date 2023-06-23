@@ -46,6 +46,7 @@ export const salvarServico = (servicoCriado, setServicosAtualizados) => {
 
 
 
+
 export const atualizarServico = (servicoAtualizado) => {
   return new Promise((resolve, reject) => {
     db.transaction(tx => {
@@ -111,6 +112,10 @@ export const deleteCadastroServico = (id) => {
     });
   });
 };
+
+
+
+
 
 
 

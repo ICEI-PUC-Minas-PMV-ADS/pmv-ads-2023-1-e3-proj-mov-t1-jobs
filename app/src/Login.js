@@ -11,12 +11,53 @@ import { Alert } from 'react-native';
 export default function Login({ navigation }) {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [nomeUsuario, setNomeUsuario] = useState(null);
 
-  const entrar = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Principal' }],
-    });
+  const entrar = async () => {
+    if (!email || !password) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+      return;
+    }
+
+    try {
+      const usuario = await UsuarioDB.buscarUsuario(email, password);
+
+      if (usuario) {
+        setNomeUsuario(usuario.nome);
+
+        // Restante do seu código...
+
+        navigation.reset({
+          index: 0,
+          routes: [
+            {
+              name: 'Principal', // Nome da rota que contém as outras rotas
+              state: {
+                routes: [
+                  { name: 'Inicio' },
+                  {
+                    name: 'Perfil',
+                    params: {
+                      id: usuario.id,
+                      nome: usuario.nome,
+                      email: usuario.email,
+                      cpf: usuario.cpf,
+                      telefone: usuario.telefone,
+                      senha: usuario.senha
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        });
+      } else {
+        Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
+      }
+    } catch (error) {
+      Alert.alert('Erro', 'Houve um erro ao fazer login. Por favor, tente novamente mais tarde.');
+      console.error('Erro ao fazer login:', error);
+    }
   };
 
   const cadastrar = () => {
@@ -75,11 +116,10 @@ export default function Login({ navigation }) {
           />
           <Button
             title="LOGIN"
-            buttonStyle={{
-              backgroundColor: '#A9A9A9',
-              borderWidth: 2,
-              borderRadius: 15,
-            }}
+            buttonStyle={[
+              specificStyle.loginButton, 
+              { width: '100%' }, 
+            ]}
             containerStyle={{
               width: '90%', 
               alignSelf: 'center',
@@ -120,10 +160,24 @@ const specificStyle = StyleSheet.create({
     borderRadius: 10,
   },
   registrarTexto: {
-    marginTop: 30,
+    marginTop: 20,
     color: 'white',
     textAlign: 'center',
     textDecorationLine: 'underline',
+    fontSize: 15,
+  },
+  inputTransparent: {
+    backgroundColor: 'transparent',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderBottomWidth: 0.5,
+    borderColor: 'grey',
+  },
+  inputContainerStyle: {
+    borderBottomWidth: 0,
+    paddingHorizontal: 5, 
+    paddingVertical: -10,
+    paddingLeft: 10, // Adicione um espaçamento interno à esquerda
   },
   iconContainer: {
     marginLeft: -40 , 

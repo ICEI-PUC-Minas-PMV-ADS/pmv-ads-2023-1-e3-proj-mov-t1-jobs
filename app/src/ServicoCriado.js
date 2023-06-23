@@ -29,29 +29,31 @@ export default function ServicoCriado({ route }) {
     setComentario('');
   };
 
-  const handleContact = () => {
-    // Aqui você pode implementar a lógica para entrar em contato com o criador do serviço
-    // Por exemplo, abrir um modal de contato com as opções de telefone, e-mail, etc.
-    Alert.alert('Contato', `Entre em contato com ${servico.nome}`);
+  const handleCurtir = (index) => {
+    // Alterna o estado de curtido do comentário selecionado
+    const novosComentarios = [...comentarios];
+    novosComentarios[index].curtido = !novosComentarios[index].curtido;
+    setComentarios(novosComentarios);
   };
 
-  const handleRating = (rating) => {
-    setAvaliacao(rating);
-    // Aqui você pode fazer o salvamento da avaliação no servidor
-    // Por exemplo, enviar uma requisição para registrar a avaliação do usuário
-    // e exibir uma mensagem de sucesso após a conclusão
-    Alert.alert('Sucesso', 'Avaliação registrada com sucesso.');
-  };
-
-  const handleComment = () => {
-    // Aqui você pode fazer o salvamento do comentário no servidor
-    // Por exemplo, enviar uma requisição para adicionar o comentário ao serviço
-    // e exibir uma mensagem de sucesso após a conclusão
-    setComentarios([...comentarios, comentario]);
-    setComentario('');
-    Alert.alert('Sucesso', 'Comentário adicionado com sucesso.');
-  };
-
+  const renderAvaliacao = () => {
+    let stars = [];
+    for (let i = 1; i <= 5; i++) {
+      const iconName = i <= avaliacao ? 'star' : 'star-outline';
+      const starColor = i <= avaliacao ? '#FFD700' : '#C0C0C0';
+      stars.push(
+        <TouchableOpacity
+          key={i}
+          onPress={() => setAvaliacao(i)}
+          activeOpacity={0.8}
+          style={styles.starButton}
+        >
+          <Ionicons name={iconName} size={24} color={starColor} />
+        </TouchableOpacity>
+      );
+    }
+    return <View style={styles.avaliacaoContainer}>{stars}</View>;
+  };  
 
   return (
     <View style={styles.container}>
