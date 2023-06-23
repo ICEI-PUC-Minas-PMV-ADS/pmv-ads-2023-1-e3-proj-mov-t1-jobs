@@ -1,22 +1,31 @@
 import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button } from 'react-native-elements';
 import { AsyncStorage } from 'react-native';
 import Perfil from './Perfil';
 import CadastroServico from './CadastroServico';
 import Inicio from './Inicio';
+import BuscarServico from './BuscarServico';
 
-const logout = (navigation) => {
-  AsyncStorage.removeItem("TOKEN")
-  navigation.reset({
-    index: 0,
-    routes: [{name: "Login"}]
-  })
-}
+    const signOut = (navigation) => {
+      navigation.reset({
+        index: 0,
+        routes: [{name: "Login"}]
+    })
+  }
 
-const Tab = createBottomTabNavigator();
+    const handleLogout = () => {
+      Alert.alert('Logout', 'Tem certeza que deseja sair?', [
+        { text: 'Cancelar', style: 'cancel' },
+        { text: 'Sair', onPress: () => signOut(navigation) },
+      ]);
+    };
 
-export default function Principal() {
   return (
       <Tab.Navigator
         initialRouteName="Feed"
@@ -31,6 +40,16 @@ export default function Principal() {
             tabBarLabel: 'Início',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Buscar Serviço"
+          component={BuscarServico}
+          options={{
+            tabBarLabel: 'Buscar',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="magnify" color={color} size={size} />
             ),
           }}
         />

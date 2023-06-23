@@ -1,6 +1,6 @@
 # Introdução
 
-Com o avanço da tecnologia e o crescimento social e humanístico que o mundo vive hoje, cada vez mais se torna difícil a exposição de serviços essenciais a sociedade nas mais diferentes esferas do conhecimento, já que com o avanço da internet principalmente boa parte dessa demanda fica presa a grandes corporações que terceirizam esses serviços fazendo com que trabalhadores autônomos se sujeitem ás condições impostas por essas grandes corporações ou encontrem grande dificuldade de manter uma boa carteira de clientes e uma concorrência sadia que também favorece o cliente final. 
+Com o avanço da tecnologia e o crescimento social e humanístico que o mundo vive hoje, torna-se cada vez mais difícil a exposição de serviços essenciais a sociedade nas mais diferentes esferas do conhecimento, já que com o avanço da internet principalmente boa parte dessa demanda fica presa a grandes corporações que terceirizam esses serviços fazendo com que trabalhadores autônomos se sujeitem ás condições impostas por essas grandes corporações ou encontrem grande dificuldade de manter uma boa carteira de clientes e uma concorrência sadia que também favorece o cliente final. 
 Pensando nesse dilema surge a criação da Jobs com a principal premissa de expor com qualidade e de forma personalizada serviços necessários a sociedade em um único lugar e principalmente aumentar a exposição e a oferta de serviços de trabalhadores autônomos.
  
 

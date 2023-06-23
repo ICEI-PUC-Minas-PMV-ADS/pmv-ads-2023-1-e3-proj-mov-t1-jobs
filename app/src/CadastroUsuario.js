@@ -6,8 +6,10 @@ import { TextInputMask } from 'react-native-masked-text';
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from '../style/MainStyle';
 import * as UsuarioDB from '../services/UsuarioDB';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Cadastro({ navigation }) {
+
+export default function CadastroUsuario({ navigation }) {
 
   const [email, setEmail] = useState(null)
   const [nome, setNome] = useState(null)
@@ -21,6 +23,7 @@ export default function Cadastro({ navigation }) {
   const [errorNome, setErrorNome] = useState(null)
   const [errorSenha, setErrorSenha] = useState(null)
   const [isLoading, setLoading] = useState(false)
+  const [confirmarSenha, setConfirmarSenha] = useState(null);
 
   let cpfField = null
   let telefoneField = null
@@ -48,6 +51,10 @@ export default function Cadastro({ navigation }) {
     if (senha == null) {
       setErrorSenha("Preencha sua senha corretamente")
       error = true
+    }
+    if (senha !== confirmarSenha) {
+      setErrorSenha('As senhas não coincidem');
+      error = true;
     }
     if (nome == null)
       setErrorNome("Preencha seu nome")
@@ -80,6 +87,7 @@ export default function Cadastro({ navigation }) {
       UsuarioDB.salvarUsuario(usuarioCriado)
         .then(() => {
           setLoading(false);
+          AsyncStorage.setItem('usuario', JSON.stringify(usuarioCriado)); // Armazene os dados do usuário
           Alert.alert('Sucesso', 'Usuário cadastrado com sucesso', [
             { text: 'OK', onPress: () => navigation.goBack() }
           ]);
@@ -167,6 +175,13 @@ export default function Cadastro({ navigation }) {
               errorMessage={errorSenha}
               secureTextEntry={true}
             />
+            <Input
+            label="Confirmar Senha"
+            placeholder="Digite sua senha novamente"
+            onChangeText={value => setConfirmarSenha(value)}
+            errorMessage={errorSenha} // Exibe a mesma mensagem de erro para manter consistência
+            secureTextEntry={true}
+          />
 
             <CheckBox
               title="Eu aceito os termos de uso"

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView, TextInput } from 'react-native';
 import { Input, Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from '../style/MainStyle';
@@ -11,34 +11,16 @@ import { Alert } from 'react-native';
 export default function Login({ navigation }) {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const [nomeUsuario, setNomeUsuario] = useState(null);
 
-  const entrar = async () => {
-    if (!email || !password) {
-      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
-      return;
-    }
-
-    try {
-      const usuario = await UsuarioDB.buscarUsuario(email, password);
-
-      if (usuario) {
-        setNomeUsuario(usuario.nome);
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Principal' }],
-        });
-      } else {
-        Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
-      }
-    } catch (error) {
-      Alert.alert('Erro', 'Houve um erro ao fazer login. Por favor, tente novamente mais tarde.');
-      console.error('Erro ao fazer login:', error);
-    }
+  const entrar = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Principal' }],
+    });
   };
 
   const cadastrar = () => {
-    navigation.navigate('Cadastro');
+    navigation.navigate('Cadastro do usuário');
   };
 
   return (
@@ -54,40 +36,53 @@ export default function Login({ navigation }) {
             style={specificStyle.logo}
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
-            placeholder="  E-mail"
-            placeholderTextColor="white"
-            leftIcon={{
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+              { backgroundColor: 'white' }
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
+            placeholder="E-mail"
+            placeholderTextColor="gray"
+            rightIcon={{
               type: 'font-awesome',
               name: 'envelope',
-              color: 'white',
+              color: 'black',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setEmail(value)}
             keyboardType="email-address"
           />
           <Input
-            style={[specificStyle.inputLogin, specificStyle.specificContainer]}
-            placeholder="    Senha"
-            placeholderTextColor="white"
-            leftIcon={{
+            style={[
+              specificStyle.inputLogin,
+              specificStyle.inputTransparent,
+              specificStyle.specificContainer,
+              { backgroundColor: 'white' }
+            ]}
+            inputContainerStyle={specificStyle.inputContainerStyle}
+            placeholder="Senha"
+            placeholderTextColor="gray"
+            rightIcon={{
               type: 'font-awesome',
               name: 'lock',
-              color: 'white',
+              color: 'black',
+              containerStyle: specificStyle.iconContainer,
             }}
             onChangeText={(value) => setPassword(value)}
             secureTextEntry={true}
           />
-
           <Button
-            title="Login"
+            title="LOGIN"
             buttonStyle={{
               backgroundColor: '#A9A9A9',
               borderWidth: 2,
-              borderRadius: 13,
+              borderRadius: 15,
             }}
             containerStyle={{
-              width: 120,
-              marginHorizontal: 50,
+              width: '90%', 
+              alignSelf: 'center',
               marginVertical: 10,
             }}
             titleStyle={{ fontWeight: 'bold' }}
@@ -117,13 +112,20 @@ const specificStyle = StyleSheet.create({
   inputLogin: {
     flexGrow: 1,
     height: 40,
-    color: 'white',
+    color: 'black',
+  },
+  loginButton: {
+    backgroundColor: '#0000CD',
+    borderWidth: 1,
+    borderRadius: 10,
   },
   registrarTexto: {
     marginTop: 30,
     color: 'white',
     textAlign: 'center',
     textDecorationLine: 'underline',
-    fontSize: 14,
   },
+  iconContainer: {
+    marginLeft: -40 , 
+  }
 });
