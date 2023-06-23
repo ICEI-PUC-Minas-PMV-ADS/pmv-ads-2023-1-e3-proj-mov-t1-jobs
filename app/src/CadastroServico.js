@@ -24,7 +24,7 @@ export default function CadastroServico() {
   }, []);
 
   const handleCadastro = async () => {
-    if (nome === '' || descricao === '' || preco === '' || telefone === '') {
+    if (nome === '' || descricao === '' || preco === '' || localizacao === '' || telefone === '') {
       Alert.alert('Erro', 'Por favor, preencha todos os campos');
     } else {
       const servicoCriado = {
@@ -128,7 +128,7 @@ export default function CadastroServico() {
                   style={styles.removerImagemButton}
                   onPress={() => removerImagem(index)}
                 >
-                  <Text style={styles.removerImagemButtonText}>x</Text>
+                  <Text style={styles.removerImagemButtonText}>×</Text>
                 </TouchableOpacity>
               </View>
             ))}
