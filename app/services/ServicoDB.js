@@ -22,7 +22,7 @@ export const criarTabelaServicos = () => {
   });
 };
 
-export const salvarServico = (servicoCriado) => {
+export const salvarServico = (servicoCriado, setServicosAtualizados) => {
   return new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
@@ -40,9 +40,10 @@ export const salvarServico = (servicoCriado) => {
           reject('Erro ao inserir o serviço no banco de dados: ' + error.message);
         }
       );
-    });
+    }, reject, setServicosAtualizados); // Passa setServicosAtualizados para o escopo da transação
   });
 };
+
 
 
 

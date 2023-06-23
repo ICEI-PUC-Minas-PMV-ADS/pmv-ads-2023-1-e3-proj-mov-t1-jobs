@@ -51,8 +51,6 @@ export default function Login({ navigation }) {
             },
           ],
         });
-        
-        // Restante do seu código...
       } else {
         Alert.alert('Erro', 'Credenciais inválidas. Por favor, verifique se seu e-mail e senha estão corretos.');
       }
@@ -173,7 +171,7 @@ const specificStyle = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderBottomWidth: 0.5,
-    borderColor: 'black',
+    borderColor: 'grey',
   },
   inputContainerStyle: {
     borderBottomWidth: 0,

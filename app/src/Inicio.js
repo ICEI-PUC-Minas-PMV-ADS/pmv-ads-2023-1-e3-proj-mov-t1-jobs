@@ -1,32 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, Button, StyleSheet, Image } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import { View, Text, FlatList, Button, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useRoute, useFocusEffect } from '@react-navigation/native'; // Importe o hook useFocusEffect
 import { getCadastroServico, deleteCadastroServico } from '../services/ServicoDB';
 import { TextInput } from 'react-native';
 
 const Inicio = ({ navigation }) => {
   const [servicos, setServicos] = useState([]);
-  const route = useRoute(); // Utilize o hook useRoute para acessar a propriedade "route"
+  const route = useRoute();
   const [searchQuery, setSearchQuery] = useState('');
-
 
   useEffect(() => {
     fetchServicos();
   }, [searchQuery]);
 
+  // Utilize o hook useFocusEffect para atualizar a lista de serviços sempre que a tela receber foco
+  useFocusEffect(
+    React.useCallback(() => {
+      fetchServicos();
+    }, [])
+  );
+
   const fetchServicos = async () => {
     try {
       const servicosData = await getCadastroServico(searchQuery);
-      setServicos(servicosData);
+      setServicos(servicosData.reverse()); // Inverta a ordem dos serviços para exibir o último criado no topo
     } catch (error) {
       console.error('Erro ao buscar os serviços:', error);
     }
   };
-  
+
   const handleDelete = async (id) => {
     try {
       await deleteCadastroServico(id);
-      // Atualiza a lista de serviços após excluir
       fetchServicos();
     } catch (error) {
       console.error('Erro ao excluir o serviço:', error);
@@ -34,8 +39,12 @@ const Inicio = ({ navigation }) => {
   };
 
   const renderServico = ({ item }) => {
+    const handleSelecionarServico = () => {
+      navigation.navigate('Serviço criado', { servico: item });
+    };
+
     return (
-      <View style={styles.servicoContainer}>
+      <TouchableOpacity onPress={handleSelecionarServico} style={styles.servicoContainer}>
         <View style={styles.servicoInfo}>
           <Text style={styles.servicoNome}>Nome: {item.nome}</Text>
           <Text style={styles.servicoDescricao}>Descrição: {item.descricao}</Text>
@@ -43,14 +52,13 @@ const Inicio = ({ navigation }) => {
           <Text style={styles.servicoTelefone}>Telefone: {item.telefone}</Text>
         </View>
         <Button title="Excluir" onPress={() => handleDelete(item.id)} />
-      </View>
+      </TouchableOpacity>
     );
   };
 
   const handleSearch = (query) => {
     setSearchQuery(query);
   };
-
 
   return (
     <View style={styles.container}>
@@ -61,10 +69,7 @@ const Inicio = ({ navigation }) => {
           value={searchQuery}
           onChangeText={handleSearch}
         />
-        <Image
-          source={require('../assets/lupa.png')}
-          style={styles.searchIcon}
-        />
+        <Image source={require('../assets/lupa.png')} style={styles.searchIcon} />
       </View>
       <FlatList
         data={servicos}

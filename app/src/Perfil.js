@@ -81,16 +81,14 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#0000CD',
-    justifyContent: 'center',
+    padding: 12,
+    borderRadius: 4,
     alignItems: 'center',
-    paddingVertical: 12,
-    borderRadius: 8,
-    marginTop: 16,
-    width: '100%', // Ocupa toda a largura disponível
   },
   buttonText: {
-    color: 'white',
-    fontSize: 18,
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   h1: {
     color: 'white',

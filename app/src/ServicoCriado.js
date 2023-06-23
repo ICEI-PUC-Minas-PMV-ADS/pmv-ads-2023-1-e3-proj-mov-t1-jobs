@@ -189,20 +189,20 @@ const styles = StyleSheet.create({
     textAlignVertical: 'top',
   },
   botaoAvaliar: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#0000CD',
+    padding: 12,
     borderRadius: 4,
-    padding: 8,
     alignItems: 'center',
   },
   textoBotaoAvaliar: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 19,
     fontWeight: 'bold',
   },
   botaoContratar: {
     backgroundColor: '#28a745',
-    borderRadius: 4,
     padding: 12,
+    borderRadius: 4,
     alignItems: 'center',
   },
   textoBotaoContratar: {
