@@ -25,8 +25,6 @@ export default function Login({ navigation }) {
       if (usuario) {
         setNomeUsuario(usuario.nome);
 
-        // Restante do seu código...
-
         navigation.reset({
           index: 0,
           routes: [
