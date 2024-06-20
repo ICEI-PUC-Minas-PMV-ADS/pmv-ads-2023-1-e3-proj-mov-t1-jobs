@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Jobs
+authors:
+  - family-names: Medeiros
+    given-names:  Crislaine
+  - family-names: 
+    given-names:  
+  - family-names: Xavier
+    given-names:  Leonardo
+  - family-names: Carvalho
+    given-names:  Alisson
+  - family-names: Luiz
+    given-names:  Vinícius
+  - family-names: 
+    given-names:  
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Machado
+    given-names:  Will
+keywords:
+  - Emprego
+  - Vagas	
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-jobs
+version: 1.0.0
+date-released: 2023-06-30
